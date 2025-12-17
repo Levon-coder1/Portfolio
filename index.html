@@ -21,11 +21,11 @@
     <header class="nav">
       <button class="brand" type="button" data-nav>Asher Jay</button>
       <nav class="nav-links">
-        <a href="#work">Work</a>
-        <a href="#services">Services</a>
-        <a href="#devices">Devices</a>
-        <a href="#gadgets">Gadgets</a>
-        <a href="#contact">Contact</a>
+        <a href="#/projects">Projects</a>
+        <a href="#/gadgets">Gadgets</a>
+        <a href="#/socials">Socials</a>
+        <a href="#/hub">Hub</a>
+        <a href="#/contact">Contact</a>
       </nav>
       <a class="pill" href="mailto:hello@asherjay.dev">Let’s talk</a>
     </header>
@@ -63,40 +63,23 @@
               </div>
             </div>
           </div>
-        </div>
-        <div class="hero__visual" data-tilt>
-          <div class="glass-frame">
-            <div class="frame__halo" aria-hidden="true"></div>
-            <div class="frame__blur" aria-hidden="true"></div>
-            <div class="frame__inner">
-              <div class="device-layer layer-back" data-depth="0.1" data-scroll-depth="0.08">
-                <img src="images/device-laptop.svg" alt="Laptop hero render" loading="lazy" />
-              </div>
-              <div class="device-layer layer-mid" data-depth="0.18" data-scroll-depth="0.12">
-                <img src="images/device-tablet.svg" alt="Tablet showcase render" loading="lazy" />
-              </div>
-              <div class="device-layer layer-front" data-depth="0.3" data-scroll-depth="0.18">
-                <img src="images/device-phone.svg" alt="Phone spotlight render" loading="lazy" />
-              </div>
-              <div class="frame__specs">
-                <div>
-                  <p class="small">Immersive drop</p>
-                  <h3>Glass, glow, and layered depth</h3>
-                  <p class="muted">
-                    Semi-transparent frame with premium hardware renders,
-                    parallax, tilt, and blur to echo an Apple-grade unboxing.
-                  </p>
-                </div>
-                <div class="pill mini translucent">Live parallax</div>
+          <div class="hero__visual" data-tilt>
+            <div class="hero__frame">
+              <div class="frame__glow"></div>
+              <div class="frame__content">
+                <p class="small">Immersive drop</p>
+                <h3>Flow that feels like hardware</h3>
+                <p class="muted">
+                  Layered glass, adaptive gradients, and subtle parallax mirror the
+                  tactility of premium devices.
+                </p>
               </div>
             </div>
             <div class="floating-tag" data-depth="0.25">Cinematic scroll</div>
             <div class="floating-tag" data-depth="0.45">Realtime lighting</div>
             <div class="floating-tag" data-depth="0.65">Magnetic CTA</div>
           </div>
-          <div class="floating-tag" data-depth="0.18">Cinematic scroll</div>
-          <div class="floating-tag" data-depth="0.36">Realtime lighting</div>
-          <div class="floating-tag" data-depth="0.54">Glassy frame</div>
+          <div class="scroll-indicator">Navigate with the links above</div>
         </div>
       </section>
 
@@ -178,57 +161,29 @@
         <div class="section reveal">
           <div class="section__header">
             <p class="eyebrow">Device drops</p>
-            <h2>Premium hardware with the same polish as the sites.</h2>
+            <h2>Pick a lane, explore the grid, tap into glossy detail.</h2>
           </div>
-          <div class="gadgets">
-            <div class="gadgets__list">
-              <button class="device" data-tilt data-gadget="phones" aria-label="Phones detail">
-                <div class="device__image shimmer"></div>
-                <div class="device__body">
-                  <p class="small">Phones</p>
-                  <h3>Flagship & pro camera builds</h3>
-                  <p class="muted">
-                    Pixel-perfect screens, elite cameras, and clean setups so you can
-                    shoot, edit, and share instantly.
-                  </p>
-                  <span class="pill mini">View detail</span>
-                </div>
-              </button>
-              <button class="device" data-tilt data-gadget="laptops" aria-label="Laptops detail">
-                <div class="device__image shimmer alt"></div>
-                <div class="device__body">
-                  <p class="small">Laptops</p>
-                  <h3>Creator & engineering rigs</h3>
-                  <p class="muted">
-                    Quiet power with calibrated color, tuned performance, and a
-                    frictionless handoff to your workflow.
-                  </p>
-                  <span class="pill mini">View detail</span>
-                </div>
-              </button>
-              <button class="device" data-tilt data-gadget="gaming" aria-label="Gaming rigs detail">
-                <div class="device__image shimmer neon"></div>
-                <div class="device__body">
-                  <p class="small">Gaming</p>
-                  <h3>High-refresh setups</h3>
-                  <p class="muted">
-                    Stacked GPUs, responsive controls, and immersive audio—built for
-                    creators who play hard.
-                  </p>
-                  <span class="pill mini">View detail</span>
-                </div>
-              </button>
-            </div>
-            <div class="gadget-detail" id="gadget-detail">
-              <div class="pill mini">Select a gadget</div>
-              <h3 class="detail-title">Explore the catalog</h3>
-              <p class="detail-meta">Choose a device to see concierge notes and specs.</p>
+          <div class="category-tabs" id="category-tabs">
+            <button class="tab" data-category="phones">Phones</button>
+            <button class="tab" data-category="laptops">Laptops</button>
+            <button class="tab" data-category="accessories">Accessories</button>
+            <button class="tab" data-category="tablets">Tabs</button>
+          </div>
+          <div class="catalog">
+            <div class="product-grid" id="product-grid" aria-live="polite"></div>
+            <aside class="product-detail" id="product-detail">
+              <div class="pill mini">Select a device</div>
+              <h3 class="detail-title">Choose a category</h3>
+              <p class="detail-meta">Tap any product tile to reveal imagery, pricing, shipping, and related picks.</p>
+              <div class="detail-gallery"></div>
               <ul class="detail-list"></ul>
+              <div class="detail-meta shipping"></div>
+              <div class="detail-related"></div>
               <div class="cta-row">
                 <a class="cta primary" href="mailto:hello@asherjay.dev">Reserve a drop</a>
                 <a class="cta ghost" href="#/contact">Talk to Asher</a>
               </div>
-            </div>
+            </aside>
           </div>
         </div>
       </section>
@@ -325,99 +280,7 @@
               >
             </div>
           </div>
-        </div>
-      </section>
-
-      <section id="gadgets" class="section reveal gadgets">
-        <div class="section__header">
-          <p class="eyebrow">Gadgets</p>
-          <h2>Shop the flagship drop with rich detail on every build.</h2>
-        </div>
-        <div class="gadgets__layout">
-          <div class="gadgets__grid">
-            <article class="gadget-card" data-gadget-id="aurora-phone" data-tilt>
-              <div
-                class="gadget-card__image"
-                style="background-image: url('images/gadgets/phone-aurora-front.svg')"
-              ></div>
-              <div class="gadget-card__body">
-                <div class="pill mini">Phone</div>
-                <h3>Aurora Pro</h3>
-                <p class="muted">Flagship camera-first build with cinematic color.</p>
-                <div class="price-tag">$1,199</div>
-              </div>
-            </article>
-            <article class="gadget-card" data-gadget-id="studio-laptop" data-tilt>
-              <div
-                class="gadget-card__image alt"
-                style="background-image: url('images/gadgets/laptop-studio-side.svg')"
-              ></div>
-              <div class="gadget-card__body">
-                <div class="pill mini">Laptop</div>
-                <h3>Studio Laptop</h3>
-                <p class="muted">Ultra-thin workstation tuned for render and code.</p>
-                <div class="price-tag">$2,499</div>
-              </div>
-            </article>
-            <article class="gadget-card" data-gadget-id="neon-rig" data-tilt>
-              <div
-                class="gadget-card__image neon"
-                style="background-image: url('images/gadgets/gaming-rig-neon.svg')"
-              ></div>
-              <div class="gadget-card__body">
-                <div class="pill mini">Gaming</div>
-                <h3>Neon Rig</h3>
-                <p class="muted">High-refresh battle station with liquid cooling.</p>
-                <div class="price-tag">$3,199</div>
-              </div>
-            </article>
-          </div>
-
-          <div class="gadget-detail" id="gadget-detail">
-            <div class="gadget-detail__header">
-              <div>
-                <p class="eyebrow">Detail view</p>
-                <h3 id="detail-name">Aurora Pro</h3>
-                <p class="muted" id="detail-subtitle">
-                  Flagship camera-first build with cinematic color.
-                </p>
-              </div>
-              <button class="pill ghost" id="close-detail" type="button">Close</button>
-            </div>
-            <div class="gadget-gallery" id="detail-gallery"></div>
-            <div class="gadget-meta">
-              <div>
-                <p class="eyebrow">Pricing</p>
-                <h4 id="detail-price">$1,199</h4>
-                <p class="muted">Taxes & import logistics handled.</p>
-              </div>
-              <ul class="spec-list" id="detail-specs"></ul>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="contact" class="section cta-panel reveal">
-        <div class="cta-card" data-tilt>
-          <div>
-            <p class="eyebrow">Let’s build something bright</p>
-            <h2>Ready for cinematic web + premium hardware?</h2>
-            <p class="lede">
-              Tell me about your launch, platform, or the gear you want to feel.
-              I’ll respond within 24 hours.
-            </p>
-          </div>
-          <div class="cta-actions">
-            <a class="cta primary" href="mailto:hello@asherjay.dev">Email Asher Jay</a>
-            <a
-              class="cta ghost"
-              href="https://wa.me/"
-              target="_blank"
-              rel="noreferrer"
-              >WhatsApp</a
-            >
-          </div>
-        </div>
+        </section>
       </section>
     </main>
 

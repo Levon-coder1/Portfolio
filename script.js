@@ -2,61 +2,148 @@ const tiltElements = document.querySelectorAll('[data-tilt]');
 const parallaxItems = document.querySelectorAll('[data-depth]');
 const scrollParallaxItems = document.querySelectorAll('[data-scroll-depth]');
 const reveals = document.querySelectorAll('.reveal');
-const gadgetCards = document.querySelectorAll('.gadget-card');
-const detailName = document.getElementById('detail-name');
-const detailSubtitle = document.getElementById('detail-subtitle');
-const detailPrice = document.getElementById('detail-price');
-const detailSpecs = document.getElementById('detail-specs');
-const detailGallery = document.getElementById('detail-gallery');
-const closeDetail = document.getElementById('close-detail');
+const views = document.querySelectorAll('[data-route]');
+const navLinks = document.querySelectorAll('.nav-links a');
+const brand = document.querySelector('.brand');
+const categoryTabs = document.querySelectorAll('[data-category]');
+const productGrid = document.getElementById('product-grid');
+const productDetail = document.getElementById('product-detail');
 
-const gadgets = {
-  'aurora-phone': {
-    name: 'Aurora Pro',
-    subtitle: 'Flagship camera-first build with cinematic color.',
-    price: '$1,199',
-    specs: [
-      '6.8" LTPO OLED · 120Hz',
-      '108MP triple camera · RAW video',
-      'Snapdragon X3 · 12GB RAM',
-      '1TB storage · 120W fast charge',
-    ],
-    images: [
-      'images/gadgets/phone-aurora-front.svg',
-      'images/gadgets/phone-aurora-back.svg',
-      'images/gadgets/phone-aurora-lifestyle.svg',
+const gadgetCatalog = {
+  phones: {
+    label: 'Phones',
+    description: 'Flagship devices tuned for camera work, travel, and creator stacks.',
+    products: [
+      {
+        slug: 'pixel-pro',
+        name: 'Pixel Pro 9',
+        price: '$1,099 · 256GB',
+        shipping: '3-5 days, sealed or tuned with your app kit',
+        summary: 'Tensor-powered flagship with cinematic video presets and calibrated OLED.',
+        gallery: ['Warm Amber', 'Graphite Mist'],
+        details: [
+          '50MP main + 5x telephoto; natural HDR with mobile LUTs installed',
+          'Unlocked dual-SIM with travel eSIM setup and battery health report',
+          'Delivered with tempered glass + slim clear and sport cases',
+        ],
+        related: ['iPhone 15 Pro Max'],
+      },
+      {
+        slug: 'iphone-pro',
+        name: 'iPhone 15 Pro Max',
+        price: '$1,199 · 512GB',
+        shipping: 'Next-day courier available in select cities',
+        summary: 'Titanium build, 5x tetraprism zoom, and ProRes log capture out of the box.',
+        gallery: ['Natural Titanium', 'Blue Titanium'],
+        details: [
+          'Color science tuned for social-first exports and LUT-ready delivery',
+          'MagSafe kit + glass install with warranty-friendly handoff',
+          'iCloud and Google Drive migration concierge included',
+        ],
+        related: ['Pixel Pro 9'],
+      },
     ],
   },
-  'studio-laptop': {
-    name: 'Studio Laptop',
-    subtitle: 'Ultra-thin workstation tuned for render and code.',
-    price: '$2,499',
-    specs: [
-      '14" mini-LED · 120Hz',
-      'RTX Studio graphics · 16GB VRAM',
-      'Intel Ultra 9 · 32GB RAM',
-      '2TB NVMe · Studio mic array',
-    ],
-    images: [
-      'images/gadgets/laptop-studio-side.svg',
-      'images/gadgets/laptop-studio-keyboard.svg',
-      'images/gadgets/laptop-studio-side.svg',
+  laptops: {
+    label: 'Laptops',
+    description: 'Creator-grade rigs with calibrated displays, tuned thermals, and quiet performance.',
+    products: [
+      {
+        slug: 'macbook-pro',
+        name: 'MacBook Pro 16" M3 Max',
+        price: '$3,699 · 64GB / 1TB',
+        shipping: 'Priority insured shipping with photo proof + setup call',
+        summary: 'Apple Silicon speed with 120Hz XDR and preloaded creative suite shortcuts.',
+        gallery: ['Space Black', 'Silver'],
+        details: [
+          'Color-calibrated XDR profile and reference modes configured',
+          'Clamshell + external monitor performance profiles pre-set',
+          'Includes USB-C hub, braided USB-C cables, and quiet cooling pad',
+        ],
+        related: ['ROG Zephyrus G16'],
+      },
+      {
+        slug: 'zephyrus-g16',
+        name: 'ROG Zephyrus G16 OLED',
+        price: '$2,299 · RTX 4080',
+        shipping: '2-4 days with stress test reports',
+        summary: 'Ultra-thin gaming/creator hybrid with G-Sync OLED and studio-ready acoustics.',
+        gallery: ['Nebula Gray'],
+        details: [
+          'GPU/CPU undervolt and fan curve tuned for balanced thermals',
+          'DaVinci Resolve + Blender profiles installed with hotkeys',
+          'Comes with low-latency 2.4GHz mouse and coiled keyboard cable',
+        ],
+        related: ['MacBook Pro 16" M3 Max'],
+      },
     ],
   },
-  'neon-rig': {
-    name: 'Neon Rig',
-    subtitle: 'High-refresh battle station with liquid cooling.',
-    price: '$3,199',
-    specs: [
-      'Ryzen 9 · Custom loop cooling',
-      'RTX 5090 · 24GB VRAM',
-      '64GB DDR5 · 2TB Gen5 NVMe',
-      'Wi-Fi 7 · 1200W platinum PSU',
+  accessories: {
+    label: 'Accessories',
+    description: 'Polished essentials that keep your devices protected, powered, and ready.',
+    products: [
+      {
+        slug: 'aurora-buds',
+        name: 'Aurora ANC Buds',
+        price: '$249',
+        shipping: 'Ships within 48 hours with fit kit',
+        summary: 'Dual drivers, adaptive ANC, and spatial audio for iOS and Android.',
+        gallery: ['Frost White', 'Obsidian'],
+        details: [
+          'Wireless + USB-C fast charge case with 36h total battery',
+          'Ear fit calibration and EQ tuning during handoff',
+          'Includes silicone + foam tips and magnetic cable clip',
+        ],
+        related: ['Arc Wireless Charger'],
+      },
+      {
+        slug: 'arc-charger',
+        name: 'Arc Wireless Charger',
+        price: '$119',
+        shipping: '3-5 days with cable kit',
+        summary: '15W MagSafe-compatible stand with soft-touch glass and LED breathing ring.',
+        gallery: ['Cloud', 'Midnight'],
+        details: [
+          'Supports iPhone/Android + Qi2 with auto-alignment magnets',
+          'Detachable braided USB-C + 30W GaN brick included',
+          'LED ring uses ambient light sensor for night-friendly glow',
+        ],
+        related: ['Aurora ANC Buds'],
+      },
     ],
-    images: [
-      'images/gadgets/gaming-rig-neon.svg',
-      'images/gadgets/gaming-rig-neon.svg',
-      'images/gadgets/phone-aurora-front.svg',
+  },
+  tablets: {
+    label: 'Tabs',
+    description: 'Portable canvases for sketching, note-taking, and on-the-go edit passes.',
+    products: [
+      {
+        slug: 'ipad-pro',
+        name: 'iPad Pro 13" M4',
+        price: '$1,499 · 512GB',
+        shipping: 'Next-day dispatch with folio + pencil options',
+        summary: 'OLED tandem display with Pencil Pro and Stage Manager tuned for multitask.',
+        gallery: ['Silver', 'Space Black'],
+        details: [
+          'Paperlike matte protector installed on request',
+          'Shortcuts, Procreate brushes, and note templates preloaded',
+          'Magic Keyboard + Pencil pairing and warranty guidance',
+        ],
+        related: ['Galaxy Tab S9 Ultra'],
+      },
+      {
+        slug: 'tab-s9',
+        name: 'Galaxy Tab S9 Ultra',
+        price: '$1,299 · 512GB',
+        shipping: '3-6 days with rugged case option',
+        summary: '14.6" Dynamic AMOLED with S Pen in-box and DeX desktop presets.',
+        gallery: ['Graphite'],
+        details: [
+          'Color-calibrated for sketching and video color checks',
+          'Samsung Notes + GoodNotes setup with cloud sync tuned',
+          'Keyboard cover + 45W charger bundle available',
+        ],
+        related: ['iPad Pro 13" M4'],
+      },
     ],
   },
 };
@@ -129,81 +216,189 @@ scrollLinks.forEach((link) => {
   });
 });
 
-function buildGallery(images) {
-  if (!detailGallery) return;
-  const main = document.createElement('div');
-  main.className = 'gadget-gallery__main';
-  main.style.backgroundImage = `url(${images[0]})`;
-
-  const thumbs = document.createElement('div');
-  thumbs.className = 'gadget-gallery__thumbs';
-
-  images.forEach((src, index) => {
-    const thumb = document.createElement('button');
-    thumb.type = 'button';
-    thumb.className = `gadget-thumb ${index === 0 ? 'is-active' : ''}`;
-    thumb.style.backgroundImage = `url(${src})`;
-    thumb.addEventListener('click', () => {
-      main.style.backgroundImage = `url(${src})`;
-      thumbs.querySelectorAll('.gadget-thumb').forEach((t) =>
-        t.classList.remove('is-active')
-      );
-      thumb.classList.add('is-active');
-    });
-    thumbs.appendChild(thumb);
-  });
-
-  detailGallery.innerHTML = '';
-  detailGallery.appendChild(main);
-  detailGallery.appendChild(thumbs);
+function parseHash() {
+  const raw = window.location.hash.replace('#', '');
+  if (!raw) return [];
+  return raw.split('/').filter(Boolean);
 }
 
-function renderGadget(id, skipHashUpdate = false) {
-  const gadget = gadgets[id];
-  if (!gadget) return;
-
-  detailName.textContent = gadget.name;
-  detailSubtitle.textContent = gadget.subtitle;
-  detailPrice.textContent = gadget.price;
-
-  detailSpecs.innerHTML = '';
-  gadget.specs.forEach((spec) => {
-    const li = document.createElement('li');
-    li.textContent = spec;
-    detailSpecs.appendChild(li);
+function setActiveNav(baseRoute) {
+  navLinks.forEach((link) => {
+    const target = link.getAttribute('href')?.replace('#', '') || '';
+    const segment = target.split('/').filter(Boolean)[0] || '';
+    link.classList.toggle('active', `/${segment}` === baseRoute);
   });
+}
 
-  buildGallery(gadget.images);
+function setActiveCategory(category) {
+  categoryTabs.forEach((tab) => {
+    tab.classList.toggle('active', tab.dataset.category === category);
+  });
+}
 
-  if (!skipHashUpdate) {
-    const newHash = `#gadgets/${id}`;
-    if (location.hash !== newHash) {
-      history.replaceState(null, '', newHash);
+function renderProducts(category) {
+  if (!productGrid) return;
+  const catalog = gadgetCatalog[category];
+  productGrid.innerHTML = '';
+
+  if (!catalog) return;
+
+  catalog.products.forEach((product) => {
+    const card = document.createElement('button');
+    card.className = 'product-card glassy';
+    card.dataset.slug = product.slug;
+    card.dataset.category = category;
+    card.innerHTML = `
+      <div class="product-card__media shimmer">
+        <span class="badge">${catalog.label}</span>
+        <div class="gloss"></div>
+      </div>
+      <div class="product-card__body">
+        <div>
+          <p class="small">${product.price}</p>
+          <h3>${product.name}</h3>
+          <p class="muted">${product.summary}</p>
+        </div>
+        <span class="pill mini">View detail</span>
+      </div>
+    `;
+    productGrid.appendChild(card);
+  });
+}
+
+function resetProductDetail(category) {
+  if (!productDetail) return;
+  const pill = productDetail.querySelector('.pill');
+  const title = productDetail.querySelector('.detail-title');
+  const meta = productDetail.querySelector('.detail-meta');
+  const list = productDetail.querySelector('.detail-list');
+  const gallery = productDetail.querySelector('.detail-gallery');
+  const shipping = productDetail.querySelector('.detail-meta.shipping');
+  const related = productDetail.querySelector('.detail-related');
+
+  if (pill) pill.textContent = 'Select a device';
+  if (title) title.textContent = 'Choose a category';
+  if (meta) meta.textContent = gadgetCatalog[category]?.description || 'Tap a tile to load full specs and concierge notes.';
+  if (list) list.innerHTML = '';
+  if (gallery) gallery.innerHTML = '';
+  if (shipping) shipping.textContent = '';
+  if (related) related.innerHTML = '';
+}
+
+function updateProductDetail(category, slug) {
+  if (!productDetail) return;
+  const catalog = gadgetCatalog[category];
+  const product = catalog?.products.find((item) => item.slug === slug);
+  if (!product) {
+    resetProductDetail(category);
+    return;
+  }
+
+  const pill = productDetail.querySelector('.pill');
+  const title = productDetail.querySelector('.detail-title');
+  const meta = productDetail.querySelector('.detail-meta');
+  const list = productDetail.querySelector('.detail-list');
+  const gallery = productDetail.querySelector('.detail-gallery');
+  const shipping = productDetail.querySelector('.detail-meta.shipping');
+  const related = productDetail.querySelector('.detail-related');
+
+  if (pill) pill.textContent = catalog.label;
+  if (title) title.textContent = product.name;
+  if (meta) meta.textContent = product.summary;
+
+  if (gallery) {
+    gallery.innerHTML = '';
+    product.gallery.forEach((shade) => {
+      const chip = document.createElement('div');
+      chip.className = 'gallery-chip';
+      chip.textContent = shade;
+      gallery.appendChild(chip);
+    });
+  }
+
+  if (list) {
+    list.innerHTML = '';
+    product.details.forEach((detail) => {
+      const li = document.createElement('li');
+      li.textContent = detail;
+      list.appendChild(li);
+    });
+  }
+
+  if (shipping) {
+    shipping.textContent = `Shipping: ${product.shipping}`;
+  }
+
+  if (related) {
+    related.innerHTML = '';
+    if (product.related?.length) {
+      const label = document.createElement('p');
+      label.className = 'small';
+      label.textContent = 'Related';
+      related.appendChild(label);
+
+      const chips = document.createElement('div');
+      chips.className = 'related-chips';
+      product.related.forEach((item) => {
+        const chip = document.createElement('span');
+        chip.className = 'pill mini';
+        chip.textContent = item;
+        chips.appendChild(chip);
+      });
+      related.appendChild(chips);
     }
   }
 }
 
-function applyRouteFromHash() {
-  if (!location.hash.startsWith('#gadgets')) return;
-  const [, gadgetId] = location.hash.split('/');
-  const id = gadgetId || 'aurora-phone';
-  renderGadget(id, true);
-  document.querySelector('#gadgets')?.scrollIntoView({ behavior: 'smooth' });
+function handleRouteChange() {
+  const segments = parseHash();
+  const baseRoute = segments[0] ? `/${segments[0]}` : '/';
+
+  views.forEach((view) => {
+    view.classList.toggle('active', view.dataset.route === baseRoute);
+  });
+
+  setActiveNav(baseRoute);
+
+  if (baseRoute === '/gadgets') {
+    const category = segments[1] || 'phones';
+    const productSlug = segments[2];
+    setActiveCategory(category);
+    renderProducts(category);
+    if (productSlug) {
+      updateProductDetail(category, productSlug);
+    } else {
+      resetProductDetail(category);
+    }
+  } else {
+    resetProductDetail('phones');
+  }
 }
 
-gadgetCards.forEach((card) => {
-  card.addEventListener('click', () => {
-    const id = card.dataset.gadgetId;
-    renderGadget(id);
+window.addEventListener('hashchange', handleRouteChange);
+window.addEventListener('load', () => {
+  if (!window.location.hash) {
+    window.location.hash = '#/';
+  }
+  handleRouteChange();
+});
+
+brand?.addEventListener('click', () => {
+  window.location.hash = '#/';
+});
+
+categoryTabs.forEach((tab) => {
+  tab.addEventListener('click', () => {
+    const category = tab.dataset.category;
+    window.location.hash = `#/gadgets/${category}`;
   });
 });
 
-closeDetail?.addEventListener('click', () => {
-  history.replaceState(null, '', '#gadgets');
+productGrid?.addEventListener('click', (event) => {
+  const card = event.target.closest('.product-card');
+  if (!card) return;
+  const { category, slug } = card.dataset;
+  if (category && slug) {
+    window.location.hash = `#/gadgets/${category}/${slug}`;
+  }
 });
-
-if (detailName && detailSubtitle && detailPrice && detailSpecs && detailGallery) {
-  renderGadget('aurora-phone', true);
-  applyRouteFromHash();
-  window.addEventListener('hashchange', applyRouteFromHash);
-}
