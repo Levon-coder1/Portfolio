@@ -1,12 +1,25 @@
 :root {
   --bg: #fff8ef;
-  --card: rgba(255, 255, 255, 0.88);
+  --card: rgba(255, 255, 255, 0.9);
   --muted: rgba(35, 23, 12, 0.75);
   --text: #0f0a07;
   --accent: linear-gradient(135deg, #ff7a18, #ff9a3c, #ffd393);
   --accent-2: linear-gradient(135deg, #ffb26b, #ff9468, #ffe3b8);
   --accent-3: linear-gradient(135deg, #ffcf87, #ffc09a, #fff1d8);
-  --border: rgba(15, 10, 7, 0.12);
+  --glass: linear-gradient(
+    145deg,
+    rgba(255, 255, 255, 0.92),
+    rgba(255, 242, 226, 0.82) 35%,
+    rgba(255, 227, 196, 0.72)
+  );
+  --glass-edge: linear-gradient(
+    120deg,
+    rgba(255, 255, 255, 0.55),
+    rgba(255, 181, 104, 0.3) 40%,
+    rgba(255, 255, 255, 0.58)
+  );
+  --border: rgba(15, 10, 7, 0.14);
+  --border-strong: rgba(255, 255, 255, 0.7);
   --shadow: 0 14px 40px rgba(0, 0, 0, 0.12);
   --radius: 18px;
   --noise: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120' viewBox='0 0 120 120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='120' height='120' filter='url(%23n)' opacity='0.15'/%3E%3C/svg%3E");
@@ -78,12 +91,26 @@ body {
   padding: 12px 18px;
   border: 1px solid var(--border);
   border-radius: 999px;
-  background: var(--card);
-  backdrop-filter: blur(16px);
+  background: var(--glass);
+  backdrop-filter: blur(18px) saturate(110%);
   position: sticky;
   top: 24px;
   z-index: 10;
-  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.12),
+    inset 0 0 0 1px var(--border-strong),
+    inset 0 1px 0 rgba(255, 255, 255, 0.8);
+  overflow: hidden;
+}
+
+.nav::after {
+  content: '';
+  position: absolute;
+  inset: 1px;
+  border-radius: inherit;
+  background: linear-gradient(120deg, rgba(255, 255, 255, 0.75), transparent 40%,
+      rgba(255, 255, 255, 0.35) 65%, transparent 85%);
+  opacity: 0.65;
+  pointer-events: none;
 }
 
 .brand {
@@ -116,7 +143,8 @@ body {
   border-radius: 999px;
   border: 1px solid var(--border);
   color: var(--text);
-  background: rgba(255, 255, 255, 0.9);
+  background: var(--glass);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.8);
   text-decoration: none;
   font-size: 0.95rem;
   transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
@@ -185,20 +213,33 @@ body {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  border: 1px solid transparent;
+  border: 1px solid rgba(255, 255, 255, 0.4);
   transition: transform 0.25s ease, box-shadow 0.3s ease, background 0.3s ease;
+  position: relative;
+  overflow: hidden;
 }
 
 .cta.primary {
-  background: var(--accent);
+  background: linear-gradient(135deg, #ff912c, #ffb15e, #ffe3bb);
   color: #1c0d04;
-  box-shadow: 0 18px 40px rgba(255, 154, 60, 0.35);
+  box-shadow: 0 18px 40px rgba(255, 154, 60, 0.35), inset 0 1px 0 rgba(255, 255, 255, 0.7);
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.6);
 }
 
 .cta.ghost {
   border-color: var(--border);
   color: var(--text);
-  background: rgba(255, 255, 255, 0.9);
+  background: var(--glass);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.8);
+}
+
+.cta::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(120deg, rgba(255, 255, 255, 0.4), transparent 45%, rgba(255, 255, 255, 0.3) 60%, transparent 80%);
+  opacity: 0.7;
+  pointer-events: none;
 }
 
 .cta:hover {
@@ -211,8 +252,10 @@ body {
   gap: 12px;
   padding: 16px;
   border-radius: var(--radius);
-  background: rgba(255, 255, 255, 0.86);
+  background: var(--glass);
   border: 1px solid var(--border);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.75), 0 16px 32px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
 }
 
 .meta-label {
@@ -229,19 +272,31 @@ body {
   position: relative;
   padding: 18px;
   border-radius: var(--radius);
-  background: rgba(255, 255, 255, 0.86);
+  background: var(--glass);
   border: 1px solid var(--border);
+  box-shadow: var(--shadow), inset 0 1px 0 rgba(255, 255, 255, 0.8);
   overflow: hidden;
-  box-shadow: var(--shadow);
 }
 
 .hero__frame {
   position: relative;
   padding: 28px;
   border-radius: 20px;
-  background: rgba(255, 255, 255, 0.9);
-  border: 1px solid rgba(255, 255, 255, 0.24);
+  background: linear-gradient(160deg, rgba(255, 255, 255, 0.96), rgba(255, 233, 210, 0.82));
+  border: 1px solid rgba(255, 255, 255, 0.32);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.8), 0 12px 26px rgba(0, 0, 0, 0.12);
   overflow: hidden;
+}
+
+.hero__frame::after {
+  content: '';
+  position: absolute;
+  inset: -10% 8% auto;
+  height: 140px;
+  background: var(--glass-edge);
+  filter: blur(24px);
+  opacity: 0.7;
+  pointer-events: none;
 }
 
 .frame__glow {
@@ -323,18 +378,36 @@ body {
 }
 
 .work-card {
-  background: rgba(255, 255, 255, 0.9);
+  position: relative;
+  background: var(--glass);
   border: 1px solid var(--border);
   border-radius: var(--radius);
   overflow: hidden;
   display: grid;
   grid-template-rows: 200px auto;
   transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(12px);
+}
+
+.work-card::after,
+.pillar::after,
+.device::after,
+.step::after,
+.hero__meta::after,
+.cta-card::after {
+  content: '';
+  position: absolute;
+  inset: 2px;
+  border-radius: inherit;
+  background: linear-gradient(120deg, rgba(255, 255, 255, 0.6), transparent 40%, rgba(255, 255, 255, 0.25) 65%, transparent 80%);
+  opacity: 0.6;
+  pointer-events: none;
 }
 
 .work-card:hover {
   border-color: rgba(15, 10, 7, 0.2);
-  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.18);
+  box-shadow: 0 22px 44px rgba(0, 0, 0, 0.18), inset 0 1px 0 rgba(255, 255, 255, 0.9);
 }
 
 .work-visual {
@@ -368,7 +441,8 @@ body {
   overflow: hidden;
   border: 1px solid var(--border);
   border-radius: var(--radius);
-  background: rgba(255, 255, 255, 0.86);
+  background: var(--glass);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.7);
   margin: 24px 0 12px;
 }
 
@@ -402,13 +476,16 @@ body {
 }
 
 .pillar {
-  background: rgba(255, 255, 255, 0.9);
+  position: relative;
+  background: var(--glass);
   border: 1px solid var(--border);
   border-radius: var(--radius);
   padding: 20px 18px 22px;
   display: grid;
   gap: 10px;
   transition: transform 0.35s ease, border-color 0.35s ease, box-shadow 0.35s ease;
+  box-shadow: 0 14px 32px rgba(0, 0, 0, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(12px);
 }
 
 .pillar ul {
@@ -425,7 +502,7 @@ body {
 
 .pillar:hover {
   border-color: rgba(15, 10, 7, 0.2);
-  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.16);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.16), inset 0 1px 0 rgba(255, 255, 255, 0.9);
 }
 
 .devices__grid {
@@ -435,11 +512,14 @@ body {
 }
 
 .device {
-  background: rgba(255, 255, 255, 0.9);
+  position: relative;
+  background: var(--glass);
   border: 1px solid var(--border);
   border-radius: var(--radius);
   overflow: hidden;
   transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
+  box-shadow: 0 14px 32px rgba(0, 0, 0, 0.12), inset 0 1px 0 rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(12px);
 }
 
 .device__image {
@@ -495,9 +575,11 @@ body {
   align-items: center;
   padding: 16px 18px;
   border-radius: var(--radius);
-  background: rgba(255, 255, 255, 0.9);
+  background: var(--glass);
   border: 1px solid var(--border);
   transition: transform 0.35s ease, border-color 0.35s ease, box-shadow 0.35s ease;
+  box-shadow: 0 14px 32px rgba(0, 0, 0, 0.08), inset 0 1px 0 rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(12px);
 }
 
 .step__index {
@@ -517,12 +599,14 @@ body {
   justify-content: space-between;
   gap: 24px;
   flex-wrap: wrap;
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(255, 231, 211, 0.6));
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.92), rgba(255, 231, 211, 0.7));
   border: 1px solid var(--border);
   padding: 26px;
   border-radius: calc(var(--radius) + 2px);
   position: relative;
   overflow: hidden;
+  box-shadow: 0 18px 44px rgba(0, 0, 0, 0.12), inset 0 1px 0 rgba(255, 255, 255, 0.82);
+  backdrop-filter: blur(14px) saturate(110%);
 }
 
 .cta-card::before {
