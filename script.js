@@ -1,5 +1,6 @@
 const tiltElements = document.querySelectorAll('[data-tilt]');
 const parallaxItems = document.querySelectorAll('[data-depth]');
+const scrollParallaxItems = document.querySelectorAll('[data-scroll-depth]');
 const reveals = document.querySelectorAll('.reveal');
 const views = document.querySelectorAll('[data-route]');
 const navLinks = document.querySelectorAll('.nav-links a');
@@ -168,11 +169,24 @@ function parallax(event) {
     const depth = parseFloat(item.dataset.depth) || 0.3;
     const x = (event.clientX - window.innerWidth / 2) * depth * 0.02;
     const y = (event.clientY - window.innerHeight / 2) * depth * 0.02;
-    item.style.transform = `translate3d(${x}px, ${y}px, 0)`;
+    item.style.setProperty('--parallax-x', `${x}px`);
+    item.style.setProperty('--parallax-y', `${y}px`);
   });
 }
 
 document.addEventListener('mousemove', parallax);
+
+function parallaxScroll() {
+  const scrollY = window.scrollY || window.pageYOffset;
+  scrollParallaxItems.forEach((item) => {
+    const depth = parseFloat(item.dataset.scrollDepth) || 0.1;
+    const offset = scrollY * depth * -0.04;
+    item.style.setProperty('--scroll-y', `${offset}px`);
+  });
+}
+
+window.addEventListener('scroll', parallaxScroll);
+parallaxScroll();
 
 const observer = new IntersectionObserver(
   (entries) => {
@@ -196,6 +210,7 @@ scrollLinks.forEach((link) => {
     const href = link.getAttribute('href');
     if (href.length > 1) {
       e.preventDefault();
+      history.replaceState(null, '', href);
       document.querySelector(href)?.scrollIntoView({ behavior: 'smooth' });
     }
   });
