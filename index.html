@@ -20,17 +20,18 @@
 
     <header class="nav">
       <div class="brand">Asher Jay</div>
+      <button class="nav-toggle" aria-label="Toggle menu">☰</button>
       <nav class="nav-links">
-        <a href="#work">Work</a>
-        <a href="#services">Services</a>
-        <a href="#devices">Devices</a>
+        <a href="#top">Home</a>
+        <a href="#projects">Projects</a>
+        <a href="#gadgets">Gadgets</a>
         <a href="#contact">Contact</a>
       </nav>
       <a class="pill" href="mailto:hello@asherjay.dev">Let’s talk</a>
     </header>
 
     <main>
-      <section class="hero">
+      <section class="hero" id="top">
         <div class="hero__copy">
           <p class="eyebrow">Immersive portfolio — Apple-grade feel</p>
           <h1>
@@ -44,7 +45,7 @@
           </p>
           <div class="cta-row">
             <a class="cta primary" href="#work">See the flow</a>
-            <a class="cta ghost" href="#devices">Shop gadgets</a>
+            <a class="cta ghost" href="#gadgets">Shop gadgets</a>
           </div>
           <div class="hero__meta">
             <div>
@@ -62,20 +63,22 @@
           </div>
         </div>
         <div class="hero__visual" data-tilt>
-          <div class="hero__frame">
-            <div class="frame__glow"></div>
-            <div class="frame__content">
-              <p class="small">Immersive drop</p>
-              <h3>Flow that feels like hardware</h3>
-              <p class="muted">
-                Layered glass, adaptive gradients, and subtle parallax mirror the
-                tactility of premium devices.
-              </p>
+          <div class="gadget-frame">
+            <div class="gadget-frame__badge">Flagship drop</div>
+            <img
+              src="images/gadget-collage.svg"
+              alt="Collage of MacBook, iPhone 17 Pro Max, iPhone 17, Galaxy S25 Ultra, and JBL speaker"
+              loading="lazy"
+              class="gadget-frame__image"
+            />
+            <div class="gadget-frame__footer">
+              <div>
+                <h3>Flagship gadget hero</h3>
+                <p class="muted">Swap <code>images/gadget-collage.svg</code> with your final render to update the hero instantly.</p>
+              </div>
+              <div class="pill mini translucent">Live visual</div>
             </div>
           </div>
-          <div class="floating-tag" data-depth="0.25">Cinematic scroll</div>
-          <div class="floating-tag" data-depth="0.45">Realtime lighting</div>
-          <div class="floating-tag" data-depth="0.65">Magnetic CTA</div>
         </div>
         <div class="scroll-indicator">Scroll to explore</div>
       </section>
@@ -247,6 +250,77 @@
               <p>Edge-ready builds, QA on real hardware, and concierge handoff.</p>
             </div>
           </div>
+        </div>
+      </section>
+
+      <section id="gadgets" class="section reveal gadgets-highlight">
+        <div class="section__header">
+          <p class="eyebrow">Gadgets</p>
+          <h2>Featured devices ready to ship with concierge setup.</h2>
+        </div>
+        <div class="highlight-grid">
+          <article class="highlight-card" data-tilt>
+            <div class="thumb phone"></div>
+            <div class="highlight-body">
+              <p class="small">Phones</p>
+              <h3>iPhone 17 PM + Galaxy S25 Ultra</h3>
+              <p class="muted">Flagship cameras, calibrated displays, and premium unboxing.</p>
+            </div>
+          </article>
+          <article class="highlight-card" data-tilt>
+            <div class="thumb laptop"></div>
+            <div class="highlight-body">
+              <p class="small">Laptops</p>
+              <h3>MacBook Pro creator kits</h3>
+              <p class="muted">Color-accurate, silent performance tuned for design and edit suites.</p>
+            </div>
+          </article>
+          <article class="highlight-card" data-tilt>
+            <div class="thumb audio"></div>
+            <div class="highlight-body">
+              <p class="small">Audio</p>
+              <h3>JBL Studio stacks</h3>
+              <p class="muted">Room-filling sound with clean controls and wireless pairing.</p>
+            </div>
+          </article>
+        </div>
+        <div class="section-actions">
+          <a class="cta primary" href="gadgets.html">Shop now</a>
+          <a class="cta ghost" href="#contact">Talk builds</a>
+        </div>
+      </section>
+
+      <section id="projects" class="section reveal projects-highlight">
+        <div class="section__header">
+          <p class="eyebrow">Projects</p>
+          <h2>Recent builds that blend cinematic web with high-end hardware.</h2>
+        </div>
+        <div class="project-grid">
+          <article class="project-card" data-tilt>
+            <div class="project-visual" aria-hidden="true"></div>
+            <div class="project-body">
+              <h3>Launch atlas</h3>
+              <p class="muted">Scroll-choreographed product unveil with realtime lighting passes.</p>
+            </div>
+          </article>
+          <article class="project-card" data-tilt>
+            <div class="project-visual alt" aria-hidden="true"></div>
+            <div class="project-body">
+              <h3>Creator gear hub</h3>
+              <p class="muted">Shop experience with hero-to-cart motion and tactile device previews.</p>
+            </div>
+          </article>
+          <article class="project-card" data-tilt>
+            <div class="project-visual neon" aria-hidden="true"></div>
+            <div class="project-body">
+              <h3>Gaming immersion</h3>
+              <p class="muted">HDR-ready landing with layered parallax and tilt-responsive cards.</p>
+            </div>
+          </article>
+        </div>
+        <div class="section-actions">
+          <a class="cta primary" href="projects.html">View more</a>
+          <a class="cta ghost" href="#work">Back to work</a>
         </div>
       </section>
 
