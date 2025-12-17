@@ -2,41 +2,61 @@ const tiltElements = document.querySelectorAll('[data-tilt]');
 const parallaxItems = document.querySelectorAll('[data-depth]');
 const scrollParallaxItems = document.querySelectorAll('[data-scroll-depth]');
 const reveals = document.querySelectorAll('.reveal');
-const views = document.querySelectorAll('[data-route]');
-const navLinks = document.querySelectorAll('.nav-links a');
-const brand = document.querySelector('.brand');
-const gadgetButtons = document.querySelectorAll('[data-gadget]');
-const gadgetDetail = document.getElementById('gadget-detail');
+const gadgetCards = document.querySelectorAll('.gadget-card');
+const detailName = document.getElementById('detail-name');
+const detailSubtitle = document.getElementById('detail-subtitle');
+const detailPrice = document.getElementById('detail-price');
+const detailSpecs = document.getElementById('detail-specs');
+const detailGallery = document.getElementById('detail-gallery');
+const closeDetail = document.getElementById('close-detail');
 
-const gadgetCopy = {
-  phones: {
-    label: 'Phones',
-    title: 'Camera-first, travel-ready builds',
-    meta: 'Pro sensors, clean Android/iOS setups, calibrated displays.',
-    points: [
-      'Unboxed, patched, and ready with key apps',
-      '2x cases + glass installed for first week protection',
-      'Camera and color profiles tuned to your style',
+const gadgets = {
+  'aurora-phone': {
+    name: 'Aurora Pro',
+    subtitle: 'Flagship camera-first build with cinematic color.',
+    price: '$1,199',
+    specs: [
+      '6.8" LTPO OLED · 120Hz',
+      '108MP triple camera · RAW video',
+      'Snapdragon X3 · 12GB RAM',
+      '1TB storage · 120W fast charge',
+    ],
+    images: [
+      'images/gadgets/phone-aurora-front.svg',
+      'images/gadgets/phone-aurora-back.svg',
+      'images/gadgets/phone-aurora-lifestyle.svg',
     ],
   },
-  laptops: {
-    label: 'Laptops',
-    title: 'Creator & engineering rigs',
-    meta: 'Calibrated color, quiet thermals, and performance presets.',
-    points: [
-      'Memory and storage spec guidance for your stack',
-      'Thermal profiles and fan curves dialed in',
-      'Peripherals paired for editing, coding, or 3D',
+  'studio-laptop': {
+    name: 'Studio Laptop',
+    subtitle: 'Ultra-thin workstation tuned for render and code.',
+    price: '$2,499',
+    specs: [
+      '14" mini-LED · 120Hz',
+      'RTX Studio graphics · 16GB VRAM',
+      'Intel Ultra 9 · 32GB RAM',
+      '2TB NVMe · Studio mic array',
+    ],
+    images: [
+      'images/gadgets/laptop-studio-side.svg',
+      'images/gadgets/laptop-studio-keyboard.svg',
+      'images/gadgets/laptop-studio-side.svg',
     ],
   },
-  gaming: {
-    label: 'Gaming',
-    title: 'High-refresh battlestations',
-    meta: '120-240hz displays, tuned inputs, immersive audio.',
-    points: [
-      'GPU/CPU pairing to avoid bottlenecks',
-      'Latency-tested controllers and keyboards',
-      'Ambilight + audio setups for immersive play',
+  'neon-rig': {
+    name: 'Neon Rig',
+    subtitle: 'High-refresh battle station with liquid cooling.',
+    price: '$3,199',
+    specs: [
+      'Ryzen 9 · Custom loop cooling',
+      'RTX 5090 · 24GB VRAM',
+      '64GB DDR5 · 2TB Gen5 NVMe',
+      'Wi-Fi 7 · 1200W platinum PSU',
+    ],
+    images: [
+      'images/gadgets/gaming-rig-neon.svg',
+      'images/gadgets/gaming-rig-neon.svg',
+      'images/gadgets/phone-aurora-front.svg',
     ],
   },
 };
@@ -103,90 +123,87 @@ scrollLinks.forEach((link) => {
     const href = link.getAttribute('href');
     if (href.length > 1) {
       e.preventDefault();
+      history.replaceState(null, '', href);
       document.querySelector(href)?.scrollIntoView({ behavior: 'smooth' });
     }
   });
 });
 
-function parseHash() {
-  const raw = window.location.hash.replace('#', '');
-  if (!raw) return [];
-  return raw.split('/').filter(Boolean);
-}
+function buildGallery(images) {
+  if (!detailGallery) return;
+  const main = document.createElement('div');
+  main.className = 'gadget-gallery__main';
+  main.style.backgroundImage = `url(${images[0]})`;
 
-function setActiveNav(baseRoute) {
-  navLinks.forEach((link) => {
-    const target = link.getAttribute('href')?.replace('#', '') || '';
-    const segment = target.split('/').filter(Boolean)[0] || '';
-    link.classList.toggle('active', `/${segment}` === baseRoute);
+  const thumbs = document.createElement('div');
+  thumbs.className = 'gadget-gallery__thumbs';
+
+  images.forEach((src, index) => {
+    const thumb = document.createElement('button');
+    thumb.type = 'button';
+    thumb.className = `gadget-thumb ${index === 0 ? 'is-active' : ''}`;
+    thumb.style.backgroundImage = `url(${src})`;
+    thumb.addEventListener('click', () => {
+      main.style.backgroundImage = `url(${src})`;
+      thumbs.querySelectorAll('.gadget-thumb').forEach((t) =>
+        t.classList.remove('is-active')
+      );
+      thumb.classList.add('is-active');
+    });
+    thumbs.appendChild(thumb);
   });
+
+  detailGallery.innerHTML = '';
+  detailGallery.appendChild(main);
+  detailGallery.appendChild(thumbs);
 }
 
-function resetGadgetDetail() {
-  if (!gadgetDetail) return;
-  const pill = gadgetDetail.querySelector('.pill');
-  const title = gadgetDetail.querySelector('.detail-title');
-  const meta = gadgetDetail.querySelector('.detail-meta');
-  const list = gadgetDetail.querySelector('.detail-list');
-  if (pill) pill.textContent = 'Select a gadget';
-  if (title) title.textContent = 'Explore the catalog';
-  if (meta) meta.textContent = 'Choose a device to see concierge notes and specs.';
-  if (list) list.innerHTML = '';
-}
+function renderGadget(id, skipHashUpdate = false) {
+  const gadget = gadgets[id];
+  if (!gadget) return;
 
-function updateGadgetDetail(slug = 'phones') {
-  if (!gadgetDetail) return;
-  const detail = gadgetCopy[slug];
-  const pill = gadgetDetail.querySelector('.pill');
-  const title = gadgetDetail.querySelector('.detail-title');
-  const meta = gadgetDetail.querySelector('.detail-meta');
-  const list = gadgetDetail.querySelector('.detail-list');
+  detailName.textContent = gadget.name;
+  detailSubtitle.textContent = gadget.subtitle;
+  detailPrice.textContent = gadget.price;
 
-  if (!detail || !pill || !title || !meta || !list) return;
-
-  pill.textContent = detail.label;
-  title.textContent = detail.title;
-  meta.textContent = detail.meta;
-  list.innerHTML = '';
-  detail.points.forEach((point) => {
+  detailSpecs.innerHTML = '';
+  gadget.specs.forEach((spec) => {
     const li = document.createElement('li');
-    li.textContent = point;
-    list.appendChild(li);
-  });
-}
-
-function handleRouteChange() {
-  const segments = parseHash();
-  const baseRoute = segments[0] ? `/${segments[0]}` : '/';
-
-  views.forEach((view) => {
-    view.classList.toggle('active', view.dataset.route === baseRoute);
+    li.textContent = spec;
+    detailSpecs.appendChild(li);
   });
 
-  setActiveNav(baseRoute);
+  buildGallery(gadget.images);
 
-  if (baseRoute === '/gadgets') {
-    updateGadgetDetail(segments[1] || 'phones');
-  } else {
-    resetGadgetDetail();
+  if (!skipHashUpdate) {
+    const newHash = `#gadgets/${id}`;
+    if (location.hash !== newHash) {
+      history.replaceState(null, '', newHash);
+    }
   }
 }
 
-window.addEventListener('hashchange', handleRouteChange);
-window.addEventListener('load', () => {
-  if (!window.location.hash) {
-    window.location.hash = '#/';
-  }
-  handleRouteChange();
-});
+function applyRouteFromHash() {
+  if (!location.hash.startsWith('#gadgets')) return;
+  const [, gadgetId] = location.hash.split('/');
+  const id = gadgetId || 'aurora-phone';
+  renderGadget(id, true);
+  document.querySelector('#gadgets')?.scrollIntoView({ behavior: 'smooth' });
+}
 
-brand?.addEventListener('click', () => {
-  window.location.hash = '#/';
-});
-
-gadgetButtons.forEach((button) => {
-  button.addEventListener('click', () => {
-    const slug = button.dataset.gadget;
-    window.location.hash = `#/gadgets/${slug}`;
+gadgetCards.forEach((card) => {
+  card.addEventListener('click', () => {
+    const id = card.dataset.gadgetId;
+    renderGadget(id);
   });
 });
+
+closeDetail?.addEventListener('click', () => {
+  history.replaceState(null, '', '#gadgets');
+});
+
+if (detailName && detailSubtitle && detailPrice && detailSpecs && detailGallery) {
+  renderGadget('aurora-phone', true);
+  applyRouteFromHash();
+  window.addEventListener('hashchange', applyRouteFromHash);
+}

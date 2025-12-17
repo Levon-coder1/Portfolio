@@ -21,11 +21,11 @@
     <header class="nav">
       <button class="brand" type="button" data-nav>Asher Jay</button>
       <nav class="nav-links">
-        <a href="#/projects">Projects</a>
-        <a href="#/gadgets">Gadgets</a>
-        <a href="#/socials">Socials</a>
-        <a href="#/hub">Hub</a>
-        <a href="#/contact">Contact</a>
+        <a href="#work">Work</a>
+        <a href="#services">Services</a>
+        <a href="#devices">Devices</a>
+        <a href="#gadgets">Gadgets</a>
+        <a href="#contact">Contact</a>
       </nav>
       <a class="pill" href="mailto:hello@asherjay.dev">Let’s talk</a>
     </header>
@@ -325,7 +325,99 @@
               >
             </div>
           </div>
-        </section>
+        </div>
+      </section>
+
+      <section id="gadgets" class="section reveal gadgets">
+        <div class="section__header">
+          <p class="eyebrow">Gadgets</p>
+          <h2>Shop the flagship drop with rich detail on every build.</h2>
+        </div>
+        <div class="gadgets__layout">
+          <div class="gadgets__grid">
+            <article class="gadget-card" data-gadget-id="aurora-phone" data-tilt>
+              <div
+                class="gadget-card__image"
+                style="background-image: url('images/gadgets/phone-aurora-front.svg')"
+              ></div>
+              <div class="gadget-card__body">
+                <div class="pill mini">Phone</div>
+                <h3>Aurora Pro</h3>
+                <p class="muted">Flagship camera-first build with cinematic color.</p>
+                <div class="price-tag">$1,199</div>
+              </div>
+            </article>
+            <article class="gadget-card" data-gadget-id="studio-laptop" data-tilt>
+              <div
+                class="gadget-card__image alt"
+                style="background-image: url('images/gadgets/laptop-studio-side.svg')"
+              ></div>
+              <div class="gadget-card__body">
+                <div class="pill mini">Laptop</div>
+                <h3>Studio Laptop</h3>
+                <p class="muted">Ultra-thin workstation tuned for render and code.</p>
+                <div class="price-tag">$2,499</div>
+              </div>
+            </article>
+            <article class="gadget-card" data-gadget-id="neon-rig" data-tilt>
+              <div
+                class="gadget-card__image neon"
+                style="background-image: url('images/gadgets/gaming-rig-neon.svg')"
+              ></div>
+              <div class="gadget-card__body">
+                <div class="pill mini">Gaming</div>
+                <h3>Neon Rig</h3>
+                <p class="muted">High-refresh battle station with liquid cooling.</p>
+                <div class="price-tag">$3,199</div>
+              </div>
+            </article>
+          </div>
+
+          <div class="gadget-detail" id="gadget-detail">
+            <div class="gadget-detail__header">
+              <div>
+                <p class="eyebrow">Detail view</p>
+                <h3 id="detail-name">Aurora Pro</h3>
+                <p class="muted" id="detail-subtitle">
+                  Flagship camera-first build with cinematic color.
+                </p>
+              </div>
+              <button class="pill ghost" id="close-detail" type="button">Close</button>
+            </div>
+            <div class="gadget-gallery" id="detail-gallery"></div>
+            <div class="gadget-meta">
+              <div>
+                <p class="eyebrow">Pricing</p>
+                <h4 id="detail-price">$1,199</h4>
+                <p class="muted">Taxes & import logistics handled.</p>
+              </div>
+              <ul class="spec-list" id="detail-specs"></ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="section cta-panel reveal">
+        <div class="cta-card" data-tilt>
+          <div>
+            <p class="eyebrow">Let’s build something bright</p>
+            <h2>Ready for cinematic web + premium hardware?</h2>
+            <p class="lede">
+              Tell me about your launch, platform, or the gear you want to feel.
+              I’ll respond within 24 hours.
+            </p>
+          </div>
+          <div class="cta-actions">
+            <a class="cta primary" href="mailto:hello@asherjay.dev">Email Asher Jay</a>
+            <a
+              class="cta ghost"
+              href="https://wa.me/"
+              target="_blank"
+              rel="noreferrer"
+              >WhatsApp</a
+            >
+          </div>
+        </div>
       </section>
     </main>
 
