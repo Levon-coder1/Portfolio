@@ -1,494 +1,588 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Divinelove — Immersive Engineer & Gadget Vendor</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Clash+Display:wght@600&display=swap"
-    <title>Divinelove | Portfolio</title>
-    <link
-      rel="preconnect"
-      href="https://fonts.googleapis.com"
-    />
-    <link
-      rel="preconnect"
-      href="https://fonts.gstatic.com"
-      crossorigin
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-    <div class="bg-noise"></div>
-    <div class="bg-gradient orb orb-a"></div>
-    <div class="bg-gradient orb orb-b"></div>
-    <div class="bg-gradient orb orb-c"></div>
-
-    <header class="nav">
-      <div class="brand">Divinelove</div>
-      <nav class="nav-links">
-        <a href="#work">Work</a>
-        <a href="#services">Services</a>
-        <a href="#devices">Devices</a>
-        <a href="#contact">Contact</a>
-      </nav>
-      <a class="pill" href="mailto:hello@divinelove.dev">Let’s talk</a>
-    <div class="bg-grid"></div>
-    <header class="nav">
-      <div class="brand">Divinelove</div>
-      <nav class="nav-links">
-        <a href="#about">About</a>
-        <a href="#services">Services</a>
-        <a href="#gallery">Showcase</a>
-        <a href="#contact">Contact</a>
-      </nav>
-      <a class="pill" href="#contact">Let’s talk</a>
-    </header>
-
-    <main>
-      <section class="hero">
-        <div class="hero__copy">
-          <p class="eyebrow">Immersive portfolio — Apple-grade feel</p>
-          <h1>
-            Divinelove<br /><span class="stroke">Software engineer</span>
-            <span class="accent">& gadget curator</span>
-          </h1>
-          <p class="lede">
-            22-year-old engineer shaping fluid, cinematic web stories while
-            sourcing flagship phones, laptops, and gaming tech. Precision,
-            lighting, and motion tuned to feel inevitable.
-          </p>
-          <div class="cta-row">
-            <a class="cta primary" href="#work">See the flow</a>
-            <a class="cta ghost" href="#devices">Shop gadgets</a>
-          </div>
-          <div class="hero__meta">
-            <div>
-              <p class="meta-label">Based in</p>
-              <p class="meta-value">Remote · Global</p>
-            </div>
-            <div>
-              <p class="meta-label">Signature</p>
-              <p class="meta-value">3D transitions · Seamless scroll</p>
-            </div>
-            <div>
-              <p class="meta-label">Industries</p>
-              <p class="meta-value">Tech, Commerce, Lifestyle</p>
-            </div>
-          </div>
-        </div>
-        <div class="hero__visual" data-tilt>
-          <div class="hero__frame">
-            <div class="frame__glow"></div>
-            <div class="frame__content">
-              <p class="small">Immersive drop</p>
-              <h3>Flow that feels like hardware</h3>
-              <p class="muted">
-                Layered glass, adaptive gradients, and subtle parallax mirror the
-                tactility of premium devices.
-              </p>
-            </div>
-          </div>
-          <div class="floating-tag" data-depth="0.25">Cinematic scroll</div>
-          <div class="floating-tag" data-depth="0.45">Realtime lighting</div>
-          <div class="floating-tag" data-depth="0.65">Magnetic CTA</div>
-        </div>
-        <div class="scroll-indicator">Scroll to explore</div>
-      </section>
-
-      <section id="work" class="section reveal">
-        <div class="section__header">
-          <p class="eyebrow">Work showcase</p>
-          <h2>Fluid storytelling with depth and precision.</h2>
-        </div>
-        <div class="work-grid">
-          <article class="work-card" data-tilt>
-            <div class="work-visual gradient-1"></div>
-            <div class="work-body">
-              <p class="small">Product hero</p>
-              <h3>Immersive launch surfaces</h3>
-              <p class="muted">
-                Apple-like pacing with staged reveals, spatial transitions, and
-                copy that rides the motion.
-              </p>
-            </div>
-          </article>
-          <article class="work-card" data-tilt>
-            <div class="work-visual gradient-2"></div>
-            <div class="work-body">
-              <p class="small">Experience layer</p>
-              <h3>3D storytelling & parallax</h3>
-              <p class="muted">
-                Multi-plane parallax and tilt cues that keep attention flowing as
-                the narrative unfolds.
-              </p>
-            </div>
-          </article>
-          <article class="work-card" data-tilt>
-            <div class="work-visual gradient-3"></div>
-            <div class="work-body">
-              <p class="small">Commerce</p>
-              <h3>Flagship gadget drops</h3>
-              <p class="muted">
-                Curated phones, laptops, and gaming rigs presented with tactile
-                UI so buyers feel the premium fit.
-              </p>
-            </div>
-          </article>
-        </div>
-      </section>
-
-      <section class="marquee" aria-label="signature stack">
-        <div class="marquee__track">
-          <span>React</span><span>Next.js</span><span>TypeScript</span
-          ><span>Three.js</span><span>WebGL</span><span>Framer Motion</span
-          ><span>Tailwind</span><span>Shopify</span><span>Figma</span>
-        </div>
-      </section>
-
-      <section id="services" class="section reveal split">
-        <div class="section__header">
-          <p class="eyebrow">Services</p>
-          <h2>Engineering & experience design built to feel inevitable.</h2>
-        </div>
-        <div class="split__grid">
-          <div class="pillar" data-tilt>
-            <div class="pill mini">Web</div>
-            <h3>Immersive product sites</h3>
-            <p>
-              Hero-to-checkout narratives with micro-interactions, lighting
-              passes, and cinematic rhythm.
-            </p>
-            <ul>
-              <li>Launch storytelling</li>
-              <li>Scroll-based reveals</li>
-              <li>Conversion-focused UX</li>
-            </ul>
-          </div>
-          <div class="pillar" data-tilt>
-            <div class="pill mini">Platforms</div>
-            <h3>Full-stack experiences</h3>
-            <p>
-              Modern apps with clean APIs, analytics, auth, and realtime layers
-              for teams that ship fast.
-            </p>
-            <ul>
-              <li>Next.js + TypeScript</li>
-              <li>Edge-ready APIs</li>
-              <li>Performance tuning</li>
-            </ul>
-          </div>
-          <div class="pillar" data-tilt>
-            <div class="pill mini">Hardware</div>
-            <h3>Gadget concierge</h3>
-            <p>
-              Phones, laptops, and gaming tech sourced to spec—with calibration
-              and onboarding support.
-            </p>
-            <ul>
-              <li>Flagship curation</li>
-              <li>Creator & gaming rigs</li>
-              <li>Logistics handled</li>
-            </ul>
-        <div class="hero-copy">
-          <p class="eyebrow">Portfolio · Immersive</p>
-          <h1>
-            Divinelove —
-            <span class="gradient-text">software engineer</span>
-            crafting smooth, premium digital and gadget experiences.
-          </h1>
-          <p class="lede">
-            22-year-old creator blending code with cutting-edge devices. From
-            bespoke web platforms to curated laptops and gaming tech, I deliver
-            a seamless, elevated feel—think Apple-like precision.
-          </p>
-          <div class="cta-group">
-            <a class="cta primary" href="#gallery">View showcase</a>
-            <a class="cta ghost" href="#services">Explore services</a>
-          </div>
-          <div class="meta">
-            <div>
-              <p class="meta-label">Based in</p>
-              <p class="meta-value">Global · Remote-first</p>
-            </div>
-            <div>
-              <p class="meta-label">Focus</p>
-              <p class="meta-value">Web engineering · Gadget sourcing</p>
-            </div>
-            <div>
-              <p class="meta-label">Tone</p>
-              <p class="meta-value">Minimal · Luminous · Smooth</p>
-            </div>
-          </div>
-        </div>
-        <div class="hero-visual">
-          <div class="orbital" aria-hidden="true"></div>
-          <div class="device-card" data-tilt>
-            <div class="device-screen">
-              <div class="glow"></div>
-              <div class="device-content">
-                <p class="small">Signature build</p>
-                <h3>MacBook-level polish</h3>
-                <p class="muted">Curated laptops and gaming tech, tuned for performance.</p>
-              </div>
-            </div>
-            <div class="device-floating" data-depth="0.25">Ultra-clear retina</div>
-            <div class="device-floating" data-depth="0.45">Adaptive RGB</div>
-          </div>
-          <div class="pill stat" data-depth="0.3">3D transitions</div>
-          <div class="pill stat" data-depth="0.6">Gadget concierge</div>
-        </div>
-      </section>
-
-      <section id="about" class="panel">
-        <div class="panel-header">
-          <p class="eyebrow">Who I am</p>
-          <h2>Precision-driven engineer and gadget curator.</h2>
-        </div>
-        <div class="panel-grid">
-          <div class="card" data-tilt>
-            <h3>Software engineering</h3>
-            <p>
-              Building resilient web experiences with modern stacks, performant
-              animations, and scalable systems. I love micro-interactions that
-              feel invisible yet memorable.
-            </p>
-            <div class="tags">
-              <span>React</span><span>TypeScript</span><span>Next.js</span>
-              <span>WebGL</span>
-            </div>
-          </div>
-          <div class="card" data-tilt>
-            <h3>Phones, laptops & gaming</h3>
-            <p>
-              Vendor for premium devices—phones, laptops, and gaming tech—so you
-              get the exact toolset for your craft. Performance, aesthetics, and
-              reliability are non-negotiable.
-            </p>
-            <div class="tags">
-              <span>Flagship phones</span><span>Creator laptops</span>
-              <span>Custom builds</span>
-            </div>
-          </div>
-          <div class="card" data-tilt>
-            <h3>Experience layer</h3>
-            <p>
-              Apple-like flow: smooth scroll, layered depth, and tactile
-              feedback. Every surface is intentional, every motion is tuned.
-            </p>
-            <div class="tags">
-              <span>3D transitions</span><span>Micro-interactions</span>
-              <span>Design systems</span>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="services" class="panel gradient">
-        <div class="panel-header">
-          <p class="eyebrow">Offerings</p>
-          <h2>What we can build together</h2>
-          <p class="lede">
-            Engineering tailored products and sourcing premium devices that keep
-            you ahead of the curve.
-          </p>
-        </div>
-        <div class="panel-grid">
-          <div class="card outline" data-tilt>
-            <div class="pill mini">Web</div>
-            <h3>Immersive product sites</h3>
-            <p>
-              Bespoke marketing sites with buttery motion, WebGL accents, and
-              conversion-focused storytelling.
-            </p>
-          </div>
-          <div class="card outline" data-tilt>
-            <div class="pill mini">Platforms</div>
-            <h3>Full-stack experiences</h3>
-            <p>
-              Scalable apps with clean APIs, analytics, and real-time UX. Built
-              with modern frameworks and cloud-native patterns.
-            </p>
-          </div>
-          <div class="card outline" data-tilt>
-            <div class="pill mini">Hardware</div>
-            <h3>Gadget concierge</h3>
-            <p>
-              Curated phones, laptops, and gaming rigs configured to your
-              workflow. Sourced, optimized, and delivered.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <section id="devices" class="section reveal devices">
-        <div class="section__header">
-          <p class="eyebrow">Device drops</p>
-          <h2>Premium hardware with the same polish as the sites.</h2>
-        </div>
-        <div class="devices__grid">
-          <div class="device" data-tilt>
-            <div class="device__image shimmer"></div>
-            <div class="device__body">
-              <p class="small">Phones</p>
-              <h3>Flagship & pro camera builds</h3>
-              <p class="muted">
-                Pixel-perfect screens, elite cameras, and clean setups so you can
-                shoot, edit, and share instantly.
-              </p>
-            </div>
-          </div>
-          <div class="device" data-tilt>
-            <div class="device__image shimmer alt"></div>
-            <div class="device__body">
-              <p class="small">Laptops</p>
-              <h3>Creator & engineering rigs</h3>
-              <p class="muted">
-                Quiet power with calibrated color, tuned performance, and a
-                frictionless handoff to your workflow.
-              </p>
-            </div>
-          </div>
-          <div class="device" data-tilt>
-            <div class="device__image shimmer neon"></div>
-            <div class="device__body">
-              <p class="small">Gaming</p>
-              <h3>High-refresh setups</h3>
-              <p class="muted">
-                Stacked GPUs, responsive controls, and immersive audio—built for
-                creators who play hard.
-      <section id="gallery" class="panel">
-        <div class="panel-header">
-          <p class="eyebrow">Showcase</p>
-          <h2>Highlights with an Apple-grade finish.</h2>
-        </div>
-        <div class="gallery">
-          <div class="gallery-item" data-tilt>
-            <div class="gallery-visual gradient-1"></div>
-            <div class="gallery-copy">
-              <p class="small">Immersive web</p>
-              <h3>Launch-ready hero experiences</h3>
-              <p class="muted">
-                Layered lighting, precise typography, and motion that guides
-                attention without distractions.
-              </p>
-            </div>
-          </div>
-          <div class="gallery-item" data-tilt>
-            <div class="gallery-visual gradient-2"></div>
-            <div class="gallery-copy">
-              <p class="small">Hardware drops</p>
-              <h3>Curated phones & laptops</h3>
-              <p class="muted">
-                Flagship devices tuned for creators and gamers—paired with the
-                software that makes them shine.
-              </p>
-            </div>
-          </div>
-          <div class="gallery-item" data-tilt>
-            <div class="gallery-visual gradient-3"></div>
-            <div class="gallery-copy">
-              <p class="small">3D + motion</p>
-              <h3>Depth, parallax, and light</h3>
-              <p class="muted">
-                Micro-interactions and depth cues that feel tactile and
-                responsive, ready for modern browsers.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="section reveal duo">
-        <div class="section__header">
-          <p class="eyebrow">Process</p>
-          <h2>Flow-first delivery tuned for rhythm and detail.</h2>
-        </div>
-        <div class="timeline">
-          <div class="step" data-tilt>
-            <span class="step__index">01</span>
-            <div>
-              <h3>Discover & stage</h3>
-              <p>Define the emotional arc, core interactions, and device needs.</p>
-            </div>
-          </div>
-          <div class="step" data-tilt>
-            <span class="step__index">02</span>
-            <div>
-              <h3>Design & prototype</h3>
-              <p>Motion-first frames, lighting, and microcopy aligned to your brand.</p>
-            </div>
-          </div>
-          <div class="step" data-tilt>
-            <span class="step__index">03</span>
-            <div>
-              <h3>Build & deliver</h3>
-              <p>Edge-ready builds, QA on real hardware, and concierge handoff.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="contact" class="section cta-panel reveal">
-        <div class="cta-card" data-tilt>
-          <div>
-            <p class="eyebrow">Let’s build something bright</p>
-            <h2>Ready for cinematic web + premium hardware?</h2>
-            <p class="lede">
-              Tell me about your launch, platform, or the gear you want to feel.
-              I’ll respond within 24 hours.
-      <section class="panel stack">
-        <div class="panel-header">
-          <p class="eyebrow">Stack</p>
-          <h2>Technologies I love to ship with</h2>
-        </div>
-        <div class="stack-grid">
-          <span class="pill mini">React</span>
-          <span class="pill mini">Next.js</span>
-          <span class="pill mini">TypeScript</span>
-          <span class="pill mini">Tailwind</span>
-          <span class="pill mini">Framer Motion</span>
-          <span class="pill mini">Three.js</span>
-          <span class="pill mini">Node.js</span>
-          <span class="pill mini">GraphQL</span>
-          <span class="pill mini">Figma</span>
-        </div>
-      </section>
-
-      <section id="contact" class="panel cta-panel">
-        <div class="cta-card" data-tilt>
-          <div>
-            <p class="eyebrow">Let’s collaborate</p>
-            <h2>Ready for a smooth, future-facing build?</h2>
-            <p class="lede">
-              Tell me about your product or the hardware you need. I’ll craft a
-              premium experience and source the perfect tech to match.
-            </p>
-          </div>
-          <div class="cta-actions">
-            <a class="cta primary" href="mailto:hello@divinelove.dev">Email Divinelove</a>
-            <a class="cta ghost" href="https://wa.me/" target="_blank" rel="noreferrer">WhatsApp</a>
-          </div>
-        </div>
-      </section>
-    </main>
-
-    <footer class="footer">
-      <p>Divinelove · Immersive engineer & gadget vendor · 2024</p>
-      <p>Divinelove · Software Engineer & Gadget Vendor · 2024</p>
-      <div class="footer-links">
-        <a href="#">Instagram</a>
-        <a href="#">LinkedIn</a>
-        <a href="#">X</a>
-      </div>
-    </footer>
-
-    <script src="script.js"></script>
-  </body>
-</html>
+diff --git a/index.html b/index.html
+new file mode 100644
+index 0000000000000000000000000000000000000000..14050498eeda0f4389fb60a67fb5e7f69f0832dd
+--- /dev/null
++++ b/index.html
+@@ -0,0 +1,288 @@
++<!DOCTYPE html>
++<html lang="en">
++  <head>
++    <meta charset="UTF-8" />
++    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
++    <title>Divinelove — Immersive Engineer & Gadget Vendor</title>
++    <link rel="preconnect" href="https://fonts.googleapis.com" />
++    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
++    <link
++      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Clash+Display:wght@600&display=swap"
++      rel="stylesheet"
++    />
++    <link rel="stylesheet" href="styles.css" />
++  </head>
++  <body>
++    <div class="bg-noise"></div>
++    <div class="bg-gradient orb orb-a"></div>
++    <div class="bg-gradient orb orb-b"></div>
++    <div class="bg-gradient orb orb-c"></div>
++
++    <header class="nav">
++      <div class="brand">Divinelove</div>
++      <nav class="nav-links">
++        <a href="#work">Work</a>
++        <a href="#services">Services</a>
++        <a href="#devices">Devices</a>
++        <a href="#contact">Contact</a>
++      </nav>
++      <a class="pill" href="mailto:hello@divinelove.dev">Let’s talk</a>
++    </header>
++
++    <main>
++      <section class="hero">
++        <div class="hero__copy">
++          <p class="eyebrow">Immersive portfolio — Apple-grade feel</p>
++          <h1>
++            Divinelove<br /><span class="stroke">Software engineer</span>
++            <span class="accent">& gadget curator</span>
++          </h1>
++          <p class="lede">
++            22-year-old engineer shaping fluid, cinematic web stories while
++            sourcing flagship phones, laptops, and gaming tech. Precision,
++            lighting, and motion tuned to feel inevitable.
++          </p>
++          <div class="cta-row">
++            <a class="cta primary" href="#work">See the flow</a>
++            <a class="cta ghost" href="#devices">Shop gadgets</a>
++          </div>
++          <div class="hero__meta">
++            <div>
++              <p class="meta-label">Based in</p>
++              <p class="meta-value">Remote · Global</p>
++            </div>
++            <div>
++              <p class="meta-label">Signature</p>
++              <p class="meta-value">3D transitions · Seamless scroll</p>
++            </div>
++            <div>
++              <p class="meta-label">Industries</p>
++              <p class="meta-value">Tech, Commerce, Lifestyle</p>
++            </div>
++          </div>
++        </div>
++        <div class="hero__visual" data-tilt>
++          <div class="hero__frame">
++            <div class="frame__glow"></div>
++            <div class="frame__content">
++              <p class="small">Immersive drop</p>
++              <h3>Flow that feels like hardware</h3>
++              <p class="muted">
++                Layered glass, adaptive gradients, and subtle parallax mirror the
++                tactility of premium devices.
++              </p>
++            </div>
++          </div>
++          <div class="floating-tag" data-depth="0.25">Cinematic scroll</div>
++          <div class="floating-tag" data-depth="0.45">Realtime lighting</div>
++          <div class="floating-tag" data-depth="0.65">Magnetic CTA</div>
++        </div>
++        <div class="scroll-indicator">Scroll to explore</div>
++      </section>
++
++      <section id="work" class="section reveal">
++        <div class="section__header">
++          <p class="eyebrow">Work showcase</p>
++          <h2>Fluid storytelling with depth and precision.</h2>
++        </div>
++        <div class="work-grid">
++          <article class="work-card" data-tilt>
++            <div class="work-visual gradient-1"></div>
++            <div class="work-body">
++              <p class="small">Product hero</p>
++              <h3>Immersive launch surfaces</h3>
++              <p class="muted">
++                Apple-like pacing with staged reveals, spatial transitions, and
++                copy that rides the motion.
++              </p>
++            </div>
++          </article>
++          <article class="work-card" data-tilt>
++            <div class="work-visual gradient-2"></div>
++            <div class="work-body">
++              <p class="small">Experience layer</p>
++              <h3>3D storytelling & parallax</h3>
++              <p class="muted">
++                Multi-plane parallax and tilt cues that keep attention flowing as
++                the narrative unfolds.
++              </p>
++            </div>
++          </article>
++          <article class="work-card" data-tilt>
++            <div class="work-visual gradient-3"></div>
++            <div class="work-body">
++              <p class="small">Commerce</p>
++              <h3>Flagship gadget drops</h3>
++              <p class="muted">
++                Curated phones, laptops, and gaming rigs presented with tactile
++                UI so buyers feel the premium fit.
++              </p>
++            </div>
++          </article>
++        </div>
++      </section>
++
++      <section class="marquee" aria-label="signature stack">
++        <div class="marquee__track">
++          <span>React</span><span>Next.js</span><span>TypeScript</span
++          ><span>Three.js</span><span>WebGL</span><span>Framer Motion</span
++          ><span>Tailwind</span><span>Shopify</span><span>Figma</span>
++        </div>
++      </section>
++
++      <section id="services" class="section reveal split">
++        <div class="section__header">
++          <p class="eyebrow">Services</p>
++          <h2>Engineering & experience design built to feel inevitable.</h2>
++        </div>
++        <div class="split__grid">
++          <div class="pillar" data-tilt>
++            <div class="pill mini">Web</div>
++            <h3>Immersive product sites</h3>
++            <p>
++              Hero-to-checkout narratives with micro-interactions, lighting
++              passes, and cinematic rhythm.
++            </p>
++            <ul>
++              <li>Launch storytelling</li>
++              <li>Scroll-based reveals</li>
++              <li>Conversion-focused UX</li>
++            </ul>
++          </div>
++          <div class="pillar" data-tilt>
++            <div class="pill mini">Platforms</div>
++            <h3>Full-stack experiences</h3>
++            <p>
++              Modern apps with clean APIs, analytics, auth, and realtime layers
++              for teams that ship fast.
++            </p>
++            <ul>
++              <li>Next.js + TypeScript</li>
++              <li>Edge-ready APIs</li>
++              <li>Performance tuning</li>
++            </ul>
++          </div>
++          <div class="pillar" data-tilt>
++            <div class="pill mini">Hardware</div>
++            <h3>Gadget concierge</h3>
++            <p>
++              Phones, laptops, and gaming tech sourced to spec—with calibration
++              and onboarding support.
++            </p>
++            <ul>
++              <li>Flagship curation</li>
++              <li>Creator & gaming rigs</li>
++              <li>Logistics handled</li>
++            </ul>
++          </div>
++        </div>
++      </section>
++
++      <section id="devices" class="section reveal devices">
++        <div class="section__header">
++          <p class="eyebrow">Device drops</p>
++          <h2>Premium hardware with the same polish as the sites.</h2>
++        </div>
++        <div class="devices__grid">
++          <div class="device" data-tilt>
++            <div class="device__image shimmer"></div>
++            <div class="device__body">
++              <p class="small">Phones</p>
++              <h3>Flagship & pro camera builds</h3>
++              <p class="muted">
++                Pixel-perfect screens, elite cameras, and clean setups so you can
++                shoot, edit, and share instantly.
++              </p>
++            </div>
++          </div>
++          <div class="device" data-tilt>
++            <div class="device__image shimmer alt"></div>
++            <div class="device__body">
++              <p class="small">Laptops</p>
++              <h3>Creator & engineering rigs</h3>
++              <p class="muted">
++                Quiet power with calibrated color, tuned performance, and a
++                frictionless handoff to your workflow.
++              </p>
++            </div>
++          </div>
++          <div class="device" data-tilt>
++            <div class="device__image shimmer neon"></div>
++            <div class="device__body">
++              <p class="small">Gaming</p>
++              <h3>High-refresh setups</h3>
++              <p class="muted">
++                Stacked GPUs, responsive controls, and immersive audio—built for
++                creators who play hard.
++              </p>
++            </div>
++          </div>
++        </div>
++      </section>
++
++      <section class="section reveal duo">
++        <div class="section__header">
++          <p class="eyebrow">Process</p>
++          <h2>Flow-first delivery tuned for rhythm and detail.</h2>
++        </div>
++        <div class="timeline">
++          <div class="step" data-tilt>
++            <span class="step__index">01</span>
++            <div>
++              <h3>Discover & stage</h3>
++              <p>Define the emotional arc, core interactions, and device needs.</p>
++            </div>
++          </div>
++          <div class="step" data-tilt>
++            <span class="step__index">02</span>
++            <div>
++              <h3>Design & prototype</h3>
++              <p>Motion-first frames, lighting, and microcopy aligned to your brand.</p>
++            </div>
++          </div>
++          <div class="step" data-tilt>
++            <span class="step__index">03</span>
++            <div>
++              <h3>Build & deliver</h3>
++              <p>Edge-ready builds, QA on real hardware, and concierge handoff.</p>
++            </div>
++          </div>
++        </div>
++      </section>
++
++      <section id="contact" class="section cta-panel reveal">
++        <div class="cta-card" data-tilt>
++          <div>
++            <p class="eyebrow">Let’s build something bright</p>
++            <h2>Ready for cinematic web + premium hardware?</h2>
++            <p class="lede">
++              Tell me about your launch, platform, or the gear you want to feel.
++              I’ll respond within 24 hours.
++            </p>
++          </div>
++          <div class="cta-actions">
++            <a class="cta primary" href="mailto:hello@divinelove.dev">Email Divinelove</a>
++            <a
++              class="cta ghost"
++              href="https://wa.me/"
++              target="_blank"
++              rel="noreferrer"
++              >WhatsApp</a
++            >
++          </div>
++        </div>
++      </section>
++    </main>
++
++    <footer class="footer">
++      <p>Divinelove · Immersive engineer & gadget vendor · 2024</p>
++      <div class="footer-links">
++        <a href="#">Instagram</a>
++        <a href="#">LinkedIn</a>
++        <a href="#">X</a>
++      </div>
++    </footer>
++
++    <script src="script.js"></script>
++  </body>
++</html>
+diff --git a/index.html b/index.html
+new file mode 100644
+index 0000000000000000000000000000000000000000..14050498eeda0f4389fb60a67fb5e7f69f0832dd
+--- /dev/null
++++ b/index.html
+@@ -0,0 +1,288 @@
++<!DOCTYPE html>
++<html lang="en">
++  <head>
++    <meta charset="UTF-8" />
++    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
++    <title>Divinelove — Immersive Engineer & Gadget Vendor</title>
++    <link rel="preconnect" href="https://fonts.googleapis.com" />
++    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
++    <link
++      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Clash+Display:wght@600&display=swap"
++      rel="stylesheet"
++    />
++    <link rel="stylesheet" href="styles.css" />
++  </head>
++  <body>
++    <div class="bg-noise"></div>
++    <div class="bg-gradient orb orb-a"></div>
++    <div class="bg-gradient orb orb-b"></div>
++    <div class="bg-gradient orb orb-c"></div>
++
++    <header class="nav">
++      <div class="brand">Divinelove</div>
++      <nav class="nav-links">
++        <a href="#work">Work</a>
++        <a href="#services">Services</a>
++        <a href="#devices">Devices</a>
++        <a href="#contact">Contact</a>
++      </nav>
++      <a class="pill" href="mailto:hello@divinelove.dev">Let’s talk</a>
++    </header>
++
++    <main>
++      <section class="hero">
++        <div class="hero__copy">
++          <p class="eyebrow">Immersive portfolio — Apple-grade feel</p>
++          <h1>
++            Divinelove<br /><span class="stroke">Software engineer</span>
++            <span class="accent">& gadget curator</span>
++          </h1>
++          <p class="lede">
++            22-year-old engineer shaping fluid, cinematic web stories while
++            sourcing flagship phones, laptops, and gaming tech. Precision,
++            lighting, and motion tuned to feel inevitable.
++          </p>
++          <div class="cta-row">
++            <a class="cta primary" href="#work">See the flow</a>
++            <a class="cta ghost" href="#devices">Shop gadgets</a>
++          </div>
++          <div class="hero__meta">
++            <div>
++              <p class="meta-label">Based in</p>
++              <p class="meta-value">Remote · Global</p>
++            </div>
++            <div>
++              <p class="meta-label">Signature</p>
++              <p class="meta-value">3D transitions · Seamless scroll</p>
++            </div>
++            <div>
++              <p class="meta-label">Industries</p>
++              <p class="meta-value">Tech, Commerce, Lifestyle</p>
++            </div>
++          </div>
++        </div>
++        <div class="hero__visual" data-tilt>
++          <div class="hero__frame">
++            <div class="frame__glow"></div>
++            <div class="frame__content">
++              <p class="small">Immersive drop</p>
++              <h3>Flow that feels like hardware</h3>
++              <p class="muted">
++                Layered glass, adaptive gradients, and subtle parallax mirror the
++                tactility of premium devices.
++              </p>
++            </div>
++          </div>
++          <div class="floating-tag" data-depth="0.25">Cinematic scroll</div>
++          <div class="floating-tag" data-depth="0.45">Realtime lighting</div>
++          <div class="floating-tag" data-depth="0.65">Magnetic CTA</div>
++        </div>
++        <div class="scroll-indicator">Scroll to explore</div>
++      </section>
++
++      <section id="work" class="section reveal">
++        <div class="section__header">
++          <p class="eyebrow">Work showcase</p>
++          <h2>Fluid storytelling with depth and precision.</h2>
++        </div>
++        <div class="work-grid">
++          <article class="work-card" data-tilt>
++            <div class="work-visual gradient-1"></div>
++            <div class="work-body">
++              <p class="small">Product hero</p>
++              <h3>Immersive launch surfaces</h3>
++              <p class="muted">
++                Apple-like pacing with staged reveals, spatial transitions, and
++                copy that rides the motion.
++              </p>
++            </div>
++          </article>
++          <article class="work-card" data-tilt>
++            <div class="work-visual gradient-2"></div>
++            <div class="work-body">
++              <p class="small">Experience layer</p>
++              <h3>3D storytelling & parallax</h3>
++              <p class="muted">
++                Multi-plane parallax and tilt cues that keep attention flowing as
++                the narrative unfolds.
++              </p>
++            </div>
++          </article>
++          <article class="work-card" data-tilt>
++            <div class="work-visual gradient-3"></div>
++            <div class="work-body">
++              <p class="small">Commerce</p>
++              <h3>Flagship gadget drops</h3>
++              <p class="muted">
++                Curated phones, laptops, and gaming rigs presented with tactile
++                UI so buyers feel the premium fit.
++              </p>
++            </div>
++          </article>
++        </div>
++      </section>
++
++      <section class="marquee" aria-label="signature stack">
++        <div class="marquee__track">
++          <span>React</span><span>Next.js</span><span>TypeScript</span
++          ><span>Three.js</span><span>WebGL</span><span>Framer Motion</span
++          ><span>Tailwind</span><span>Shopify</span><span>Figma</span>
++        </div>
++      </section>
++
++      <section id="services" class="section reveal split">
++        <div class="section__header">
++          <p class="eyebrow">Services</p>
++          <h2>Engineering & experience design built to feel inevitable.</h2>
++        </div>
++        <div class="split__grid">
++          <div class="pillar" data-tilt>
++            <div class="pill mini">Web</div>
++            <h3>Immersive product sites</h3>
++            <p>
++              Hero-to-checkout narratives with micro-interactions, lighting
++              passes, and cinematic rhythm.
++            </p>
++            <ul>
++              <li>Launch storytelling</li>
++              <li>Scroll-based reveals</li>
++              <li>Conversion-focused UX</li>
++            </ul>
++          </div>
++          <div class="pillar" data-tilt>
++            <div class="pill mini">Platforms</div>
++            <h3>Full-stack experiences</h3>
++            <p>
++              Modern apps with clean APIs, analytics, auth, and realtime layers
++              for teams that ship fast.
++            </p>
++            <ul>
++              <li>Next.js + TypeScript</li>
++              <li>Edge-ready APIs</li>
++              <li>Performance tuning</li>
++            </ul>
++          </div>
++          <div class="pillar" data-tilt>
++            <div class="pill mini">Hardware</div>
++            <h3>Gadget concierge</h3>
++            <p>
++              Phones, laptops, and gaming tech sourced to spec—with calibration
++              and onboarding support.
++            </p>
++            <ul>
++              <li>Flagship curation</li>
++              <li>Creator & gaming rigs</li>
++              <li>Logistics handled</li>
++            </ul>
++          </div>
++        </div>
++      </section>
++
++      <section id="devices" class="section reveal devices">
++        <div class="section__header">
++          <p class="eyebrow">Device drops</p>
++          <h2>Premium hardware with the same polish as the sites.</h2>
++        </div>
++        <div class="devices__grid">
++          <div class="device" data-tilt>
++            <div class="device__image shimmer"></div>
++            <div class="device__body">
++              <p class="small">Phones</p>
++              <h3>Flagship & pro camera builds</h3>
++              <p class="muted">
++                Pixel-perfect screens, elite cameras, and clean setups so you can
++                shoot, edit, and share instantly.
++              </p>
++            </div>
++          </div>
++          <div class="device" data-tilt>
++            <div class="device__image shimmer alt"></div>
++            <div class="device__body">
++              <p class="small">Laptops</p>
++              <h3>Creator & engineering rigs</h3>
++              <p class="muted">
++                Quiet power with calibrated color, tuned performance, and a
++                frictionless handoff to your workflow.
++              </p>
++            </div>
++          </div>
++          <div class="device" data-tilt>
++            <div class="device__image shimmer neon"></div>
++            <div class="device__body">
++              <p class="small">Gaming</p>
++              <h3>High-refresh setups</h3>
++              <p class="muted">
++                Stacked GPUs, responsive controls, and immersive audio—built for
++                creators who play hard.
++              </p>
++            </div>
++          </div>
++        </div>
++      </section>
++
++      <section class="section reveal duo">
++        <div class="section__header">
++          <p class="eyebrow">Process</p>
++          <h2>Flow-first delivery tuned for rhythm and detail.</h2>
++        </div>
++        <div class="timeline">
++          <div class="step" data-tilt>
++            <span class="step__index">01</span>
++            <div>
++              <h3>Discover & stage</h3>
++              <p>Define the emotional arc, core interactions, and device needs.</p>
++            </div>
++          </div>
++          <div class="step" data-tilt>
++            <span class="step__index">02</span>
++            <div>
++              <h3>Design & prototype</h3>
++              <p>Motion-first frames, lighting, and microcopy aligned to your brand.</p>
++            </div>
++          </div>
++          <div class="step" data-tilt>
++            <span class="step__index">03</span>
++            <div>
++              <h3>Build & deliver</h3>
++              <p>Edge-ready builds, QA on real hardware, and concierge handoff.</p>
++            </div>
++          </div>
++        </div>
++      </section>
++
++      <section id="contact" class="section cta-panel reveal">
++        <div class="cta-card" data-tilt>
++          <div>
++            <p class="eyebrow">Let’s build something bright</p>
++            <h2>Ready for cinematic web + premium hardware?</h2>
++            <p class="lede">
++              Tell me about your launch, platform, or the gear you want to feel.
++              I’ll respond within 24 hours.
++            </p>
++          </div>
++          <div class="cta-actions">
++            <a class="cta primary" href="mailto:hello@divinelove.dev">Email Divinelove</a>
++            <a
++              class="cta ghost"
++              href="https://wa.me/"
++              target="_blank"
++              rel="noreferrer"
++              >WhatsApp</a
++            >
++          </div>
++        </div>
++      </section>
++    </main>
++
++    <footer class="footer">
++      <p>Divinelove · Immersive engineer & gadget vendor · 2024</p>
++      <div class="footer-links">
++        <a href="#">Instagram</a>
++        <a href="#">LinkedIn</a>
++        <a href="#">X</a>
++      </div>
++    </footer>
++
++    <script src="script.js"></script>
++  </body>
++</html>
