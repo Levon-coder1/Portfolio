@@ -1,5 +1,4 @@
 const tiltElements = document.querySelectorAll('[data-tilt]');
-const parallaxItems = document.querySelectorAll('[data-depth]');
 const reveals = document.querySelectorAll('.reveal');
 
 function handleTilt(event) {
@@ -17,17 +16,6 @@ tiltElements.forEach((el) => {
   el.addEventListener('mousemove', handleTilt);
   el.addEventListener('mouseleave', resetTilt);
 });
-
-function parallax(event) {
-  parallaxItems.forEach((item) => {
-    const depth = parseFloat(item.dataset.depth) || 0.3;
-    const x = (event.clientX - window.innerWidth / 2) * depth * 0.02;
-    const y = (event.clientY - window.innerHeight / 2) * depth * 0.02;
-    item.style.transform = `translate3d(${x}px, ${y}px, 0)`;
-  });
-}
-
-document.addEventListener('mousemove', parallax);
 
 const observer = new IntersectionObserver(
   (entries) => {

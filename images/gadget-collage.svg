@@ -1,0 +1,61 @@
+<svg width="1200" height="800" viewBox="0 0 1200 800" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="200" y1="120" x2="980" y2="700" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFE9D2" />
+      <stop offset="0.5" stop-color="#FFC89A" />
+      <stop offset="1" stop-color="#FF9A4F" />
+    </linearGradient>
+    <linearGradient id="glass" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="rgba(255,255,255,0.86)" />
+      <stop offset="1" stop-color="rgba(255,255,255,0.22)" />
+    </linearGradient>
+    <filter id="shadow" x="-50%" y="-50%" width="200%" height="200%" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="24" stdDeviation="28" flood-color="#000" flood-opacity="0.25" />
+    </filter>
+  </defs>
+  <rect width="1200" height="800" rx="40" fill="url(#bg)" />
+  <rect x="60" y="60" width="1080" height="680" rx="32" fill="rgba(255,255,255,0.22)" stroke="rgba(255,255,255,0.38)" />
+  <g filter="url(#shadow)">
+    <rect x="140" y="180" width="760" height="420" rx="28" fill="#0E0A08" stroke="rgba(255,255,255,0.2)" />
+    <rect x="190" y="220" width="660" height="340" rx="22" fill="url(#glass)" />
+    <rect x="240" y="260" width="560" height="260" rx="16" fill="#1B120F" />
+    <rect x="250" y="270" width="540" height="240" rx="14" fill="#121212" />
+    <rect x="270" y="290" width="500" height="200" rx="12" fill="#0A0A0A" />
+  </g>
+  <g filter="url(#shadow)">
+    <rect x="740" y="300" width="230" height="330" rx="30" fill="#050505" stroke="rgba(255,255,255,0.28)" />
+    <rect x="760" y="320" width="190" height="290" rx="22" fill="#111" />
+    <rect x="784" y="348" width="142" height="10" rx="5" fill="#1E1E1E" />
+    <rect x="820" y="520" width="70" height="12" rx="6" fill="#1E1E1E" />
+    <rect x="820" y="540" width="70" height="12" rx="6" fill="#1E1E1E" />
+    <rect x="820" y="560" width="70" height="12" rx="6" fill="#1E1E1E" />
+    <text x="855" y="466" fill="#F7F2ED" font-family="'Space Grotesk', 'Segoe UI', sans-serif" font-size="20" text-anchor="middle">iPhone 17 PM</text>
+  </g>
+  <g filter="url(#shadow)">
+    <rect x="520" y="220" width="190" height="310" rx="30" fill="#0A0909" stroke="rgba(255,255,255,0.22)" />
+    <rect x="542" y="242" width="146" height="266" rx="22" fill="#141414" />
+    <text x="615" y="392" fill="#EFE7DF" font-family="'Space Grotesk', 'Segoe UI', sans-serif" font-size="18" text-anchor="middle">Galaxy S25 Ultra</text>
+  </g>
+  <g filter="url(#shadow)">
+    <rect x="410" y="340" width="150" height="260" rx="26" fill="#0C0C0C" stroke="rgba(255,255,255,0.18)" />
+    <rect x="430" y="360" width="110" height="220" rx="18" fill="#181818" />
+    <text x="485" y="490" fill="#EFE7DF" font-family="'Space Grotesk', 'Segoe UI', sans-serif" font-size="16" text-anchor="middle">iPhone 17</text>
+  </g>
+  <g filter="url(#shadow)">
+    <rect x="260" y="430" width="110" height="200" rx="24" fill="#151515" stroke="rgba(255,255,255,0.18)" />
+    <rect x="276" y="450" width="78" height="160" rx="14" fill="#1F1F1F" />
+    <text x="315" y="560" fill="#EFE7DF" font-family="'Space Grotesk', 'Segoe UI', sans-serif" font-size="14" text-anchor="middle">JBL</text>
+  </g>
+  <g filter="url(#shadow)">
+    <rect x="180" y="520" width="240" height="140" rx="24" fill="#2B2B2B" stroke="rgba(255,255,255,0.2)" />
+    <rect x="210" y="550" width="180" height="80" rx="20" fill="#161616" />
+    <text x="300" y="598" fill="#EFE7DF" font-family="'Space Grotesk', 'Segoe UI', sans-serif" font-size="18" text-anchor="middle">MacBook</text>
+  </g>
+  <g opacity="0.45">
+    <circle cx="220" cy="180" r="100" fill="#FFFFFF" />
+    <circle cx="1040" cy="620" r="160" fill="#FFFFFF" />
+    <circle cx="1040" cy="620" r="160" fill="#FFB76B" opacity="0.18" />
+  </g>
+  <text x="160" y="140" fill="#4B2C1F" font-family="'Space Grotesk', 'Segoe UI', sans-serif" font-size="24">Hero placeholder — gadget collage</text>
+  <text x="160" y="170" fill="#7A4A30" font-family="'Space Grotesk', 'Segoe UI', sans-serif" font-size="18">iPhone 17 Pro Max, iPhone 17, Galaxy S25 Ultra, JBL speaker, and MacBooks stacked in one frame.</text>
+</svg>
