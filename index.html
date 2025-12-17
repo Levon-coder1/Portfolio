@@ -63,23 +63,40 @@
               </div>
             </div>
           </div>
-          <div class="hero__visual" data-tilt>
-            <div class="hero__frame">
-              <div class="frame__glow"></div>
-              <div class="frame__content">
-                <p class="small">Immersive drop</p>
-                <h3>Flow that feels like hardware</h3>
-                <p class="muted">
-                  Layered glass, adaptive gradients, and subtle parallax mirror the
-                  tactility of premium devices.
-                </p>
+        </div>
+        <div class="hero__visual" data-tilt>
+          <div class="glass-frame">
+            <div class="frame__halo" aria-hidden="true"></div>
+            <div class="frame__blur" aria-hidden="true"></div>
+            <div class="frame__inner">
+              <div class="device-layer layer-back" data-depth="0.1" data-scroll-depth="0.08">
+                <img src="images/device-laptop.svg" alt="Laptop hero render" loading="lazy" />
+              </div>
+              <div class="device-layer layer-mid" data-depth="0.18" data-scroll-depth="0.12">
+                <img src="images/device-tablet.svg" alt="Tablet showcase render" loading="lazy" />
+              </div>
+              <div class="device-layer layer-front" data-depth="0.3" data-scroll-depth="0.18">
+                <img src="images/device-phone.svg" alt="Phone spotlight render" loading="lazy" />
+              </div>
+              <div class="frame__specs">
+                <div>
+                  <p class="small">Immersive drop</p>
+                  <h3>Glass, glow, and layered depth</h3>
+                  <p class="muted">
+                    Semi-transparent frame with premium hardware renders,
+                    parallax, tilt, and blur to echo an Apple-grade unboxing.
+                  </p>
+                </div>
+                <div class="pill mini translucent">Live parallax</div>
               </div>
             </div>
             <div class="floating-tag" data-depth="0.25">Cinematic scroll</div>
             <div class="floating-tag" data-depth="0.45">Realtime lighting</div>
             <div class="floating-tag" data-depth="0.65">Magnetic CTA</div>
           </div>
-          <div class="scroll-indicator">Navigate with the links above</div>
+          <div class="floating-tag" data-depth="0.18">Cinematic scroll</div>
+          <div class="floating-tag" data-depth="0.36">Realtime lighting</div>
+          <div class="floating-tag" data-depth="0.54">Glassy frame</div>
         </div>
       </section>
 
