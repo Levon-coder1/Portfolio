@@ -6,6 +6,15 @@ const brand = document.querySelector('.brand');
 const categoryTabs = document.querySelectorAll('[data-category]');
 const productGrid = document.getElementById('product-grid');
 const productDetail = document.getElementById('product-detail');
+const productPage = document.getElementById('product-page');
+const productPageVisual = document.getElementById('product-page-visual');
+const productPageCategory = document.getElementById('product-page-category');
+const productPagePrice = document.getElementById('product-page-price');
+const productPageName = document.getElementById('product-page-name');
+const productPageDescription = document.getElementById('product-page-description');
+const productPageList = document.getElementById('product-page-list');
+const productPageGallery = document.getElementById('product-page-gallery');
+const productPageRelated = document.getElementById('product-page-related');
 const categoryDescription = document.getElementById('category-description');
 
 function createGlassImage(title, primary, secondary) {
@@ -553,12 +562,28 @@ function resetProductDetail(category) {
   if (media) media.style.backgroundImage = 'none';
 }
 
+function resetProductPage() {
+  if (!productPage) return;
+  productPage.classList.remove('open');
+  if (productPageVisual) productPageVisual.style.backgroundImage = 'none';
+  if (productPageCategory) productPageCategory.textContent = 'Phones';
+  if (productPagePrice) productPagePrice.textContent = '';
+  if (productPageName) productPageName.textContent = 'Choose any product tile to load details.';
+  if (productPageDescription)
+    productPageDescription.textContent =
+      'The full-width panel will showcase the hero image, expanded specs, pricing, shipping, and curated related picks.';
+  if (productPageList) productPageList.innerHTML = '';
+  if (productPageGallery) productPageGallery.innerHTML = '';
+  if (productPageRelated) productPageRelated.innerHTML = '';
+}
+
 function updateProductDetail(category, slug) {
   if (!productDetail) return;
   const catalog = gadgetCatalog[category];
   const product = catalog?.products.find((item) => item.slug === slug);
   if (!product) {
     resetProductDetail(category);
+    resetProductPage();
     return;
   }
 
@@ -626,6 +651,64 @@ function updateProductDetail(category, slug) {
   if (media) {
     media.style.backgroundImage = `url('${product.image}')`;
   }
+
+  renderProductPage({ ...product, category });
+}
+
+function renderProductPage(product) {
+  if (!productPage) return;
+  productPage.classList.add('open');
+  if (productPageVisual) productPageVisual.style.backgroundImage = `url('${product.image}')`;
+  if (productPageCategory) productPageCategory.textContent = gadgetCatalog[product.category]?.label || 'Gadget';
+  if (productPagePrice) productPagePrice.textContent = `${product.price} · ${product.shipping}`;
+  if (productPageName) productPageName.textContent = product.name;
+  if (productPageDescription) productPageDescription.textContent = product.summary;
+
+  if (productPageList) {
+    productPageList.innerHTML = '';
+    product.details.forEach((detail) => {
+      const li = document.createElement('li');
+      li.textContent = detail;
+      productPageList.appendChild(li);
+    });
+  }
+
+  if (productPageGallery) {
+    productPageGallery.innerHTML = '';
+    if (product.gallery?.length) {
+      product.gallery.forEach((color) => {
+        const swatch = document.createElement('span');
+        swatch.className = 'pill mini';
+        swatch.textContent = color;
+        productPageGallery.appendChild(swatch);
+      });
+    }
+  }
+
+  if (productPageRelated) {
+    productPageRelated.innerHTML = '';
+    if (product.related?.length) {
+      const label = document.createElement('p');
+      label.className = 'small';
+      label.textContent = 'Related picks';
+      productPageRelated.appendChild(label);
+
+      const chips = document.createElement('div');
+      chips.className = 'related-chips';
+      product.related.forEach((itemSlug) => {
+        const chip = document.createElement('button');
+        chip.className = 'pill mini link-chip';
+        const linkedProduct = productLookup[itemSlug];
+        chip.textContent = linkedProduct?.name || itemSlug;
+        chip.dataset.slug = linkedProduct?.slug || itemSlug;
+        chip.dataset.category = linkedProduct?.category || product.category;
+        chips.appendChild(chip);
+      });
+      productPageRelated.appendChild(chips);
+    }
+  }
+
+  productPage.scrollIntoView({ behavior: 'smooth', block: 'start' });
 }
 
 function handleRouteChange() {
@@ -648,9 +731,11 @@ function handleRouteChange() {
       updateProductDetail(category, productSlug);
     } else {
       resetProductDetail(category);
+      resetProductPage();
     }
   } else {
     resetProductDetail('phones');
+    resetProductPage();
   }
 }
 
@@ -683,6 +768,15 @@ productGrid?.addEventListener('click', (event) => {
 });
 
 productDetail?.addEventListener('click', (event) => {
+  const chip = event.target.closest('.link-chip');
+  if (!chip) return;
+  const { category, slug } = chip.dataset;
+  if (category && slug) {
+    window.location.hash = `#/gadgets/${category}/${slug}`;
+  }
+});
+
+productPage?.addEventListener('click', (event) => {
   const chip = event.target.closest('.link-chip');
   if (!chip) return;
   const { category, slug } = chip.dataset;
