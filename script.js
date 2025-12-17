@@ -6,6 +6,30 @@ const brand = document.querySelector('.brand');
 const categoryTabs = document.querySelectorAll('[data-category]');
 const productGrid = document.getElementById('product-grid');
 const productDetail = document.getElementById('product-detail');
+const categoryDescription = document.getElementById('category-description');
+
+function createGlassImage(title, primary, secondary) {
+  const svg = `<svg width="780" height="520" viewBox="0 0 780 520" xmlns="http://www.w3.org/2000/svg">`
+    + `<defs>`
+    + `<linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">`
+    + `<stop stop-color="${primary}" offset="0"/>`
+    + `<stop stop-color="${secondary}" offset="1"/>`
+    + `</linearGradient>`
+    + `<filter id="glow" x="-30%" y="-30%" width="160%" height="160%">`
+    + `<feGaussianBlur stdDeviation="32" result="blur"/>`
+    + `<feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>`
+    + `</filter>`
+    + `</defs>`
+    + `<rect width="780" height="520" rx="48" fill="#0f0a07" opacity="0.65"/>`
+    + `<rect width="720" height="460" x="30" y="30" rx="40" fill="url(%23grad)" opacity="0.68" filter="url(%23glow)"/>`
+    + `<circle cx="200" cy="180" r="120" fill="${secondary}" opacity="0.46"/>`
+    + `<circle cx="520" cy="300" r="180" fill="${primary}" opacity="0.46"/>`
+    + `<rect x="110" y="120" width="560" height="320" rx="34" fill="rgba(255,255,255,0.08)" stroke="rgba(255,255,255,0.18)"/>`
+    + `<text x="135" y="290" fill="rgba(255,255,255,0.9)" font-size="54" font-family="'Space Grotesk', 'Inter', sans-serif" letter-spacing="1" font-weight="700">${title}</text>`
+    + `<text x="135" y="338" fill="rgba(255,255,255,0.7)" font-size="22" font-family="'Space Grotesk', 'Inter', sans-serif" letter-spacing="4">Liquid glass edition</text>`
+    + `</svg>`;
+  return `data:image/svg+xml,${encodeURIComponent(svg)}`;
+}
 
 const gadgetCatalog = {
   phones: {
@@ -18,13 +42,14 @@ const gadgetCatalog = {
         price: '$1,099 · 256GB',
         shipping: '3-5 days, sealed or tuned with your app kit',
         summary: 'Tensor-powered flagship with cinematic video presets and calibrated OLED.',
-        gallery: ['Warm Amber', 'Graphite Mist'],
+        gallery: ['Warm Amber', 'Graphite Mist', 'Porcelain'],
         details: [
           '50MP main + 5x telephoto; natural HDR with mobile LUTs installed',
           'Unlocked dual-SIM with travel eSIM setup and battery health report',
           'Delivered with tempered glass + slim clear and sport cases',
         ],
-        related: ['iPhone 15 Pro Max'],
+        related: ['iphone-pro', 'galaxy-s24'],
+        image: createGlassImage('Pixel Pro 9', '#ff7a18', '#202033'),
       },
       {
         slug: 'iphone-pro',
@@ -32,13 +57,74 @@ const gadgetCatalog = {
         price: '$1,199 · 512GB',
         shipping: 'Next-day courier available in select cities',
         summary: 'Titanium build, 5x tetraprism zoom, and ProRes log capture out of the box.',
-        gallery: ['Natural Titanium', 'Blue Titanium'],
+        gallery: ['Natural Titanium', 'Blue Titanium', 'White'],
         details: [
           'Color science tuned for social-first exports and LUT-ready delivery',
           'MagSafe kit + glass install with warranty-friendly handoff',
           'iCloud and Google Drive migration concierge included',
         ],
-        related: ['Pixel Pro 9'],
+        related: ['pixel-pro', 'xperia-1vi'],
+        image: createGlassImage('iPhone 15 Pro Max', '#c7b9a6', '#1b1c22'),
+      },
+      {
+        slug: 'galaxy-s24',
+        name: 'Galaxy S24 Ultra',
+        price: '$1,299 · 512GB',
+        shipping: 'Insured shipping with camera tuning and Spigen case',
+        summary: '200MP camera with ExpertRAW presets, vivid LTPO screen, S Pen in-box.',
+        gallery: ['Titan Gray', 'Onyx Black'],
+        details: [
+          'Snapdragon for Galaxy with performance + battery profiles set',
+          'ExpertRAW + Lightroom presets installed for crisp night shots',
+          'Aramid fiber and clear kickstand cases included',
+        ],
+        related: ['iphone-pro', 'pixel-pro'],
+        image: createGlassImage('Galaxy S24 Ultra', '#2f2b38', '#9e7cff'),
+      },
+      {
+        slug: 'oneplus-12',
+        name: 'OnePlus 12',
+        price: '$899 · 256GB',
+        shipping: '2-4 days with Warp charge kit',
+        summary: 'Snapdragon 8 Gen 3, bright 120Hz OLED, Hasselblad-tuned colors.',
+        gallery: ['Flowy Emerald', 'Silky Black'],
+        details: [
+          'OxygenOS streamlined with creator tools and Zen mode focus setup',
+          '100W charger + spare cable and matte protector installed',
+          'Gaming mode toggles mapped with haptics tuned',
+        ],
+        related: ['galaxy-s24', 'pixel-pro'],
+        image: createGlassImage('OnePlus 12', '#61f4b8', '#0f1820'),
+      },
+      {
+        slug: 'xperia-1vi',
+        name: 'Sony Xperia 1 VI',
+        price: '$1,199 · 256GB',
+        shipping: 'Ships in 3-5 days with CineAlta presets',
+        summary: 'True 4K OLED, pro manual cameras, and Hi-Res audio with LDAC.',
+        gallery: ['Khaki Green', 'Black'],
+        details: [
+          'Cinema Pro and Photo Pro dialed with LUTs + shutter button tuning',
+          'Hi-Res playlists + LDAC headphone pairing at handoff',
+          'Glass screen protector installed with lanyard-ready case',
+        ],
+        related: ['iphone-pro'],
+        image: createGlassImage('Xperia 1 VI', '#94a58a', '#0a0f0a'),
+      },
+      {
+        slug: 'nothing-2a',
+        name: 'Nothing Phone 2a',
+        price: '$499 · 256GB',
+        shipping: 'Fast dispatch with glyph automation setup',
+        summary: 'Playful transparent design, solid cameras, and glyph lighting presets.',
+        gallery: ['Milk', 'Black'],
+        details: [
+          'Glyph lights mapped to focus, delivery, and productivity cues',
+          'Minimal bloat setup with curated app stack and privacy tweaks',
+          'Comes with clear case, film protector, and USB-C cable',
+        ],
+        related: ['oneplus-12'],
+        image: createGlassImage('Nothing Phone 2a', '#ffffff', '#0c0c0c'),
       },
     ],
   },
@@ -58,7 +144,8 @@ const gadgetCatalog = {
           'Clamshell + external monitor performance profiles pre-set',
           'Includes USB-C hub, braided USB-C cables, and quiet cooling pad',
         ],
-        related: ['ROG Zephyrus G16'],
+        related: ['zephyrus-g16', 'razer-blade'],
+        image: createGlassImage('MacBook Pro 16"', '#1f1c2c', '#d9d9d9'),
       },
       {
         slug: 'zephyrus-g16',
@@ -72,7 +159,68 @@ const gadgetCatalog = {
           'DaVinci Resolve + Blender profiles installed with hotkeys',
           'Comes with low-latency 2.4GHz mouse and coiled keyboard cable',
         ],
-        related: ['MacBook Pro 16" M3 Max'],
+        related: ['macbook-pro', 'xps-15'],
+        image: createGlassImage('Zephyrus G16', '#7f8cff', '#12121a'),
+      },
+      {
+        slug: 'razer-blade',
+        name: 'Razer Blade 15 OLED',
+        price: '$2,499 · RTX 4070',
+        shipping: 'Ships with thermals tuned + matte screen guard installed',
+        summary: 'Slim aluminum chassis, per-key RGB, and calibrated OLED for edits and play.',
+        gallery: ['Shadow Black'],
+        details: [
+          'Synapse profiles balanced for whisper, creator, and turbo modes',
+          'RGB set to subtle studio-safe glow with per-app triggers',
+          'Includes USB-C dock, slim charger, and microfiber kit',
+        ],
+        related: ['zephyrus-g16'],
+        image: createGlassImage('Razer Blade 15', '#00ffbd', '#0b0f0f'),
+      },
+      {
+        slug: 'xps-15',
+        name: 'Dell XPS 15 OLED',
+        price: '$2,099 · 32GB / 1TB',
+        shipping: 'Calibrated and delivered with Windows Studio setup',
+        summary: 'Borderless OLED, Adobe-tuned color profiles, and quiet performance.',
+        gallery: ['Platinum'],
+        details: [
+          'Fresh Windows build with minimal bloat + driver validation',
+          'Adobe Suite shortcuts, VPN, and cloud sync staged',
+          'Includes USB-C hub and Thunderbolt SSD enclosure',
+        ],
+        related: ['macbook-pro'],
+        image: createGlassImage('XPS 15 OLED', '#d4e2ff', '#0e1520'),
+      },
+      {
+        slug: 'spectre-x360',
+        name: 'HP Spectre x360 14',
+        price: '$1,699 · Evo platform',
+        shipping: '3-6 days with pen + sleeve bundle',
+        summary: 'Convertible elegance with OLED touch, long battery, and stylus-ready hinge.',
+        gallery: ['Nightfall Black', 'Nocturne Blue'],
+        details: [
+          'Two-in-one modes tuned with pen shortcuts + note templates',
+          'Windows Hello + privacy switches set and verified',
+          'Includes pen tips, folio sleeve, and spare charger',
+        ],
+        related: ['xps-15'],
+        image: createGlassImage('Spectre x360', '#2c1c3a', '#caa7ff'),
+      },
+      {
+        slug: 'framework-13',
+        name: 'Framework 13 DIY',
+        price: '$1,399 · Modular',
+        shipping: 'Ships in 4-7 days with expansion cards of your choice',
+        summary: 'Repairable, modular laptop tuned for dev and travel simplicity.',
+        gallery: ['Modular Silver'],
+        details: [
+          'RAM/SSD installed + BIOS tuned for battery and quiet cooling',
+          'Expansion cards picked for your ports; spare screws included',
+          'Linux/Windows dual-boot setup available on request',
+        ],
+        related: ['macbook-pro'],
+        image: createGlassImage('Framework 13', '#d9ffea', '#1c1f24'),
       },
     ],
   },
@@ -92,7 +240,8 @@ const gadgetCatalog = {
           'Ear fit calibration and EQ tuning during handoff',
           'Includes silicone + foam tips and magnetic cable clip',
         ],
-        related: ['Arc Wireless Charger'],
+        related: ['halo-watch', 'arc-charger'],
+        image: createGlassImage('Aurora ANC Buds', '#f7f8ff', '#0f111c'),
       },
       {
         slug: 'arc-charger',
@@ -106,7 +255,68 @@ const gadgetCatalog = {
           'Detachable braided USB-C + 30W GaN brick included',
           'LED ring uses ambient light sensor for night-friendly glow',
         ],
-        related: ['Aurora ANC Buds'],
+        related: ['aurora-buds', 'lumen-cable'],
+        image: createGlassImage('Arc Charger', '#c3d8ff', '#0b1020'),
+      },
+      {
+        slug: 'halo-watch',
+        name: 'Halo Health Watch',
+        price: '$329',
+        shipping: 'Priority courier with strap sizing kit',
+        summary: 'AMOLED wearable with dual-band GPS, HRV tracking, and week-long battery.',
+        gallery: ['Sandstone', 'Slate'],
+        details: [
+          'Preloaded with sleep coaching, strength plans, and NFC wallet',
+          'Metal + fluoroelastomer straps sized and fitted at delivery',
+          'Includes tempered glass protector and wireless puck',
+        ],
+        related: ['aurora-buds'],
+        image: createGlassImage('Halo Watch', '#ffd3b6', '#1b0f0f'),
+      },
+      {
+        slug: 'aero-pack',
+        name: 'Aero Tech Backpack',
+        price: '$189',
+        shipping: 'Ships in 2-3 days with dust bag',
+        summary: 'Weatherproof 24L pack with laptop cradle, cable bay, and hidden AirTag slot.',
+        gallery: ['Jet Black', 'Fog Gray'],
+        details: [
+          'Fits 16" laptops, cameras, and tablet; structured to stand upright',
+          'Cable/charger bay with magnetic door and label set',
+          'Luggage passthrough + breathable straps tuned for travel',
+        ],
+        related: ['arc-charger'],
+        image: createGlassImage('Aero Pack', '#d7dee7', '#0c0f12'),
+      },
+      {
+        slug: 'lumen-cable',
+        name: 'Lumen Weave Cable Set',
+        price: '$69',
+        shipping: '24h dispatch; set of 3 braided lengths',
+        summary: 'Glowing braided USB-C/Lightning set with 100W support and soft glass sheen.',
+        gallery: ['Frost Glow', 'Obsidian'],
+        details: [
+          'Includes 1m, 2m, and 3m lengths with cable wraps',
+          'LED breathing ends to find cables in dark studios',
+          'Kevlar-weave with gentle curve memory to stay tidy',
+        ],
+        related: ['arc-charger'],
+        image: createGlassImage('Lumen Cable Set', '#f0f5ff', '#0e1b2f'),
+      },
+      {
+        slug: 'glide-stand',
+        name: 'Glide Laptop Stand',
+        price: '$129',
+        shipping: '3-5 days with padded sleeve',
+        summary: 'Polished aluminum stand with glass inlays and 18° ergonomic lift.',
+        gallery: ['Ice Silver', 'Ink'],
+        details: [
+          'Holds 16" laptops securely with silicone rail and cable pass-through',
+          'Glass inlay with anti-fingerprint coating for clean desk aesthetic',
+          'Folds flat; includes microfiber and travel sleeve',
+        ],
+        related: ['macbook-pro'],
+        image: createGlassImage('Glide Stand', '#cbd8ff', '#0f172a'),
       },
     ],
   },
@@ -126,7 +336,8 @@ const gadgetCatalog = {
           'Shortcuts, Procreate brushes, and note templates preloaded',
           'Magic Keyboard + Pencil pairing and warranty guidance',
         ],
-        related: ['Galaxy Tab S9 Ultra'],
+        related: ['tab-s9', 'ipad-air'],
+        image: createGlassImage('iPad Pro 13"', '#f6f4ff', '#0c0c12'),
       },
       {
         slug: 'tab-s9',
@@ -140,7 +351,68 @@ const gadgetCatalog = {
           'Samsung Notes + GoodNotes setup with cloud sync tuned',
           'Keyboard cover + 45W charger bundle available',
         ],
-        related: ['iPad Pro 13" M4'],
+        related: ['ipad-pro'],
+        image: createGlassImage('Tab S9 Ultra', '#a4b5ff', '#0d1623'),
+      },
+      {
+        slug: 'ipad-air',
+        name: 'iPad Air 13"',
+        price: '$899 · 256GB',
+        shipping: 'Ships within 72 hours with Smart Folio',
+        summary: 'M2 power in an ultra-thin chassis with vivid Liquid Retina display.',
+        gallery: ['Blue', 'Starlight'],
+        details: [
+          'Stage Manager + split view shortcuts pre-mapped',
+          'Paperlike or gloss protector installed at handoff',
+          'Bundle options with Pencil USB-C and Bluetooth keyboard',
+        ],
+        related: ['ipad-pro'],
+        image: createGlassImage('iPad Air 13"', '#c8e5ff', '#0d1322'),
+      },
+      {
+        slug: 'surface-pro',
+        name: 'Surface Pro 10',
+        price: '$1,199 · Copilot+ PC',
+        shipping: 'Ships in 3-5 days with keyboard cover',
+        summary: 'OLED Copilot+ 2-in-1 with studio mics, sharp webcam, and pen layer.',
+        gallery: ['Platinum', 'Black'],
+        details: [
+          'Fresh Windows build with Studio Effects tuned for calls',
+          'Pen, keyboard, and color profiles calibrated for editing',
+          'Clip Studio and OneNote layouts ready to go',
+        ],
+        related: ['tab-s9'],
+        image: createGlassImage('Surface Pro 10', '#d8d8ff', '#0f0f1a'),
+      },
+      {
+        slug: 'lenovo-p12',
+        name: 'Lenovo Tab P12 Pro',
+        price: '$749 · 256GB',
+        shipping: '4-7 days with folio + pen kit',
+        summary: 'OLED entertainment and sketch tablet with slim metal build.',
+        gallery: ['Storm Gray'],
+        details: [
+          'Pen latency tuned; custom shortcuts for sketching apps',
+          'Dolby Vision / Atmos profiles ready for media nights',
+          'Bundled with keyboard cover and tempered glass',
+        ],
+        related: ['ipad-air'],
+        image: createGlassImage('Lenovo P12 Pro', '#c7d2ff', '#0c111f'),
+      },
+      {
+        slug: 'remarkable-2',
+        name: 'reMarkable 2 Studio',
+        price: '$649 · Bundle',
+        shipping: 'Ships within 5 days with folio and Marker Plus',
+        summary: 'Paper-feel e-ink tablet for deep work and note capture.',
+        gallery: ['Cloud Gray'],
+        details: [
+          'Templates, notebooks, and cloud sync configured',
+          'Marker tips + folio installed; handwriting OCR enabled',
+          'Focus mode layouts for distraction-free sessions',
+        ],
+        related: ['lenovo-p12'],
+        image: createGlassImage('reMarkable 2', '#f1f1f1', '#111111'),
       },
     ],
   },
@@ -210,6 +482,24 @@ function setActiveCategory(category) {
   });
 }
 
+function setCategoryDescription(category) {
+  if (!categoryDescription) return;
+  const catalog = gadgetCatalog[category];
+  categoryDescription.textContent = catalog?.description || 'Pick a lane to see glossy gear with specs, imagery, and concierge notes.';
+}
+
+function buildProductLookup() {
+  const lookup = {};
+  Object.entries(gadgetCatalog).forEach(([category, catalog]) => {
+    catalog.products.forEach((product) => {
+      lookup[product.slug] = { ...product, category };
+    });
+  });
+  return lookup;
+}
+
+const productLookup = buildProductLookup();
+
 function renderProducts(category) {
   if (!productGrid) return;
   const catalog = gadgetCatalog[category];
@@ -223,7 +513,7 @@ function renderProducts(category) {
     card.dataset.slug = product.slug;
     card.dataset.category = category;
     card.innerHTML = `
-      <div class="product-card__media shimmer">
+      <div class="product-card__media shimmer" style="background-image: url('${product.image}')">
         <span class="badge">${catalog.label}</span>
         <div class="gloss"></div>
       </div>
@@ -244,19 +534,23 @@ function resetProductDetail(category) {
   if (!productDetail) return;
   const pill = productDetail.querySelector('.pill');
   const title = productDetail.querySelector('.detail-title');
+  const price = productDetail.querySelector('.detail-price');
   const meta = productDetail.querySelector('.detail-meta');
   const list = productDetail.querySelector('.detail-list');
   const gallery = productDetail.querySelector('.detail-gallery');
   const shipping = productDetail.querySelector('.detail-meta.shipping');
   const related = productDetail.querySelector('.detail-related');
+  const media = productDetail.querySelector('.detail-media');
 
   if (pill) pill.textContent = 'Select a device';
   if (title) title.textContent = 'Choose a category';
+  if (price) price.textContent = '';
   if (meta) meta.textContent = gadgetCatalog[category]?.description || 'Tap a tile to load full specs and concierge notes.';
   if (list) list.innerHTML = '';
   if (gallery) gallery.innerHTML = '';
   if (shipping) shipping.textContent = '';
   if (related) related.innerHTML = '';
+  if (media) media.style.backgroundImage = 'none';
 }
 
 function updateProductDetail(category, slug) {
@@ -270,14 +564,17 @@ function updateProductDetail(category, slug) {
 
   const pill = productDetail.querySelector('.pill');
   const title = productDetail.querySelector('.detail-title');
+  const price = productDetail.querySelector('.detail-price');
   const meta = productDetail.querySelector('.detail-meta');
   const list = productDetail.querySelector('.detail-list');
   const gallery = productDetail.querySelector('.detail-gallery');
   const shipping = productDetail.querySelector('.detail-meta.shipping');
   const related = productDetail.querySelector('.detail-related');
+  const media = productDetail.querySelector('.detail-media');
 
   if (pill) pill.textContent = catalog.label;
   if (title) title.textContent = product.name;
+  if (price) price.textContent = product.price;
   if (meta) meta.textContent = product.summary;
 
   if (gallery) {
@@ -313,14 +610,21 @@ function updateProductDetail(category, slug) {
 
       const chips = document.createElement('div');
       chips.className = 'related-chips';
-      product.related.forEach((item) => {
-        const chip = document.createElement('span');
-        chip.className = 'pill mini';
-        chip.textContent = item;
+      product.related.forEach((itemSlug) => {
+        const chip = document.createElement('button');
+        chip.className = 'pill mini link-chip';
+        const linkedProduct = productLookup[itemSlug];
+        chip.textContent = linkedProduct?.name || itemSlug;
+        chip.dataset.slug = linkedProduct?.slug || itemSlug;
+        chip.dataset.category = linkedProduct?.category || category;
         chips.appendChild(chip);
       });
       related.appendChild(chips);
     }
+  }
+
+  if (media) {
+    media.style.backgroundImage = `url('${product.image}')`;
   }
 }
 
@@ -338,6 +642,7 @@ function handleRouteChange() {
     const category = segments[1] || 'phones';
     const productSlug = segments[2];
     setActiveCategory(category);
+    setCategoryDescription(category);
     renderProducts(category);
     if (productSlug) {
       updateProductDetail(category, productSlug);
@@ -372,6 +677,15 @@ productGrid?.addEventListener('click', (event) => {
   const card = event.target.closest('.product-card');
   if (!card) return;
   const { category, slug } = card.dataset;
+  if (category && slug) {
+    window.location.hash = `#/gadgets/${category}/${slug}`;
+  }
+});
+
+productDetail?.addEventListener('click', (event) => {
+  const chip = event.target.closest('.link-chip');
+  if (!chip) return;
+  const { category, slug } = chip.dataset;
   if (category && slug) {
     window.location.hash = `#/gadgets/${category}/${slug}`;
   }
