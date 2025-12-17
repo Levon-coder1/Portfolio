@@ -1,0 +1,30 @@
+<svg width="480" height="760" viewBox="0 0 480 760" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="frame" x1="60" y1="40" x2="420" y2="700" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#1B1611" />
+      <stop offset="1" stop-color="#0E0B0A" />
+    </linearGradient>
+    <linearGradient id="glass" x1="80" y1="80" x2="380" y2="520" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFFFFF" stop-opacity="0.15" />
+      <stop offset="1" stop-color="#FDF3E3" stop-opacity="0.04" />
+    </linearGradient>
+    <radialGradient id="glow" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(240 200) rotate(90) scale(240 180)">
+      <stop stop-color="#FFDBA3" stop-opacity="0.6" />
+      <stop offset="1" stop-color="#FF7A3D" stop-opacity="0.08" />
+    </radialGradient>
+    <filter id="shadow" x="0" y="0" width="480" height="760" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="18" stdDeviation="26" flood-color="#0B0B0B" flood-opacity="0.32" />
+    </filter>
+  </defs>
+  <g filter="url(#shadow)">
+    <rect x="60" y="40" width="360" height="680" rx="60" fill="url(#frame)" />
+    <rect x="84" y="64" width="312" height="632" rx="50" fill="#0C0908" />
+    <rect x="96" y="82" width="288" height="596" rx="46" fill="#0B0807" />
+    <rect x="120" y="120" width="240" height="200" rx="30" fill="url(#glow)" />
+    <rect x="120" y="354" width="240" height="248" rx="30" fill="#19110D" />
+    <rect x="132" y="108" width="216" height="32" rx="16" fill="#2F221A" opacity="0.45" />
+    <rect x="150" y="92" width="180" height="8" rx="4" fill="#56301F" opacity="0.7" />
+    <rect x="172" y="654" width="136" height="14" rx="7" fill="#120D0B" opacity="0.6" />
+    <rect x="84" y="128" width="312" height="540" rx="42" fill="url(#glass)" />
+  </g>
+</svg>
