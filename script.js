@@ -481,3 +481,231 @@ navToggle?.addEventListener('click', () => {
 nav?.querySelectorAll('.nav-links a').forEach((link) => {
   link.addEventListener('click', () => nav?.classList.remove('open'));
 });
+
+function findProductBySlug(slug) {
+  for (const [categoryKey, category] of Object.entries(gadgetCatalog)) {
+    const match = category.products.find((product) => product.slug === slug);
+    if (match) {
+      return { product: match, categoryKey, category };
+    }
+  }
+
+  return null;
+}
+
+function setActiveCategoryTab(activeKey) {
+  categoryTabs.forEach((tab) => {
+    tab.classList.toggle('active', tab.dataset.category === activeKey);
+  });
+}
+
+function renderProductCards(categoryKey) {
+  if (!productGrid) return;
+
+  const category = gadgetCatalog[categoryKey];
+  if (!category) return;
+
+  productGrid.innerHTML = '';
+  setActiveCategoryTab(categoryKey);
+  if (categoryDescription) {
+    categoryDescription.textContent = category.description;
+  }
+
+  category.products.forEach((product) => {
+    const card = document.createElement('article');
+    card.className = 'product-card';
+    card.dataset.slug = product.slug;
+    card.dataset.category = categoryKey;
+
+    card.innerHTML = `
+      <div class="product-card__media" style="background-image: url('${product.image}')">
+        <span class="badge">${category.label}</span>
+      </div>
+      <div class="product-card__body">
+        <div class="card-meta">
+          <p class="small">${product.price}</p>
+          <p class="small">${product.shipping}</p>
+        </div>
+        <h3>${product.name}</h3>
+        <p class="muted">${product.summary}</p>
+      </div>
+    `;
+
+    card.addEventListener('click', () => openProductPage(product.slug, categoryKey));
+    productGrid.appendChild(card);
+  });
+}
+
+function buildChips(container, items, className) {
+  container.innerHTML = '';
+  items.forEach((item) => {
+    const chip = document.createElement('span');
+    chip.className = className;
+    chip.textContent = item;
+    container.appendChild(chip);
+  });
+}
+
+function renderRelated(container, relatedSlugs) {
+  if (!container) return;
+  container.innerHTML = '';
+
+  const relatedWrapper = document.createElement('div');
+  relatedWrapper.className = 'related-chips';
+
+  relatedSlugs.forEach((slug) => {
+    const found = findProductBySlug(slug);
+    if (!found) return;
+
+    const button = document.createElement('button');
+    button.className = 'pill mini link-chip';
+    button.type = 'button';
+    button.textContent = found.product.name;
+    button.addEventListener('click', () => openProductPage(slug, found.categoryKey));
+    relatedWrapper.appendChild(button);
+  });
+
+  if (!relatedWrapper.childElementCount) return;
+  container.appendChild(relatedWrapper);
+}
+
+function renderDetailPanel(product, categoryLabel) {
+  if (!productDetail) return;
+
+  const detailTitle = productDetail.querySelector('.detail-title');
+  const detailPrice = productDetail.querySelector('.detail-price');
+  const detailMeta = productDetail.querySelector('.detail-meta.shipping');
+  const detailVisual = productDetail.querySelector('.detail-media');
+  const detailGallery = productDetail.querySelector('.detail-gallery');
+  const detailList = productDetail.querySelector('.detail-list');
+  const detailRelated = productDetail.querySelector('.detail-related');
+  const detailPill = productDetail.querySelector('.pill');
+
+  detailPill.textContent = categoryLabel;
+  detailTitle.textContent = product.name;
+  detailPrice.textContent = product.price;
+  detailMeta.textContent = product.shipping;
+
+  if (detailVisual) {
+    detailVisual.style.backgroundImage = `url('${product.image}')`;
+  }
+
+  if (detailGallery) {
+    buildChips(detailGallery, product.gallery, 'gallery-chip');
+  }
+
+  if (detailList) {
+    detailList.innerHTML = '';
+    product.details.forEach((item) => {
+      const li = document.createElement('li');
+      li.textContent = item;
+      detailList.appendChild(li);
+    });
+  }
+
+  renderRelated(detailRelated, product.related);
+}
+
+function renderProductPage(product, categoryKey) {
+  if (!productPage) return;
+
+  const categoryLabel = gadgetCatalog[categoryKey]?.label ?? 'Gadgets';
+  const title = document.getElementById('product-page-title');
+  const subtitle = document.getElementById('product-page-subtitle');
+
+  productPage.classList.add('open');
+
+  productPageCategory.textContent = categoryLabel;
+  productPagePrice.textContent = `${product.price} · ${product.shipping}`;
+  productPageName.textContent = product.name;
+  productPageDescription.textContent = product.summary;
+  productPageList.innerHTML = '';
+
+  product.details.forEach((item) => {
+    const li = document.createElement('li');
+    li.textContent = item;
+    productPageList.appendChild(li);
+  });
+
+  buildChips(productPageGallery, product.gallery, 'gallery-chip');
+  renderRelated(productPageRelated, product.related);
+
+  if (productPageVisual) {
+    productPageVisual.style.backgroundImage = `url('${product.image}')`;
+  }
+
+  if (title) {
+    title.textContent = product.name;
+  }
+
+  if (subtitle) {
+    subtitle.textContent = `${categoryLabel} · ${product.shipping}`;
+  }
+}
+
+function openProductPage(slug, categoryKey) {
+  const target = findProductBySlug(slug);
+
+  if (!target) return;
+
+  const { product, categoryKey: locatedCategoryKey, category } = target;
+  const resolvedCategory = categoryKey ?? locatedCategoryKey;
+
+  renderProductCards(resolvedCategory);
+  renderDetailPanel(product, category.label);
+  renderProductPage(product, resolvedCategory);
+  updateHash(resolvedCategory, product.slug);
+}
+
+function updateHash(categoryKey, slug) {
+  const nextHash = slug ? `#/gadgets/${slug}` : '#/gadgets';
+  const nextUrl = window.location.pathname + window.location.search + nextHash;
+  history.replaceState(null, '', nextUrl);
+  setActiveCategoryTab(categoryKey);
+}
+
+function handleRoute() {
+  if (!productGrid) return;
+
+  const hash = window.location.hash.slice(1);
+  const segments = hash.split('/').filter(Boolean);
+  const [route, slug] = segments;
+  let activeCategory = 'phones';
+
+  if (route === 'gadgets' && slug) {
+    const found = findProductBySlug(slug);
+    if (found) {
+      activeCategory = found.categoryKey;
+      renderProductCards(activeCategory);
+      renderDetailPanel(found.product, found.category.label);
+      renderProductPage(found.product, activeCategory);
+      setActiveCategoryTab(activeCategory);
+      return;
+    }
+  }
+
+  renderProductCards(activeCategory);
+  updateHash(activeCategory);
+}
+
+function attachCategoryHandlers() {
+  if (!categoryTabs.length) return;
+
+  categoryTabs.forEach((tab) => {
+    tab.addEventListener('click', () => {
+      const categoryKey = tab.dataset.category;
+      renderProductCards(categoryKey);
+      updateHash(categoryKey);
+    });
+  });
+}
+
+function initializeCatalog() {
+  if (!productGrid) return;
+
+  attachCategoryHandlers();
+  handleRoute();
+  window.addEventListener('hashchange', handleRoute);
+}
+
+initializeCatalog();
