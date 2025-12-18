@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gadgets · Asher Jay</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="bg-noise"></div>
+    <header class="nav">
+      <a class="brand" href="index.html">
+        <img src="images/logo.svg" alt="Asher Jay logo" class="brand-logo" />
+        <span>Asher Jay</span>
+      </a>
+      <nav class="nav-links" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="projects.html">Projects</a>
+        <a href="gadgets.html">Gadgets</a>
+        <a href="socials.html">Socials</a>
+        <a href="hub.html">Hub</a>
+        <a href="contact.html">Contact</a>
+        <a href="search.html">Search</a>
+      </nav>
+      <button class="icon-button search-trigger" aria-label="Open search page" title="Search">
+        🔍
+      </button>
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+    </header>
+
+    <main>
+      <section class="page-hero">
+        <div>
+          <p class="pill mini">Catalog</p>
+          <h1>Flagship gadgets curated with transparent details.</h1>
+          <p class="lede">Click any product to open a dedicated detail page with gallery, specs, price, and similar devices.</p>
+          <div class="tag-row">
+            <a class="cta primary" href="search.html">Search & filter</a>
+            <a class="cta" href="contact.html">Request a device</a>
+          </div>
+        </div>
+        <div class="glass-card">
+          <p class="lede">Fully responsive layout with glassmorphism panels. Works across phones, tablets, and desktops without overlapping sections.</p>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section__header">
+          <p class="pill mini">Categories</p>
+          <h2>Pick a lane and dive in</h2>
+          <p class="lede">Select a category to open a dedicated page of its products. Each category opens on its own page with full listings.</p>
+        </div>
+        <div id="category-grid" class="gadget-grid" aria-live="polite"></div>
+      </section>
+    </main>
+
+
+    <div class="mobile-cta-bar">
+      <a class="cta primary" href="mailto:hello@asherjay.dev">Let’s talk</a>
+    </div>
+
+    <footer class="footer">
+      <p>Asher Jay · Gadget catalog</p>
+      <div class="footer-links">
+        <a href="search.html">Search</a>
+        <a href="product.html">Product page</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>

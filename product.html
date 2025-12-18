@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product Detail · Asher Jay</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="bg-noise"></div>
+    <header class="nav">
+      <a class="brand" href="index.html">
+        <img src="images/logo.svg" alt="Asher Jay logo" class="brand-logo" />
+        <span>Asher Jay</span>
+      </a>
+      <nav class="nav-links" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="projects.html">Projects</a>
+        <a href="gadgets.html">Gadgets</a>
+        <a href="socials.html">Socials</a>
+        <a href="hub.html">Hub</a>
+        <a href="contact.html">Contact</a>
+        <a href="search.html">Search</a>
+      </nav>
+      <button class="icon-button search-trigger" aria-label="Open search page" title="Search">
+        🔍
+      </button>
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+    </header>
+
+    <main>
+      <section class="section">
+        <div class="section__header">
+          <p class="pill mini">Product page</p>
+          <h2>Dedicated detail view</h2>
+          <p class="lede">Loaded directly from the data layer by slug. Replace the placeholder images in the images/gadgets folder with your own.</p>
+        </div>
+        <div id="product-detail" class="product-detail" aria-live="polite"></div>
+      </section>
+
+      <section class="section">
+        <div class="section__header">
+          <p class="pill mini">Similar</p>
+          <h2>Related devices</h2>
+        </div>
+        <div id="similar-products" class="similar-grid"></div>
+      </section>
+    </main>
+
+
+    <div class="mobile-cta-bar">
+      <a class="cta primary" href="mailto:hello@asherjay.dev">Let’s talk</a>
+    </div>
+
+    <footer class="footer">
+      <p>Asher Jay · Product detail</p>
+      <div class="footer-links">
+        <a href="gadgets.html">Back to gadgets</a>
+        <a href="search.html">Search</a>
+      </div>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
