@@ -272,6 +272,62 @@
           <p class="muted category-description" id="category-description">
             Pick a lane to see glossy gear with specs, imagery, and concierge notes.
           </p>
+          <div class="search-panel">
+            <div class="search-panel__bar">
+              <label class="search-label" for="catalog-search">Search gadgets</label>
+              <div class="search-input">
+                <span class="search-icon" aria-hidden="true">🔍</span>
+                <input
+                  id="catalog-search"
+                  type="search"
+                  name="search"
+                  placeholder="Search devices, bundles, or tags (e.g., 120Hz, OLED, ANC)"
+                  autocomplete="off"
+                />
+                <button class="pill mini ghost" id="clear-search" type="button">Clear</button>
+              </div>
+            </div>
+            <div class="filters">
+              <div class="filter">
+                <label for="filter-category">Category</label>
+                <select id="filter-category">
+                  <option value="all">All gadgets</option>
+                  <option value="phones">Phones</option>
+                  <option value="laptops">Laptops</option>
+                  <option value="accessories">Accessories</option>
+                  <option value="tablets">Tabs</option>
+                </select>
+              </div>
+              <div class="filter">
+                <div class="filter-row">
+                  <label for="filter-price">Price ceiling</label>
+                  <span class="price-display" id="filter-price-display"></span>
+                </div>
+                <input type="range" id="filter-price" min="0" max="4000" step="50" value="4000" />
+                <div class="filter-range">
+                  <span id="filter-price-min">$0</span>
+                  <span id="filter-price-max">$4,000</span>
+                </div>
+              </div>
+              <div class="filter tags-filter">
+                <label>Tags</label>
+                <div class="tag-chips" id="filter-tags"></div>
+              </div>
+              <div class="filter filter-actions">
+                <label aria-hidden="true" class="sr-only">Actions</label>
+                <button class="cta ghost" id="reset-filters" type="button">Reset filters</button>
+              </div>
+            </div>
+            <div class="results-header" id="results-header">
+              <div>
+                <p class="eyebrow">Results</p>
+                <h3 id="results-title">Browse curated gadgets</h3>
+              </div>
+              <p class="muted" id="results-subtitle">
+                Start typing or pick filters to see matching products. Debounced search keeps things smooth.
+              </p>
+            </div>
+          </div>
           <div class="catalog">
             <div class="product-grid" id="product-grid" aria-live="polite"></div>
             <aside class="product-detail" id="product-detail">
