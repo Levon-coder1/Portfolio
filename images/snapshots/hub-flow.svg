@@ -1,0 +1,17 @@
+<svg width="480" height="280" viewBox="0 0 480 280" xmlns="http://www.w3.org/2000/svg" fill="none">
+  <defs>
+    <linearGradient id="grad4" x1="1" y1="1" x2="0" y2="0">
+      <stop offset="0%" stop-color="#111" stop-opacity="0.92"/>
+      <stop offset="45%" stop-color="#ffbe82" stop-opacity="0.36"/>
+      <stop offset="100%" stop-color="#fff7ee" stop-opacity="0.9"/>
+    </linearGradient>
+  </defs>
+  <rect x="10" y="12" width="460" height="256" rx="32" fill="url(#grad4)" stroke="rgba(255,140,50,0.32)" stroke-width="2"/>
+  <rect x="56" y="70" width="150" height="120" rx="22" fill="rgba(255,255,255,0.9)" stroke="rgba(0,0,0,0.1)"/>
+  <rect x="220" y="80" width="200" height="140" rx="26" fill="rgba(0,0,0,0.8)" stroke="rgba(255,255,255,0.2)"/>
+  <path d="M220 112h160" stroke="rgba(255,255,255,0.26)" stroke-width="3" stroke-linecap="round"/>
+  <path d="M220 140h140" stroke="rgba(255,255,255,0.22)" stroke-width="3" stroke-linecap="round"/>
+  <path d="M220 168h120" stroke="rgba(255,255,255,0.2)" stroke-width="3" stroke-linecap="round"/>
+  <text x="60" y="60" fill="#0f0f0f" font-family="'Space Grotesk', 'Inter', sans-serif" font-size="24" font-weight="700">Hub utilities</text>
+  <text x="60" y="210" fill="#0f0f0f" font-family="'Space Grotesk', 'Inter', sans-serif" font-size="16" opacity="0.8">Blog, maps, and suggestions under a single glass surface.</text>
+</svg>

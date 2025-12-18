@@ -1,0 +1,18 @@
+<svg width="480" height="280" viewBox="0 0 480 280" xmlns="http://www.w3.org/2000/svg" fill="none">
+  <defs>
+    <linearGradient id="grad3" x1="0" y1="1" x2="1" y2="0">
+      <stop offset="0%" stop-color="#fff4e8" stop-opacity="0.95"/>
+      <stop offset="55%" stop-color="#ffb87a" stop-opacity="0.38"/>
+      <stop offset="100%" stop-color="#121212" stop-opacity="0.88"/>
+    </linearGradient>
+  </defs>
+  <rect x="8" y="10" width="464" height="260" rx="30" fill="url(#grad3)" stroke="rgba(255,140,50,0.42)" stroke-width="2"/>
+  <rect x="60" y="72" width="360" height="46" rx="16" fill="rgba(0,0,0,0.72)" stroke="rgba(255,255,255,0.12)"/>
+  <rect x="60" y="134" width="220" height="36" rx="14" fill="rgba(255,255,255,0.86)" stroke="rgba(0,0,0,0.08)"/>
+  <rect x="300" y="134" width="120" height="36" rx="14" fill="rgba(255,140,50,0.24)" stroke="rgba(255,255,255,0.18)"/>
+  <circle cx="88" cy="96" r="12" fill="rgba(255,255,255,0.78)"/>
+  <circle cx="120" cy="96" r="10" fill="rgba(255,140,50,0.35)"/>
+  <circle cx="152" cy="96" r="8" fill="rgba(255,255,255,0.7)"/>
+  <text x="60" y="60" fill="#0f0f0f" font-family="'Space Grotesk', 'Inter', sans-serif" font-size="24" font-weight="700">Channel spotlight</text>
+  <text x="60" y="190" fill="#0f0f0f" font-family="'Space Grotesk', 'Inter', sans-serif" font-size="16" opacity="0.8">Per-platform highlights with CTAs to follow or message.</text>
+</svg>
