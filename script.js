@@ -844,13 +844,25 @@ scrollLinks.forEach((link) => {
 
 const nav = document.querySelector('.nav');
 const navToggle = document.querySelector('.nav-toggle');
+const navLinksContainer = nav?.querySelector('.nav-links');
 
 navToggle?.addEventListener('click', () => {
-  nav?.classList.toggle('open');
+  const isOpen = nav?.classList.toggle('open');
+  navToggle.setAttribute('aria-expanded', isOpen);
 });
 
-nav?.querySelectorAll('.nav-links a').forEach((link) => {
-  link.addEventListener('click', () => nav?.classList.remove('open'));
+navLinksContainer?.querySelectorAll('a').forEach((link) => {
+  link.addEventListener('click', () => {
+    nav?.classList.remove('open');
+    navToggle?.setAttribute('aria-expanded', 'false');
+  });
+});
+
+window.addEventListener('resize', () => {
+  if (window.innerWidth > 768 && nav?.classList.contains('open')) {
+    nav.classList.remove('open');
+    navToggle?.setAttribute('aria-expanded', 'false');
+  }
 });
 
 categoryTabs.forEach((tab) => {
