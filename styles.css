@@ -742,6 +742,23 @@ button {
   font-weight: 700;
 }
 
+.detail-tags,
+.page-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.tag {
+  padding: 6px 10px;
+  border-radius: 999px;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  background: rgba(255, 255, 255, 0.85);
+  color: var(--muted);
+  font-weight: 600;
+  font-size: 0.85rem;
+}
+
 .detail-meta {
   color: var(--muted);
 }
