@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Projects · Asher Jay</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="bg-noise"></div>
+    <header class="nav">
+      <a class="brand" href="index.html">
+        <img src="images/logo.svg" alt="Asher Jay logo" class="brand-logo" />
+        <span>Asher Jay</span>
+      </a>
+      <nav class="nav-links" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="projects.html">Projects</a>
+        <a href="gadgets.html">Gadgets</a>
+        <a href="socials.html">Socials</a>
+        <a href="hub.html">Hub</a>
+        <a href="contact.html">Contact</a>
+        <a href="search.html">Search</a>
+      </nav>
+      <div class="nav-actions">
+        <button class="icon-button search-trigger" aria-label="Open search page" title="Search">
+          🔍
+        </button>
+        <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+      </div>
+    </header>
+
+    <main>
+      <section class="page-hero">
+        <div>
+          <p class="pill mini">Projects</p>
+          <h1>Software engineering services</h1>
+          <p class="lede">
+            Liquid-glass service cards highlight how I deliver web, mobile, and systems support. Tap any service to open a dedicated preview page and request a quote.
+          </p>
+        </div>
+        <div class="glass-card">
+          <p class="lede">Every CTA is a buttoned glass pill. Grids collapse beautifully on tablets and phones.</p>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section__header">
+          <p class="pill mini">Capabilities</p>
+          <h2>What I ship</h2>
+        </div>
+        <div class="service-grid">
+          <article class="card service-card">
+            <img src="images/services/web-design.svg" alt="Web design concept" />
+            <div class="tag-row">
+              <span class="pill mini">UI/UX</span>
+              <span class="pill mini">Landing pages</span>
+            </div>
+            <h3>Web design</h3>
+            <p class="lede">High-polish websites with animation, storytelling, and conversion-led layouts.</p>
+            <a class="cta primary" href="service-web-design.html">Open web design</a>
+          </article>
+
+          <article class="card service-card">
+            <img src="images/services/mobile-app.svg" alt="Mobile app mock" />
+            <div class="tag-row">
+              <span class="pill mini">iOS/Android</span>
+              <span class="pill mini">Native</span>
+            </div>
+            <h3>Mobile app development</h3>
+            <p class="lede">Responsive, performant mobile builds with offline-first flows and push-ready UX.</p>
+            <a class="cta primary" href="service-mobile-app.html">Open mobile apps</a>
+          </article>
+
+          <article class="card service-card">
+            <img src="images/services/web-app.svg" alt="Web app layout" />
+            <div class="tag-row">
+              <span class="pill mini">SaaS</span>
+              <span class="pill mini">Dashboards</span>
+            </div>
+            <h3>Web app development</h3>
+            <p class="lede">Full-stack web apps with auth, APIs, analytics, and glossy product ergonomics.</p>
+            <a class="cta primary" href="service-web-app.html">Open web apps</a>
+          </article>
+
+          <article class="card service-card">
+            <img src="images/services/debugging.svg" alt="Debugging illustration" />
+            <div class="tag-row">
+              <span class="pill mini">Troubleshoot</span>
+              <span class="pill mini">Stability</span>
+            </div>
+            <h3>Debugging</h3>
+            <p class="lede">Root-cause hunts, fixes, and performance tuning to keep apps healthy.</p>
+            <a class="cta primary" href="service-debugging.html">Open debugging</a>
+          </article>
+
+          <article class="card service-card">
+            <img src="images/services/maintenance.svg" alt="Maintenance illustration" />
+            <div class="tag-row">
+              <span class="pill mini">Updates</span>
+              <span class="pill mini">Hardware</span>
+            </div>
+            <h3>Software & hardware upkeep</h3>
+            <p class="lede">Version upgrades, security patches, and device care to keep systems in peak shape.</p>
+            <a class="cta primary" href="service-maintenance.html">Open maintenance</a>
+          </article>
+        </div>
+      </section>
+    </main>
+
+
+    <footer class="footer">
+      <div class="footer-mobile-cta">
+        <a class="cta primary" href="mailto:hello@asherjay.dev">Let’s talk</a>
+      </div>
+      <p>Asher Jay · Projects</p>
+      <div class="footer-links">
+        <a href="gadgets.html">Gadgets</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,2412 @@
+[
+  {
+    "name": "Aurora Air Phone",
+    "slug": "aurora-air-phone",
+    "category": "Phones",
+    "price": 620,
+    "summary": "Phone built for creators and enthusiasts with polished design and smooth performance. Variant 1.",
+    "tags": [
+      "Phones",
+      "Premium",
+      "Glass"
+    ],
+    "heroImage": "images/gadgets/phone-aurora-front.svg",
+    "gallery": [
+      "images/gadgets/phone-aurora-front.svg",
+      "images/gadgets/phone-aurora-back.svg",
+      "images/gadgets/phone-aurora-side.svg"
+    ],
+    "specs": [
+      "6.8\" 120Hz AMOLED",
+      "Pro cameras",
+      "512GB/1TB",
+      "5G ultra"
+    ],
+    "similar": []
+  },
+  {
+    "name": "Aurora Pro Phone",
+    "slug": "aurora-pro-phone",
+    "category": "Phones",
+    "price": 740,
+    "summary": "Phone built for creators and enthusiasts with polished design and smooth performance. Variant 2.",
+    "tags": [
+      "Phones",
+      "Premium",
+      "Glass"
+    ],
+    "heroImage": "images/gadgets/phone-aurora-front.svg",
+    "gallery": [
+      "images/gadgets/phone-aurora-front.svg",
+      "images/gadgets/phone-aurora-back.svg",
+      "images/gadgets/phone-aurora-side.svg"
+    ],
+    "specs": [
+      "6.8\" 120Hz AMOLED",
+      "Pro cameras",
+      "512GB/1TB",
+      "5G ultra"
+    ],
+    "similar": []
+  },
+  {
+    "name": "Aurora Max Phone",
+    "slug": "aurora-max-phone",
+    "category": "Phones",
+    "price": 860,
+    "summary": "Phone built for creators and enthusiasts with polished design and smooth performance. Variant 3.",
+    "tags": [
+      "Phones",
+      "Premium",
+      "Glass"
+    ],
+    "heroImage": "images/gadgets/phone-aurora-front.svg",
+    "gallery": [
+      "images/gadgets/phone-aurora-front.svg",
+      "images/gadgets/phone-aurora-back.svg",
+      "images/gadgets/phone-aurora-side.svg"
+    ],
+    "specs": [
+      "6.8\" 120Hz AMOLED",
+      "Pro cameras",
+      "512GB/1TB",
+      "5G ultra"
+    ],
+    "similar": []
+  },
+  {
+    "name": "Aurora Studio Phone",
+    "slug": "aurora-studio-phone",
+    "category": "Phones",
+    "price": 980,
+    "summary": "Phone built for creators and enthusiasts with polished design and smooth performance. Variant 4.",
+    "tags": [
+      "Phones",
+      "Premium",
+      "Glass"
+    ],
+    "heroImage": "images/gadgets/phone-aurora-front.svg",
+    "gallery": [
+      "images/gadgets/phone-aurora-front.svg",
+      "images/gadgets/phone-aurora-back.svg",
+      "images/gadgets/phone-aurora-side.svg"
+    ],
+    "specs": [
+      "6.8\" 120Hz AMOLED",
+      "Pro cameras",
+      "512GB/1TB",
+      "5G ultra"
+    ],
+    "similar": []
+  },
+  {
+    "name": "Aurora Lite Phone",
+    "slug": "aurora-lite-phone",
+    "category": "Phones",
+    "price": 1100,
+    "summary": "Phone built for creators and enthusiasts with polished design and smooth performance. Variant 5.",
+    "tags": [
+      "Phones",
+      "Premium",
+      "Glass"
+    ],
+    "heroImage": "images/gadgets/phone-aurora-front.svg",
+    "gallery": [
+      "images/gadgets/phone-aurora-front.svg",
+      "images/gadgets/phone-aurora-back.svg",
+      "images/gadgets/phone-aurora-side.svg"
+    ],
+    "specs": [
+      "6.8\" 120Hz AMOLED",
+      "Pro cameras",
+      "512GB/1TB",
+      "5G ultra"
+    ],
+    "similar": []
+  },
+  {
+    "name": "Aurora Plus Phone",
+    "slug": "aurora-plus-phone",
+    "category": "Phones",
+    "price": 1220,
+    "summary": "Phone built for creators and enthusiasts with polished design and smooth performance. Variant 6.",
+    "tags": [
+      "Phones",
+      "Premium",
+      "Glass"
+    ],
+    "heroImage": "images/gadgets/phone-aurora-front.svg",
+    "gallery": [
+      "images/gadgets/phone-aurora-front.svg",
+      "images/gadgets/phone-aurora-back.svg",
+      "images/gadgets/phone-aurora-side.svg"
+    ],
+    "specs": [
+      "6.8\" 120Hz AMOLED",
+      "Pro cameras",
+      "512GB/1TB",
+      "5G ultra"
+    ],
+    "similar": []
+  },
+  {
+    "name": "Aurora Ultra Phone",
+    "slug": "aurora-ultra-phone",
+    "category": "Phones",
+    "price": 1340,
+    "summary": "Phone built for creators and enthusiasts with polished design and smooth performance. Variant 7.",
+    "tags": [
+      "Phones",
+      "Premium",
+      "Glass"
+    ],
+    "heroImage": "images/gadgets/phone-aurora-front.svg",
+    "gallery": [
+      "images/gadgets/phone-aurora-front.svg",
+      "images/gadgets/phone-aurora-back.svg",
+      "images/gadgets/phone-aurora-side.svg"
+    ],
+    "specs": [
+      "6.8\" 120Hz AMOLED",
+      "Pro cameras",
+      "512GB/1TB",
+      "5G ultra"
+    ],
+    "similar": []
+  },
+  {
+    "name": "Aurora Edge Phone",
+    "slug": "aurora-edge-phone",
+    "category": "Phones",
+    "price": 1460,
+    "summary": "Phone built for creators and enthusiasts with polished design and smooth performance. Variant 8.",
+    "tags": [
+      "Phones",
+      "Premium",
+      "Glass"
+    ],
+    "heroImage": "images/gadgets/phone-aurora-front.svg",
+    "gallery": [
+      "images/gadgets/phone-aurora-front.svg",
+      "images/gadgets/phone-aurora-back.svg",
+      "images/gadgets/phone-aurora-side.svg"
+    ],
+    "specs": [
+      "6.8\" 120Hz AMOLED",
+      "Pro cameras",
+      "512GB/1TB",
+      "5G ultra"
+    ],
+    "similar": []
+  },
+  {
+    "name": "Aurora Prime Phone",
+    "slug": "aurora-prime-phone",
+    "category": "Phones",
+    "price": 1580,
+    "summary": "Phone built for creators and enthusiasts with polished design and smooth performance. Variant 9.",
+    "tags": [
+      "Phones",
+      "Premium",
+      "Glass"
+    ],
+    "heroImage": "images/gadgets/phone-aurora-front.svg",
+    "gallery": [
+      "images/gadgets/phone-aurora-front.svg",
+      "images/gadgets/phone-aurora-back.svg",
+      "images/gadgets/phone-aurora-side.svg"
+    ],
+    "specs": [
+      "6.8\" 120Hz AMOLED",
+      "Pro cameras",
+      "512GB/1TB",
+      "5G ultra"
+    ],
+    "similar": []
+  },
+  {
+    "name": "Aurora Flex Phone",
+    "slug": "aurora-flex-phone",
+    "category": "Phones",
+    "price": 1700,
+    "summary": "Phone built for creators and enthusiasts with polished design and smooth performance. Variant 10.",
+    "tags": [
+      "Phones",
+      "Premium",
+      "Glass"
+    ],
+    "heroImage": "images/gadgets/phone-aurora-front.svg",
+    "gallery": [
+      "images/gadgets/phone-aurora-front.svg",
+      "images/gadgets/phone-aurora-back.svg",
+      "images/gadgets/phone-aurora-side.svg"
+    ],
+    "specs": [
+      "6.8\" 120Hz AMOLED",
+      "Pro cameras",
+      "512GB/1TB",
+      "5G ultra"
+    ],
+    "similar": []
+  },
+  {
+    "name": "Lumen Air Laptop",
+    "slug": "lumen-air-laptop",
+    "category": "Laptops",
+    "price": 750,
+    "summary": "Laptop built for creators and enthusiasts with polished design and smooth performance. Variant 1.",
+    "tags": [
+      "Laptops",
+      "Premium",
+      "Glass"
+    ],
+    "heroImage": "images/gadgets/laptop-lumen-open.svg",
+    "gallery": [
+      "images/gadgets/laptop-lumen-open.svg",
+      "images/gadgets/laptop-lumen-side.svg"
+    ],
+    "specs": [
+      "14\" 4K OLED",
+      "32GB RAM",
+      "1TB NVMe",
+      "RTX Studio"
+    ],
+    "similar": []
+  },
+  {
+    "name": "Lumen Pro Laptop",
+    "slug": "lumen-pro-laptop",
+    "category": "Laptops",
+    "price": 1000,
+    "summary": "Laptop built for creators and enthusiasts with polished design and smooth performance. Variant 2.",
+    "tags": [
+      "Laptops",
+      "Premium",
+      "Glass"
+    ],
+    "heroImage": "images/gadgets/laptop-lumen-open.svg",
+    "gallery": [
+      "images/gadgets/laptop-lumen-open.svg",
+      "images/gadgets/laptop-lumen-side.svg"
+    ],
+    "specs": [
+      "14\" 4K OLED",
+      "32GB RAM",
+      "1TB NVMe",
+      "RTX Studio"
+    ],
+    "similar": []
+  },
+  {
+    "name": "Lumen Max Laptop",
+    "slug": "lumen-max-laptop",
+    "category": "Laptops",
+    "price": 1250,
+    "summary": "Laptop built for creators and enthusiasts with polished design and smooth performance. Variant 3.",
+    "tags": [
+      "Laptops",
+      "Premium",
+      "Glass"
+    ],
+    "heroImage": "images/gadgets/laptop-lumen-open.svg",
+    "gallery": [
+      "images/gadgets/laptop-lumen-open.svg",
+      "images/gadgets/laptop-lumen-side.svg"
+    ],
+    "specs": [
+      "14\" 4K OLED",
+      "32GB RAM",
+      "1TB NVMe",
+      "RTX Studio"
+    ],
+    "similar": []
+  },
+  {
+    "name": "Lumen Studio Laptop",
+    "slug": "lumen-studio-laptop",
+    "category": "Laptops",
+    "price": 1500,
+    "summary": "Laptop built for creators and enthusiasts with polished design and smooth performance. Variant 4.",
+    "tags": [
+      "Laptops",
+      "Premium",
+      "Glass"
+    ],
+    "heroImage": "images/gadgets/laptop-lumen-open.svg",
+    "gallery": [
+      "images/gadgets/laptop-lumen-open.svg",
+      "images/gadgets/laptop-lumen-side.svg"
+    ],
+    "specs": [
+      "14\" 4K OLED",
+      "32GB RAM",
+      "1TB NVMe",
+      "RTX Studio"
+    ],
+    "similar": []
+  },
+  {
+    "name": "Lumen Lite Laptop",
+    "slug": "lumen-lite-laptop",
+    "category": "Laptops",
+    "price": 1750,
+    "summary": "Laptop built for creators and enthusiasts with polished design and smooth performance. Variant 5.",
+    "tags": [
+      "Laptops",
+      "Premium",
+      "Glass"
+    ],
+    "heroImage": "images/gadgets/laptop-lumen-open.svg",
+    "gallery": [
+      "images/gadgets/laptop-lumen-open.svg",
+      "images/gadgets/laptop-lumen-side.svg"
+    ],
+    "specs": [
+      "14\" 4K OLED",
+      "32GB RAM",
+      "1TB NVMe",
+      "RTX Studio"
+    ],
+    "similar": []
+  },
+  {
+    "name": "Lumen Plus Laptop",
+    "slug": "lumen-plus-laptop",
+    "category": "Laptops",
+    "price": 2000,
+    "summary": "Laptop built for creators and enthusiasts with polished design and smooth performance. Variant 6.",
+    "tags": [
+      "Laptops",
+      "Premium",
+      "Glass"
+    ],
+    "heroImage": "images/gadgets/laptop-lumen-open.svg",
+    "gallery": [
+      "images/gadgets/laptop-lumen-open.svg",
+      "images/gadgets/laptop-lumen-side.svg"
+    ],
+    "specs": [
+      "14\" 4K OLED",
+      "32GB RAM",
+      "1TB NVMe",
+      "RTX Studio"
+    ],
+    "similar": []
+  },
+  {
+    "name": "Lumen Ultra Laptop",
+    "slug": "lumen-ultra-laptop",
+    "category": "Laptops",
+    "price": 2250,
+    "summary": "Laptop built for creators and enthusiasts with polished design and smooth performance. Variant 7.",
+    "tags": [
+      "Laptops",
+      "Premium",
+      "Glass"
+    ],
+    "heroImage": "images/gadgets/laptop-lumen-open.svg",
+    "gallery": [
+      "images/gadgets/laptop-lumen-open.svg",
+      "images/gadgets/laptop-lumen-side.svg"
+    ],
+    "specs": [
+      "14\" 4K OLED",
+      "32GB RAM",
+      "1TB NVMe",
+      "RTX Studio"
+    ],
+    "similar": []
+  },
+  {
+    "name": "Lumen Edge Laptop",
+    "slug": "lumen-edge-laptop",
+    "category": "Laptops",
+    "price": 2500,
+    "summary": "Laptop built for creators and enthusiasts with polished design and smooth performance. Variant 8.",
+    "tags": [
+      "Laptops",
+      "Premium",
+      "Glass"
+    ],
+    "heroImage": "images/gadgets/laptop-lumen-open.svg",
+    "gallery": [
+      "images/gadgets/laptop-lumen-open.svg",
+      "images/gadgets/laptop-lumen-side.svg"
+    ],
+    "specs": [
+      "14\" 4K OLED",
+      "32GB RAM",
+      "1TB NVMe",
+      "RTX Studio"
+    ],
+    "similar": []
+  },
+  {
+    "name": "Lumen Prime Laptop",
+    "slug": "lumen-prime-laptop",
+    "category": "Laptops",
+    "price": 2750,
+    "summary": "Laptop built for creators and enthusiasts with polished design and smooth performance. Variant 9.",
+    "tags": [
+      "Laptops",
+      "Premium",
+      "Glass"
+    ],
+    "heroImage": "images/gadgets/laptop-lumen-open.svg",
+    "gallery": [
+      "images/gadgets/laptop-lumen-open.svg",
+      "images/gadgets/laptop-lumen-side.svg"
+    ],
+    "specs": [
+      "14\" 4K OLED",
+      "32GB RAM",
+      "1TB NVMe",
+      "RTX Studio"
+    ],
+    "similar": []
+  },
+  {
+    "name": "Lumen Flex Laptop",
+    "slug": "lumen-flex-laptop",
+    "category": "Laptops",
+    "price": 3000,
+    "summary": "Laptop built for creators and enthusiasts with polished design and smooth performance. Variant 10.",
+    "tags": [
+      "Laptops",
+      "Premium",
+      "Glass"
+    ],
+    "heroImage": "images/gadgets/laptop-lumen-open.svg",
+    "gallery": [
+      "images/gadgets/laptop-lumen-open.svg",
+      "images/gadgets/laptop-lumen-side.svg"
+    ],
+    "specs": [
+      "14\" 4K OLED",
+      "32GB RAM",
+      "1TB NVMe",
+      "RTX Studio"
+    ],
+    "similar": []
+  },
+  {
+    "name": "Nova Air Gaming",
+    "slug": "nova-air-gaming",
+    "category": "Gaming",
+    "price": 720,
+    "summary": "Gaming built for creators and enthusiasts with polished design and smooth performance. Variant 1.",
+    "tags": [
+      "Gaming",
+      "Premium",
+      "Glass"
+    ],
+    "heroImage": "images/gadgets/rig-nova-front.svg",
+    "gallery": [
+      "images/gadgets/rig-nova-front.svg",
+      "images/gadgets/rig-nova-side.svg"
+    ],
+    "specs": [
+      "RTX 4080",
+      "Liquid cooling",
+      "64GB DDR5",
+      "2TB NVMe"
+    ],
+    "similar": []
+  },
+  {
+    "name": "Nova Pro Gaming",
+    "slug": "nova-pro-gaming",
+    "category": "Gaming",
+    "price": 940,
+    "summary": "Gaming built for creators and enthusiasts with polished design and smooth performance. Variant 2.",
+    "tags": [
+      "Gaming",
+      "Premium",
+      "Glass"
+    ],
+    "heroImage": "images/gadgets/rig-nova-front.svg",
+    "gallery": [
+      "images/gadgets/rig-nova-front.svg",
+      "images/gadgets/rig-nova-side.svg"
+    ],
+    "specs": [
+      "RTX 4080",
+      "Liquid cooling",
+      "64GB DDR5",
+      "2TB NVMe"
+    ],
+    "similar": []
+  },
+  {
+    "name": "Nova Max Gaming",
+    "slug": "nova-max-gaming",
+    "category": "Gaming",
+    "price": 1160,
+    "summary": "Gaming built for creators and enthusiasts with polished design and smooth performance. Variant 3.",
+    "tags": [
+      "Gaming",
+      "Premium",
+      "Glass"
+    ],
+    "heroImage": "images/gadgets/rig-nova-front.svg",
+    "gallery": [
+      "images/gadgets/rig-nova-front.svg",
+      "images/gadgets/rig-nova-side.svg"
+    ],
+    "specs": [
+      "RTX 4080",
+      "Liquid cooling",
+      "64GB DDR5",
+      "2TB NVMe"
+    ],
+    "similar": []
+  },
+  {
+    "name": "Nova Studio Gaming",
+    "slug": "nova-studio-gaming",
+    "category": "Gaming",
+    "price": 1380,
+    "summary": "Gaming built for creators and enthusiasts with polished design and smooth performance. Variant 4.",
+    "tags": [
+      "Gaming",
+      "Premium",
+      "Glass"
+    ],
+    "heroImage": "images/gadgets/rig-nova-front.svg",
+    "gallery": [
+      "images/gadgets/rig-nova-front.svg",
+      "images/gadgets/rig-nova-side.svg"
+    ],
+    "specs": [
+      "RTX 4080",
+      "Liquid cooling",
+      "64GB DDR5",
+      "2TB NVMe"
+    ],
+    "similar": []
+  },
+  {
+    "name": "Nova Lite Gaming",
+    "slug": "nova-lite-gaming",
+    "category": "Gaming",
+    "price": 1600,
+    "summary": "Gaming built for creators and enthusiasts with polished design and smooth performance. Variant 5.",
+    "tags": [
+      "Gaming",
+      "Premium",
+      "Glass"
+    ],
+    "heroImage": "images/gadgets/rig-nova-front.svg",
+    "gallery": [
+      "images/gadgets/rig-nova-front.svg",
+      "images/gadgets/rig-nova-side.svg"
+    ],
+    "specs": [
+      "RTX 4080",
+      "Liquid cooling",
+      "64GB DDR5",
+      "2TB NVMe"
+    ],
+    "similar": []
+  },
+  {
+    "name": "Nova Plus Gaming",
+    "slug": "nova-plus-gaming",
+    "category": "Gaming",
+    "price": 1820,
+    "summary": "Gaming built for creators and enthusiasts with polished design and smooth performance. Variant 6.",
+    "tags": [
+      "Gaming",
+      "Premium",
+      "Glass"
+    ],
+    "heroImage": "images/gadgets/rig-nova-front.svg",
+    "gallery": [
+      "images/gadgets/rig-nova-front.svg",
+      "images/gadgets/rig-nova-side.svg"
+    ],
+    "specs": [
+      "RTX 4080",
+      "Liquid cooling",
+      "64GB DDR5",
+      "2TB NVMe"
+    ],
+    "similar": []
+  },
+  {
+    "name": "Nova Ultra Gaming",
+    "slug": "nova-ultra-gaming",
+    "category": "Gaming",
+    "price": 2040,
+    "summary": "Gaming built for creators and enthusiasts with polished design and smooth performance. Variant 7.",
+    "tags": [
+      "Gaming",
+      "Premium",
+      "Glass"
+    ],
+    "heroImage": "images/gadgets/rig-nova-front.svg",
+    "gallery": [
+      "images/gadgets/rig-nova-front.svg",
+      "images/gadgets/rig-nova-side.svg"
+    ],
+    "specs": [
+      "RTX 4080",
+      "Liquid cooling",
+      "64GB DDR5",
+      "2TB NVMe"
+    ],
+    "similar": []
+  },
+  {
+    "name": "Nova Edge Gaming",
+    "slug": "nova-edge-gaming",
+    "category": "Gaming",
+    "price": 2260,
+    "summary": "Gaming built for creators and enthusiasts with polished design and smooth performance. Variant 8.",
+    "tags": [
+      "Gaming",
+      "Premium",
+      "Glass"
+    ],
+    "heroImage": "images/gadgets/rig-nova-front.svg",
+    "gallery": [
+      "images/gadgets/rig-nova-front.svg",
+      "images/gadgets/rig-nova-side.svg"
+    ],
+    "specs": [
+      "RTX 4080",
+      "Liquid cooling",
+      "64GB DDR5",
+      "2TB NVMe"
+    ],
+    "similar": []
+  },
+  {
+    "name": "Nova Prime Gaming",
+    "slug": "nova-prime-gaming",
+    "category": "Gaming",
+    "price": 2480,
+    "summary": "Gaming built for creators and enthusiasts with polished design and smooth performance. Variant 9.",
+    "tags": [
+      "Gaming",
+      "Premium",
+      "Glass"
+    ],
+    "heroImage": "images/gadgets/rig-nova-front.svg",
+    "gallery": [
+      "images/gadgets/rig-nova-front.svg",
+      "images/gadgets/rig-nova-side.svg"
+    ],
+    "specs": [
+      "RTX 4080",
+      "Liquid cooling",
+      "64GB DDR5",
+      "2TB NVMe"
+    ],
+    "similar": []
+  },
+  {
+    "name": "Nova Flex Gaming",
+    "slug": "nova-flex-gaming",
+    "category": "Gaming",
+    "price": 2700,
+    "summary": "Gaming built for creators and enthusiasts with polished design and smooth performance. Variant 10.",
+    "tags": [
+      "Gaming",
+      "Premium",
+      "Glass"
+    ],
+    "heroImage": "images/gadgets/rig-nova-front.svg",
+    "gallery": [
+      "images/gadgets/rig-nova-front.svg",
+      "images/gadgets/rig-nova-side.svg"
+    ],
+    "specs": [
+      "RTX 4080",
+      "Liquid cooling",
+      "64GB DDR5",
+      "2TB NVMe"
+    ],
+    "similar": []
+  },
+  {
+    "name": "Orbit Air Tablet",
+    "slug": "orbit-air-tablet",
+    "category": "Tablets",
+    "price": 680,
+    "summary": "Tablet built for creators and enthusiasts with polished design and smooth performance. Variant 1.",
+    "tags": [
+      "Tablets",
+      "Premium",
+      "Glass"
+    ],
+    "heroImage": "images/gadgets/tablet-orbit-front.svg",
+    "gallery": [
+      "images/gadgets/tablet-orbit-front.svg",
+      "images/gadgets/tablet-orbit-side.svg"
+    ],
+    "specs": [
+      "12.9\" XDR",
+      "M-series",
+      "Stylus + keyboard",
+      "Wi-Fi 6E"
+    ],
+    "similar": []
+  },
+  {
+    "name": "Orbit Pro Tablet",
+    "slug": "orbit-pro-tablet",
+    "category": "Tablets",
+    "price": 860,
+    "summary": "Tablet built for creators and enthusiasts with polished design and smooth performance. Variant 2.",
+    "tags": [
+      "Tablets",
+      "Premium",
+      "Glass"
+    ],
+    "heroImage": "images/gadgets/tablet-orbit-front.svg",
+    "gallery": [
+      "images/gadgets/tablet-orbit-front.svg",
+      "images/gadgets/tablet-orbit-side.svg"
+    ],
+    "specs": [
+      "12.9\" XDR",
+      "M-series",
+      "Stylus + keyboard",
+      "Wi-Fi 6E"
+    ],
+    "similar": []
+  },
+  {
+    "name": "Orbit Max Tablet",
+    "slug": "orbit-max-tablet",
+    "category": "Tablets",
+    "price": 1040,
+    "summary": "Tablet built for creators and enthusiasts with polished design and smooth performance. Variant 3.",
+    "tags": [
+      "Tablets",
+      "Premium",
+      "Glass"
+    ],
+    "heroImage": "images/gadgets/tablet-orbit-front.svg",
+    "gallery": [
+      "images/gadgets/tablet-orbit-front.svg",
+      "images/gadgets/tablet-orbit-side.svg"
+    ],
+    "specs": [
+      "12.9\" XDR",
+      "M-series",
+      "Stylus + keyboard",
+      "Wi-Fi 6E"
+    ],
+    "similar": []
+  },
+  {
+    "name": "Orbit Studio Tablet",
+    "slug": "orbit-studio-tablet",
+    "category": "Tablets",
+    "price": 1220,
+    "summary": "Tablet built for creators and enthusiasts with polished design and smooth performance. Variant 4.",
+    "tags": [
+      "Tablets",
+      "Premium",
+      "Glass"
+    ],
+    "heroImage": "images/gadgets/tablet-orbit-front.svg",
+    "gallery": [
+      "images/gadgets/tablet-orbit-front.svg",
+      "images/gadgets/tablet-orbit-side.svg"
+    ],
+    "specs": [
+      "12.9\" XDR",
+      "M-series",
+      "Stylus + keyboard",
+      "Wi-Fi 6E"
+    ],
+    "similar": []
+  },
+  {
+    "name": "Orbit Lite Tablet",
+    "slug": "orbit-lite-tablet",
+    "category": "Tablets",
+    "price": 1400,
+    "summary": "Tablet built for creators and enthusiasts with polished design and smooth performance. Variant 5.",
+    "tags": [
+      "Tablets",
+      "Premium",
+      "Glass"
+    ],
+    "heroImage": "images/gadgets/tablet-orbit-front.svg",
+    "gallery": [
+      "images/gadgets/tablet-orbit-front.svg",
+      "images/gadgets/tablet-orbit-side.svg"
+    ],
+    "specs": [
+      "12.9\" XDR",
+      "M-series",
+      "Stylus + keyboard",
+      "Wi-Fi 6E"
+    ],
+    "similar": []
+  },
+  {
+    "name": "Orbit Plus Tablet",
+    "slug": "orbit-plus-tablet",
+    "category": "Tablets",
+    "price": 1580,
+    "summary": "Tablet built for creators and enthusiasts with polished design and smooth performance. Variant 6.",
+    "tags": [
+      "Tablets",
+      "Premium",
+      "Glass"
+    ],
+    "heroImage": "images/gadgets/tablet-orbit-front.svg",
+    "gallery": [
+      "images/gadgets/tablet-orbit-front.svg",
+      "images/gadgets/tablet-orbit-side.svg"
+    ],
+    "specs": [
+      "12.9\" XDR",
+      "M-series",
+      "Stylus + keyboard",
+      "Wi-Fi 6E"
+    ],
+    "similar": []
+  },
+  {
+    "name": "Orbit Ultra Tablet",
+    "slug": "orbit-ultra-tablet",
+    "category": "Tablets",
+    "price": 1760,
+    "summary": "Tablet built for creators and enthusiasts with polished design and smooth performance. Variant 7.",
+    "tags": [
+      "Tablets",
+      "Premium",
+      "Glass"
+    ],
+    "heroImage": "images/gadgets/tablet-orbit-front.svg",
+    "gallery": [
+      "images/gadgets/tablet-orbit-front.svg",
+      "images/gadgets/tablet-orbit-side.svg"
+    ],
+    "specs": [
+      "12.9\" XDR",
+      "M-series",
+      "Stylus + keyboard",
+      "Wi-Fi 6E"
+    ],
+    "similar": []
+  },
+  {
+    "name": "Orbit Edge Tablet",
+    "slug": "orbit-edge-tablet",
+    "category": "Tablets",
+    "price": 1940,
+    "summary": "Tablet built for creators and enthusiasts with polished design and smooth performance. Variant 8.",
+    "tags": [
+      "Tablets",
+      "Premium",
+      "Glass"
+    ],
+    "heroImage": "images/gadgets/tablet-orbit-front.svg",
+    "gallery": [
+      "images/gadgets/tablet-orbit-front.svg",
+      "images/gadgets/tablet-orbit-side.svg"
+    ],
+    "specs": [
+      "12.9\" XDR",
+      "M-series",
+      "Stylus + keyboard",
+      "Wi-Fi 6E"
+    ],
+    "similar": []
+  },
+  {
+    "name": "Orbit Prime Tablet",
+    "slug": "orbit-prime-tablet",
+    "category": "Tablets",
+    "price": 2120,
+    "summary": "Tablet built for creators and enthusiasts with polished design and smooth performance. Variant 9.",
+    "tags": [
+      "Tablets",
+      "Premium",
+      "Glass"
+    ],
+    "heroImage": "images/gadgets/tablet-orbit-front.svg",
+    "gallery": [
+      "images/gadgets/tablet-orbit-front.svg",
+      "images/gadgets/tablet-orbit-side.svg"
+    ],
+    "specs": [
+      "12.9\" XDR",
+      "M-series",
+      "Stylus + keyboard",
+      "Wi-Fi 6E"
+    ],
+    "similar": []
+  },
+  {
+    "name": "Orbit Flex Tablet",
+    "slug": "orbit-flex-tablet",
+    "category": "Tablets",
+    "price": 2300,
+    "summary": "Tablet built for creators and enthusiasts with polished design and smooth performance. Variant 10.",
+    "tags": [
+      "Tablets",
+      "Premium",
+      "Glass"
+    ],
+    "heroImage": "images/gadgets/tablet-orbit-front.svg",
+    "gallery": [
+      "images/gadgets/tablet-orbit-front.svg",
+      "images/gadgets/tablet-orbit-side.svg"
+    ],
+    "specs": [
+      "12.9\" XDR",
+      "M-series",
+      "Stylus + keyboard",
+      "Wi-Fi 6E"
+    ],
+    "similar": []
+  },
+  {
+    "name": "Pulse Air Wearable",
+    "slug": "pulse-air-wearable",
+    "category": "Wearables",
+    "price": 620,
+    "summary": "Wearable built for creators and enthusiasts with polished design and smooth performance. Variant 1.",
+    "tags": [
+      "Wearables",
+      "Premium",
+      "Glass"
+    ],
+    "heroImage": "images/gadgets/watch-pulse-face.svg",
+    "gallery": [
+      "images/gadgets/watch-pulse-face.svg",
+      "images/gadgets/watch-pulse-side.svg"
+    ],
+    "specs": [
+      "Always-on display",
+      "ECG + SpO2",
+      "LTE + GPS",
+      "7-day battery"
+    ],
+    "similar": []
+  },
+  {
+    "name": "Pulse Pro Wearable",
+    "slug": "pulse-pro-wearable",
+    "category": "Wearables",
+    "price": 740,
+    "summary": "Wearable built for creators and enthusiasts with polished design and smooth performance. Variant 2.",
+    "tags": [
+      "Wearables",
+      "Premium",
+      "Glass"
+    ],
+    "heroImage": "images/gadgets/watch-pulse-face.svg",
+    "gallery": [
+      "images/gadgets/watch-pulse-face.svg",
+      "images/gadgets/watch-pulse-side.svg"
+    ],
+    "specs": [
+      "Always-on display",
+      "ECG + SpO2",
+      "LTE + GPS",
+      "7-day battery"
+    ],
+    "similar": []
+  },
+  {
+    "name": "Pulse Max Wearable",
+    "slug": "pulse-max-wearable",
+    "category": "Wearables",
+    "price": 860,
+    "summary": "Wearable built for creators and enthusiasts with polished design and smooth performance. Variant 3.",
+    "tags": [
+      "Wearables",
+      "Premium",
+      "Glass"
+    ],
+    "heroImage": "images/gadgets/watch-pulse-face.svg",
+    "gallery": [
+      "images/gadgets/watch-pulse-face.svg",
+      "images/gadgets/watch-pulse-side.svg"
+    ],
+    "specs": [
+      "Always-on display",
+      "ECG + SpO2",
+      "LTE + GPS",
+      "7-day battery"
+    ],
+    "similar": []
+  },
+  {
+    "name": "Pulse Studio Wearable",
+    "slug": "pulse-studio-wearable",
+    "category": "Wearables",
+    "price": 980,
+    "summary": "Wearable built for creators and enthusiasts with polished design and smooth performance. Variant 4.",
+    "tags": [
+      "Wearables",
+      "Premium",
+      "Glass"
+    ],
+    "heroImage": "images/gadgets/watch-pulse-face.svg",
+    "gallery": [
+      "images/gadgets/watch-pulse-face.svg",
+      "images/gadgets/watch-pulse-side.svg"
+    ],
+    "specs": [
+      "Always-on display",
+      "ECG + SpO2",
+      "LTE + GPS",
+      "7-day battery"
+    ],
+    "similar": []
+  },
+  {
+    "name": "Pulse Lite Wearable",
+    "slug": "pulse-lite-wearable",
+    "category": "Wearables",
+    "price": 1100,
+    "summary": "Wearable built for creators and enthusiasts with polished design and smooth performance. Variant 5.",
+    "tags": [
+      "Wearables",
+      "Premium",
+      "Glass"
+    ],
+    "heroImage": "images/gadgets/watch-pulse-face.svg",
+    "gallery": [
+      "images/gadgets/watch-pulse-face.svg",
+      "images/gadgets/watch-pulse-side.svg"
+    ],
+    "specs": [
+      "Always-on display",
+      "ECG + SpO2",
+      "LTE + GPS",
+      "7-day battery"
+    ],
+    "similar": []
+  },
+  {
+    "name": "Pulse Plus Wearable",
+    "slug": "pulse-plus-wearable",
+    "category": "Wearables",
+    "price": 1220,
+    "summary": "Wearable built for creators and enthusiasts with polished design and smooth performance. Variant 6.",
+    "tags": [
+      "Wearables",
+      "Premium",
+      "Glass"
+    ],
+    "heroImage": "images/gadgets/watch-pulse-face.svg",
+    "gallery": [
+      "images/gadgets/watch-pulse-face.svg",
+      "images/gadgets/watch-pulse-side.svg"
+    ],
+    "specs": [
+      "Always-on display",
+      "ECG + SpO2",
+      "LTE + GPS",
+      "7-day battery"
+    ],
+    "similar": []
+  },
+  {
+    "name": "Pulse Ultra Wearable",
+    "slug": "pulse-ultra-wearable",
+    "category": "Wearables",
+    "price": 1340,
+    "summary": "Wearable built for creators and enthusiasts with polished design and smooth performance. Variant 7.",
+    "tags": [
+      "Wearables",
+      "Premium",
+      "Glass"
+    ],
+    "heroImage": "images/gadgets/watch-pulse-face.svg",
+    "gallery": [
+      "images/gadgets/watch-pulse-face.svg",
+      "images/gadgets/watch-pulse-side.svg"
+    ],
+    "specs": [
+      "Always-on display",
+      "ECG + SpO2",
+      "LTE + GPS",
+      "7-day battery"
+    ],
+    "similar": []
+  },
+  {
+    "name": "Pulse Edge Wearable",
+    "slug": "pulse-edge-wearable",
+    "category": "Wearables",
+    "price": 1460,
+    "summary": "Wearable built for creators and enthusiasts with polished design and smooth performance. Variant 8.",
+    "tags": [
+      "Wearables",
+      "Premium",
+      "Glass"
+    ],
+    "heroImage": "images/gadgets/watch-pulse-face.svg",
+    "gallery": [
+      "images/gadgets/watch-pulse-face.svg",
+      "images/gadgets/watch-pulse-side.svg"
+    ],
+    "specs": [
+      "Always-on display",
+      "ECG + SpO2",
+      "LTE + GPS",
+      "7-day battery"
+    ],
+    "similar": []
+  },
+  {
+    "name": "Pulse Prime Wearable",
+    "slug": "pulse-prime-wearable",
+    "category": "Wearables",
+    "price": 1580,
+    "summary": "Wearable built for creators and enthusiasts with polished design and smooth performance. Variant 9.",
+    "tags": [
+      "Wearables",
+      "Premium",
+      "Glass"
+    ],
+    "heroImage": "images/gadgets/watch-pulse-face.svg",
+    "gallery": [
+      "images/gadgets/watch-pulse-face.svg",
+      "images/gadgets/watch-pulse-side.svg"
+    ],
+    "specs": [
+      "Always-on display",
+      "ECG + SpO2",
+      "LTE + GPS",
+      "7-day battery"
+    ],
+    "similar": []
+  },
+  {
+    "name": "Pulse Flex Wearable",
+    "slug": "pulse-flex-wearable",
+    "category": "Wearables",
+    "price": 1700,
+    "summary": "Wearable built for creators and enthusiasts with polished design and smooth performance. Variant 10.",
+    "tags": [
+      "Wearables",
+      "Premium",
+      "Glass"
+    ],
+    "heroImage": "images/gadgets/watch-pulse-face.svg",
+    "gallery": [
+      "images/gadgets/watch-pulse-face.svg",
+      "images/gadgets/watch-pulse-side.svg"
+    ],
+    "specs": [
+      "Always-on display",
+      "ECG + SpO2",
+      "LTE + GPS",
+      "7-day battery"
+    ],
+    "similar": []
+  },
+  {
+    "name": "Echo Air Audio",
+    "slug": "echo-air-audio",
+    "category": "Audio",
+    "price": 620,
+    "summary": "Audio built for creators and enthusiasts with polished design and smooth performance. Variant 1.",
+    "tags": [
+      "Audio",
+      "Premium",
+      "Glass"
+    ],
+    "heroImage": "images/gadgets/earbuds-echo-case.svg",
+    "gallery": [
+      "images/gadgets/earbuds-echo-case.svg",
+      "images/gadgets/earbuds-echo-pods.svg"
+    ],
+    "specs": [
+      "Adaptive ANC",
+      "Spatial audio",
+      "Wireless charge",
+      "Dual drivers"
+    ],
+    "similar": []
+  },
+  {
+    "name": "Echo Pro Audio",
+    "slug": "echo-pro-audio",
+    "category": "Audio",
+    "price": 740,
+    "summary": "Audio built for creators and enthusiasts with polished design and smooth performance. Variant 2.",
+    "tags": [
+      "Audio",
+      "Premium",
+      "Glass"
+    ],
+    "heroImage": "images/gadgets/earbuds-echo-case.svg",
+    "gallery": [
+      "images/gadgets/earbuds-echo-case.svg",
+      "images/gadgets/earbuds-echo-pods.svg"
+    ],
+    "specs": [
+      "Adaptive ANC",
+      "Spatial audio",
+      "Wireless charge",
+      "Dual drivers"
+    ],
+    "similar": []
+  },
+  {
+    "name": "Echo Max Audio",
+    "slug": "echo-max-audio",
+    "category": "Audio",
+    "price": 860,
+    "summary": "Audio built for creators and enthusiasts with polished design and smooth performance. Variant 3.",
+    "tags": [
+      "Audio",
+      "Premium",
+      "Glass"
+    ],
+    "heroImage": "images/gadgets/earbuds-echo-case.svg",
+    "gallery": [
+      "images/gadgets/earbuds-echo-case.svg",
+      "images/gadgets/earbuds-echo-pods.svg"
+    ],
+    "specs": [
+      "Adaptive ANC",
+      "Spatial audio",
+      "Wireless charge",
+      "Dual drivers"
+    ],
+    "similar": []
+  },
+  {
+    "name": "Echo Studio Audio",
+    "slug": "echo-studio-audio",
+    "category": "Audio",
+    "price": 980,
+    "summary": "Audio built for creators and enthusiasts with polished design and smooth performance. Variant 4.",
+    "tags": [
+      "Audio",
+      "Premium",
+      "Glass"
+    ],
+    "heroImage": "images/gadgets/earbuds-echo-case.svg",
+    "gallery": [
+      "images/gadgets/earbuds-echo-case.svg",
+      "images/gadgets/earbuds-echo-pods.svg"
+    ],
+    "specs": [
+      "Adaptive ANC",
+      "Spatial audio",
+      "Wireless charge",
+      "Dual drivers"
+    ],
+    "similar": []
+  },
+  {
+    "name": "Echo Lite Audio",
+    "slug": "echo-lite-audio",
+    "category": "Audio",
+    "price": 1100,
+    "summary": "Audio built for creators and enthusiasts with polished design and smooth performance. Variant 5.",
+    "tags": [
+      "Audio",
+      "Premium",
+      "Glass"
+    ],
+    "heroImage": "images/gadgets/earbuds-echo-case.svg",
+    "gallery": [
+      "images/gadgets/earbuds-echo-case.svg",
+      "images/gadgets/earbuds-echo-pods.svg"
+    ],
+    "specs": [
+      "Adaptive ANC",
+      "Spatial audio",
+      "Wireless charge",
+      "Dual drivers"
+    ],
+    "similar": []
+  },
+  {
+    "name": "Echo Plus Audio",
+    "slug": "echo-plus-audio",
+    "category": "Audio",
+    "price": 1220,
+    "summary": "Audio built for creators and enthusiasts with polished design and smooth performance. Variant 6.",
+    "tags": [
+      "Audio",
+      "Premium",
+      "Glass"
+    ],
+    "heroImage": "images/gadgets/earbuds-echo-case.svg",
+    "gallery": [
+      "images/gadgets/earbuds-echo-case.svg",
+      "images/gadgets/earbuds-echo-pods.svg"
+    ],
+    "specs": [
+      "Adaptive ANC",
+      "Spatial audio",
+      "Wireless charge",
+      "Dual drivers"
+    ],
+    "similar": []
+  },
+  {
+    "name": "Echo Ultra Audio",
+    "slug": "echo-ultra-audio",
+    "category": "Audio",
+    "price": 1340,
+    "summary": "Audio built for creators and enthusiasts with polished design and smooth performance. Variant 7.",
+    "tags": [
+      "Audio",
+      "Premium",
+      "Glass"
+    ],
+    "heroImage": "images/gadgets/earbuds-echo-case.svg",
+    "gallery": [
+      "images/gadgets/earbuds-echo-case.svg",
+      "images/gadgets/earbuds-echo-pods.svg"
+    ],
+    "specs": [
+      "Adaptive ANC",
+      "Spatial audio",
+      "Wireless charge",
+      "Dual drivers"
+    ],
+    "similar": []
+  },
+  {
+    "name": "Echo Edge Audio",
+    "slug": "echo-edge-audio",
+    "category": "Audio",
+    "price": 1460,
+    "summary": "Audio built for creators and enthusiasts with polished design and smooth performance. Variant 8.",
+    "tags": [
+      "Audio",
+      "Premium",
+      "Glass"
+    ],
+    "heroImage": "images/gadgets/earbuds-echo-case.svg",
+    "gallery": [
+      "images/gadgets/earbuds-echo-case.svg",
+      "images/gadgets/earbuds-echo-pods.svg"
+    ],
+    "specs": [
+      "Adaptive ANC",
+      "Spatial audio",
+      "Wireless charge",
+      "Dual drivers"
+    ],
+    "similar": []
+  },
+  {
+    "name": "Echo Prime Audio",
+    "slug": "echo-prime-audio",
+    "category": "Audio",
+    "price": 1580,
+    "summary": "Audio built for creators and enthusiasts with polished design and smooth performance. Variant 9.",
+    "tags": [
+      "Audio",
+      "Premium",
+      "Glass"
+    ],
+    "heroImage": "images/gadgets/earbuds-echo-case.svg",
+    "gallery": [
+      "images/gadgets/earbuds-echo-case.svg",
+      "images/gadgets/earbuds-echo-pods.svg"
+    ],
+    "specs": [
+      "Adaptive ANC",
+      "Spatial audio",
+      "Wireless charge",
+      "Dual drivers"
+    ],
+    "similar": []
+  },
+  {
+    "name": "Echo Flex Audio",
+    "slug": "echo-flex-audio",
+    "category": "Audio",
+    "price": 1700,
+    "summary": "Audio built for creators and enthusiasts with polished design and smooth performance. Variant 10.",
+    "tags": [
+      "Audio",
+      "Premium",
+      "Glass"
+    ],
+    "heroImage": "images/gadgets/earbuds-echo-case.svg",
+    "gallery": [
+      "images/gadgets/earbuds-echo-case.svg",
+      "images/gadgets/earbuds-echo-pods.svg"
+    ],
+    "specs": [
+      "Adaptive ANC",
+      "Spatial audio",
+      "Wireless charge",
+      "Dual drivers"
+    ],
+    "similar": []
+  },
+  {
+    "name": "Zen Air Camera",
+    "slug": "zen-air-camera",
+    "category": "Cameras",
+    "price": 750,
+    "summary": "Camera built for creators and enthusiasts with polished design and smooth performance. Variant 1.",
+    "tags": [
+      "Cameras",
+      "Premium",
+      "Glass"
+    ],
+    "heroImage": "images/gadgets/camera-zen-front.svg",
+    "gallery": [
+      "images/gadgets/camera-zen-front.svg",
+      "images/gadgets/camera-zen-top.svg"
+    ],
+    "specs": [
+      "8K60 RAW",
+      "Stacked sensor",
+      "IBIS 7-stop",
+      "Dual CFexpress"
+    ],
+    "similar": []
+  },
+  {
+    "name": "Zen Pro Camera",
+    "slug": "zen-pro-camera",
+    "category": "Cameras",
+    "price": 1000,
+    "summary": "Camera built for creators and enthusiasts with polished design and smooth performance. Variant 2.",
+    "tags": [
+      "Cameras",
+      "Premium",
+      "Glass"
+    ],
+    "heroImage": "images/gadgets/camera-zen-front.svg",
+    "gallery": [
+      "images/gadgets/camera-zen-front.svg",
+      "images/gadgets/camera-zen-top.svg"
+    ],
+    "specs": [
+      "8K60 RAW",
+      "Stacked sensor",
+      "IBIS 7-stop",
+      "Dual CFexpress"
+    ],
+    "similar": []
+  },
+  {
+    "name": "Zen Max Camera",
+    "slug": "zen-max-camera",
+    "category": "Cameras",
+    "price": 1250,
+    "summary": "Camera built for creators and enthusiasts with polished design and smooth performance. Variant 3.",
+    "tags": [
+      "Cameras",
+      "Premium",
+      "Glass"
+    ],
+    "heroImage": "images/gadgets/camera-zen-front.svg",
+    "gallery": [
+      "images/gadgets/camera-zen-front.svg",
+      "images/gadgets/camera-zen-top.svg"
+    ],
+    "specs": [
+      "8K60 RAW",
+      "Stacked sensor",
+      "IBIS 7-stop",
+      "Dual CFexpress"
+    ],
+    "similar": []
+  },
+  {
+    "name": "Zen Studio Camera",
+    "slug": "zen-studio-camera",
+    "category": "Cameras",
+    "price": 1500,
+    "summary": "Camera built for creators and enthusiasts with polished design and smooth performance. Variant 4.",
+    "tags": [
+      "Cameras",
+      "Premium",
+      "Glass"
+    ],
+    "heroImage": "images/gadgets/camera-zen-front.svg",
+    "gallery": [
+      "images/gadgets/camera-zen-front.svg",
+      "images/gadgets/camera-zen-top.svg"
+    ],
+    "specs": [
+      "8K60 RAW",
+      "Stacked sensor",
+      "IBIS 7-stop",
+      "Dual CFexpress"
+    ],
+    "similar": []
+  },
+  {
+    "name": "Zen Lite Camera",
+    "slug": "zen-lite-camera",
+    "category": "Cameras",
+    "price": 1750,
+    "summary": "Camera built for creators and enthusiasts with polished design and smooth performance. Variant 5.",
+    "tags": [
+      "Cameras",
+      "Premium",
+      "Glass"
+    ],
+    "heroImage": "images/gadgets/camera-zen-front.svg",
+    "gallery": [
+      "images/gadgets/camera-zen-front.svg",
+      "images/gadgets/camera-zen-top.svg"
+    ],
+    "specs": [
+      "8K60 RAW",
+      "Stacked sensor",
+      "IBIS 7-stop",
+      "Dual CFexpress"
+    ],
+    "similar": []
+  },
+  {
+    "name": "Zen Plus Camera",
+    "slug": "zen-plus-camera",
+    "category": "Cameras",
+    "price": 2000,
+    "summary": "Camera built for creators and enthusiasts with polished design and smooth performance. Variant 6.",
+    "tags": [
+      "Cameras",
+      "Premium",
+      "Glass"
+    ],
+    "heroImage": "images/gadgets/camera-zen-front.svg",
+    "gallery": [
+      "images/gadgets/camera-zen-front.svg",
+      "images/gadgets/camera-zen-top.svg"
+    ],
+    "specs": [
+      "8K60 RAW",
+      "Stacked sensor",
+      "IBIS 7-stop",
+      "Dual CFexpress"
+    ],
+    "similar": []
+  },
+  {
+    "name": "Zen Ultra Camera",
+    "slug": "zen-ultra-camera",
+    "category": "Cameras",
+    "price": 2250,
+    "summary": "Camera built for creators and enthusiasts with polished design and smooth performance. Variant 7.",
+    "tags": [
+      "Cameras",
+      "Premium",
+      "Glass"
+    ],
+    "heroImage": "images/gadgets/camera-zen-front.svg",
+    "gallery": [
+      "images/gadgets/camera-zen-front.svg",
+      "images/gadgets/camera-zen-top.svg"
+    ],
+    "specs": [
+      "8K60 RAW",
+      "Stacked sensor",
+      "IBIS 7-stop",
+      "Dual CFexpress"
+    ],
+    "similar": []
+  },
+  {
+    "name": "Zen Edge Camera",
+    "slug": "zen-edge-camera",
+    "category": "Cameras",
+    "price": 2500,
+    "summary": "Camera built for creators and enthusiasts with polished design and smooth performance. Variant 8.",
+    "tags": [
+      "Cameras",
+      "Premium",
+      "Glass"
+    ],
+    "heroImage": "images/gadgets/camera-zen-front.svg",
+    "gallery": [
+      "images/gadgets/camera-zen-front.svg",
+      "images/gadgets/camera-zen-top.svg"
+    ],
+    "specs": [
+      "8K60 RAW",
+      "Stacked sensor",
+      "IBIS 7-stop",
+      "Dual CFexpress"
+    ],
+    "similar": []
+  },
+  {
+    "name": "Zen Prime Camera",
+    "slug": "zen-prime-camera",
+    "category": "Cameras",
+    "price": 2750,
+    "summary": "Camera built for creators and enthusiasts with polished design and smooth performance. Variant 9.",
+    "tags": [
+      "Cameras",
+      "Premium",
+      "Glass"
+    ],
+    "heroImage": "images/gadgets/camera-zen-front.svg",
+    "gallery": [
+      "images/gadgets/camera-zen-front.svg",
+      "images/gadgets/camera-zen-top.svg"
+    ],
+    "specs": [
+      "8K60 RAW",
+      "Stacked sensor",
+      "IBIS 7-stop",
+      "Dual CFexpress"
+    ],
+    "similar": []
+  },
+  {
+    "name": "Zen Flex Camera",
+    "slug": "zen-flex-camera",
+    "category": "Cameras",
+    "price": 3000,
+    "summary": "Camera built for creators and enthusiasts with polished design and smooth performance. Variant 10.",
+    "tags": [
+      "Cameras",
+      "Premium",
+      "Glass"
+    ],
+    "heroImage": "images/gadgets/camera-zen-front.svg",
+    "gallery": [
+      "images/gadgets/camera-zen-front.svg",
+      "images/gadgets/camera-zen-top.svg"
+    ],
+    "specs": [
+      "8K60 RAW",
+      "Stacked sensor",
+      "IBIS 7-stop",
+      "Dual CFexpress"
+    ],
+    "similar": []
+  },
+  {
+    "name": "Arcade Air Console",
+    "slug": "arcade-air-console",
+    "category": "Consoles",
+    "price": 680,
+    "summary": "Console built for creators and enthusiasts with polished design and smooth performance. Variant 1.",
+    "tags": [
+      "Consoles",
+      "Premium",
+      "Glass"
+    ],
+    "heroImage": "images/gadgets/console-arcade-front.svg",
+    "gallery": [
+      "images/gadgets/console-arcade-front.svg",
+      "images/gadgets/console-arcade-side.svg"
+    ],
+    "specs": [
+      "OLED display",
+      "Hall sticks",
+      "Hybrid play",
+      "1TB NVMe"
+    ],
+    "similar": []
+  },
+  {
+    "name": "Arcade Pro Console",
+    "slug": "arcade-pro-console",
+    "category": "Consoles",
+    "price": 860,
+    "summary": "Console built for creators and enthusiasts with polished design and smooth performance. Variant 2.",
+    "tags": [
+      "Consoles",
+      "Premium",
+      "Glass"
+    ],
+    "heroImage": "images/gadgets/console-arcade-front.svg",
+    "gallery": [
+      "images/gadgets/console-arcade-front.svg",
+      "images/gadgets/console-arcade-side.svg"
+    ],
+    "specs": [
+      "OLED display",
+      "Hall sticks",
+      "Hybrid play",
+      "1TB NVMe"
+    ],
+    "similar": []
+  },
+  {
+    "name": "Arcade Max Console",
+    "slug": "arcade-max-console",
+    "category": "Consoles",
+    "price": 1040,
+    "summary": "Console built for creators and enthusiasts with polished design and smooth performance. Variant 3.",
+    "tags": [
+      "Consoles",
+      "Premium",
+      "Glass"
+    ],
+    "heroImage": "images/gadgets/console-arcade-front.svg",
+    "gallery": [
+      "images/gadgets/console-arcade-front.svg",
+      "images/gadgets/console-arcade-side.svg"
+    ],
+    "specs": [
+      "OLED display",
+      "Hall sticks",
+      "Hybrid play",
+      "1TB NVMe"
+    ],
+    "similar": []
+  },
+  {
+    "name": "Arcade Studio Console",
+    "slug": "arcade-studio-console",
+    "category": "Consoles",
+    "price": 1220,
+    "summary": "Console built for creators and enthusiasts with polished design and smooth performance. Variant 4.",
+    "tags": [
+      "Consoles",
+      "Premium",
+      "Glass"
+    ],
+    "heroImage": "images/gadgets/console-arcade-front.svg",
+    "gallery": [
+      "images/gadgets/console-arcade-front.svg",
+      "images/gadgets/console-arcade-side.svg"
+    ],
+    "specs": [
+      "OLED display",
+      "Hall sticks",
+      "Hybrid play",
+      "1TB NVMe"
+    ],
+    "similar": []
+  },
+  {
+    "name": "Arcade Lite Console",
+    "slug": "arcade-lite-console",
+    "category": "Consoles",
+    "price": 1400,
+    "summary": "Console built for creators and enthusiasts with polished design and smooth performance. Variant 5.",
+    "tags": [
+      "Consoles",
+      "Premium",
+      "Glass"
+    ],
+    "heroImage": "images/gadgets/console-arcade-front.svg",
+    "gallery": [
+      "images/gadgets/console-arcade-front.svg",
+      "images/gadgets/console-arcade-side.svg"
+    ],
+    "specs": [
+      "OLED display",
+      "Hall sticks",
+      "Hybrid play",
+      "1TB NVMe"
+    ],
+    "similar": []
+  },
+  {
+    "name": "Arcade Plus Console",
+    "slug": "arcade-plus-console",
+    "category": "Consoles",
+    "price": 1580,
+    "summary": "Console built for creators and enthusiasts with polished design and smooth performance. Variant 6.",
+    "tags": [
+      "Consoles",
+      "Premium",
+      "Glass"
+    ],
+    "heroImage": "images/gadgets/console-arcade-front.svg",
+    "gallery": [
+      "images/gadgets/console-arcade-front.svg",
+      "images/gadgets/console-arcade-side.svg"
+    ],
+    "specs": [
+      "OLED display",
+      "Hall sticks",
+      "Hybrid play",
+      "1TB NVMe"
+    ],
+    "similar": []
+  },
+  {
+    "name": "Arcade Ultra Console",
+    "slug": "arcade-ultra-console",
+    "category": "Consoles",
+    "price": 1760,
+    "summary": "Console built for creators and enthusiasts with polished design and smooth performance. Variant 7.",
+    "tags": [
+      "Consoles",
+      "Premium",
+      "Glass"
+    ],
+    "heroImage": "images/gadgets/console-arcade-front.svg",
+    "gallery": [
+      "images/gadgets/console-arcade-front.svg",
+      "images/gadgets/console-arcade-side.svg"
+    ],
+    "specs": [
+      "OLED display",
+      "Hall sticks",
+      "Hybrid play",
+      "1TB NVMe"
+    ],
+    "similar": []
+  },
+  {
+    "name": "Arcade Edge Console",
+    "slug": "arcade-edge-console",
+    "category": "Consoles",
+    "price": 1940,
+    "summary": "Console built for creators and enthusiasts with polished design and smooth performance. Variant 8.",
+    "tags": [
+      "Consoles",
+      "Premium",
+      "Glass"
+    ],
+    "heroImage": "images/gadgets/console-arcade-front.svg",
+    "gallery": [
+      "images/gadgets/console-arcade-front.svg",
+      "images/gadgets/console-arcade-side.svg"
+    ],
+    "specs": [
+      "OLED display",
+      "Hall sticks",
+      "Hybrid play",
+      "1TB NVMe"
+    ],
+    "similar": []
+  },
+  {
+    "name": "Arcade Prime Console",
+    "slug": "arcade-prime-console",
+    "category": "Consoles",
+    "price": 2120,
+    "summary": "Console built for creators and enthusiasts with polished design and smooth performance. Variant 9.",
+    "tags": [
+      "Consoles",
+      "Premium",
+      "Glass"
+    ],
+    "heroImage": "images/gadgets/console-arcade-front.svg",
+    "gallery": [
+      "images/gadgets/console-arcade-front.svg",
+      "images/gadgets/console-arcade-side.svg"
+    ],
+    "specs": [
+      "OLED display",
+      "Hall sticks",
+      "Hybrid play",
+      "1TB NVMe"
+    ],
+    "similar": []
+  },
+  {
+    "name": "Arcade Flex Console",
+    "slug": "arcade-flex-console",
+    "category": "Consoles",
+    "price": 2300,
+    "summary": "Console built for creators and enthusiasts with polished design and smooth performance. Variant 10.",
+    "tags": [
+      "Consoles",
+      "Premium",
+      "Glass"
+    ],
+    "heroImage": "images/gadgets/console-arcade-front.svg",
+    "gallery": [
+      "images/gadgets/console-arcade-front.svg",
+      "images/gadgets/console-arcade-side.svg"
+    ],
+    "specs": [
+      "OLED display",
+      "Hall sticks",
+      "Hybrid play",
+      "1TB NVMe"
+    ],
+    "similar": []
+  },
+  {
+    "name": "Canvas Air Monitor",
+    "slug": "canvas-air-monitor",
+    "category": "Monitors",
+    "price": 750,
+    "summary": "Monitor built for creators and enthusiasts with polished design and smooth performance. Variant 1.",
+    "tags": [
+      "Monitors",
+      "Premium",
+      "Glass"
+    ],
+    "heroImage": "images/gadgets/monitor-canvas-front.svg",
+    "gallery": [
+      "images/gadgets/monitor-canvas-front.svg",
+      "images/gadgets/monitor-canvas-side.svg"
+    ],
+    "specs": [
+      "32\" 6K",
+      "Mini-LED",
+      "Nano-texture",
+      "Thunderbolt 4"
+    ],
+    "similar": []
+  },
+  {
+    "name": "Canvas Pro Monitor",
+    "slug": "canvas-pro-monitor",
+    "category": "Monitors",
+    "price": 1000,
+    "summary": "Monitor built for creators and enthusiasts with polished design and smooth performance. Variant 2.",
+    "tags": [
+      "Monitors",
+      "Premium",
+      "Glass"
+    ],
+    "heroImage": "images/gadgets/monitor-canvas-front.svg",
+    "gallery": [
+      "images/gadgets/monitor-canvas-front.svg",
+      "images/gadgets/monitor-canvas-side.svg"
+    ],
+    "specs": [
+      "32\" 6K",
+      "Mini-LED",
+      "Nano-texture",
+      "Thunderbolt 4"
+    ],
+    "similar": []
+  },
+  {
+    "name": "Canvas Max Monitor",
+    "slug": "canvas-max-monitor",
+    "category": "Monitors",
+    "price": 1250,
+    "summary": "Monitor built for creators and enthusiasts with polished design and smooth performance. Variant 3.",
+    "tags": [
+      "Monitors",
+      "Premium",
+      "Glass"
+    ],
+    "heroImage": "images/gadgets/monitor-canvas-front.svg",
+    "gallery": [
+      "images/gadgets/monitor-canvas-front.svg",
+      "images/gadgets/monitor-canvas-side.svg"
+    ],
+    "specs": [
+      "32\" 6K",
+      "Mini-LED",
+      "Nano-texture",
+      "Thunderbolt 4"
+    ],
+    "similar": []
+  },
+  {
+    "name": "Canvas Studio Monitor",
+    "slug": "canvas-studio-monitor",
+    "category": "Monitors",
+    "price": 1500,
+    "summary": "Monitor built for creators and enthusiasts with polished design and smooth performance. Variant 4.",
+    "tags": [
+      "Monitors",
+      "Premium",
+      "Glass"
+    ],
+    "heroImage": "images/gadgets/monitor-canvas-front.svg",
+    "gallery": [
+      "images/gadgets/monitor-canvas-front.svg",
+      "images/gadgets/monitor-canvas-side.svg"
+    ],
+    "specs": [
+      "32\" 6K",
+      "Mini-LED",
+      "Nano-texture",
+      "Thunderbolt 4"
+    ],
+    "similar": []
+  },
+  {
+    "name": "Canvas Lite Monitor",
+    "slug": "canvas-lite-monitor",
+    "category": "Monitors",
+    "price": 1750,
+    "summary": "Monitor built for creators and enthusiasts with polished design and smooth performance. Variant 5.",
+    "tags": [
+      "Monitors",
+      "Premium",
+      "Glass"
+    ],
+    "heroImage": "images/gadgets/monitor-canvas-front.svg",
+    "gallery": [
+      "images/gadgets/monitor-canvas-front.svg",
+      "images/gadgets/monitor-canvas-side.svg"
+    ],
+    "specs": [
+      "32\" 6K",
+      "Mini-LED",
+      "Nano-texture",
+      "Thunderbolt 4"
+    ],
+    "similar": []
+  },
+  {
+    "name": "Canvas Plus Monitor",
+    "slug": "canvas-plus-monitor",
+    "category": "Monitors",
+    "price": 2000,
+    "summary": "Monitor built for creators and enthusiasts with polished design and smooth performance. Variant 6.",
+    "tags": [
+      "Monitors",
+      "Premium",
+      "Glass"
+    ],
+    "heroImage": "images/gadgets/monitor-canvas-front.svg",
+    "gallery": [
+      "images/gadgets/monitor-canvas-front.svg",
+      "images/gadgets/monitor-canvas-side.svg"
+    ],
+    "specs": [
+      "32\" 6K",
+      "Mini-LED",
+      "Nano-texture",
+      "Thunderbolt 4"
+    ],
+    "similar": []
+  },
+  {
+    "name": "Canvas Ultra Monitor",
+    "slug": "canvas-ultra-monitor",
+    "category": "Monitors",
+    "price": 2250,
+    "summary": "Monitor built for creators and enthusiasts with polished design and smooth performance. Variant 7.",
+    "tags": [
+      "Monitors",
+      "Premium",
+      "Glass"
+    ],
+    "heroImage": "images/gadgets/monitor-canvas-front.svg",
+    "gallery": [
+      "images/gadgets/monitor-canvas-front.svg",
+      "images/gadgets/monitor-canvas-side.svg"
+    ],
+    "specs": [
+      "32\" 6K",
+      "Mini-LED",
+      "Nano-texture",
+      "Thunderbolt 4"
+    ],
+    "similar": []
+  },
+  {
+    "name": "Canvas Edge Monitor",
+    "slug": "canvas-edge-monitor",
+    "category": "Monitors",
+    "price": 2500,
+    "summary": "Monitor built for creators and enthusiasts with polished design and smooth performance. Variant 8.",
+    "tags": [
+      "Monitors",
+      "Premium",
+      "Glass"
+    ],
+    "heroImage": "images/gadgets/monitor-canvas-front.svg",
+    "gallery": [
+      "images/gadgets/monitor-canvas-front.svg",
+      "images/gadgets/monitor-canvas-side.svg"
+    ],
+    "specs": [
+      "32\" 6K",
+      "Mini-LED",
+      "Nano-texture",
+      "Thunderbolt 4"
+    ],
+    "similar": []
+  },
+  {
+    "name": "Canvas Prime Monitor",
+    "slug": "canvas-prime-monitor",
+    "category": "Monitors",
+    "price": 2750,
+    "summary": "Monitor built for creators and enthusiasts with polished design and smooth performance. Variant 9.",
+    "tags": [
+      "Monitors",
+      "Premium",
+      "Glass"
+    ],
+    "heroImage": "images/gadgets/monitor-canvas-front.svg",
+    "gallery": [
+      "images/gadgets/monitor-canvas-front.svg",
+      "images/gadgets/monitor-canvas-side.svg"
+    ],
+    "specs": [
+      "32\" 6K",
+      "Mini-LED",
+      "Nano-texture",
+      "Thunderbolt 4"
+    ],
+    "similar": []
+  },
+  {
+    "name": "Canvas Flex Monitor",
+    "slug": "canvas-flex-monitor",
+    "category": "Monitors",
+    "price": 3000,
+    "summary": "Monitor built for creators and enthusiasts with polished design and smooth performance. Variant 10.",
+    "tags": [
+      "Monitors",
+      "Premium",
+      "Glass"
+    ],
+    "heroImage": "images/gadgets/monitor-canvas-front.svg",
+    "gallery": [
+      "images/gadgets/monitor-canvas-front.svg",
+      "images/gadgets/monitor-canvas-side.svg"
+    ],
+    "specs": [
+      "32\" 6K",
+      "Mini-LED",
+      "Nano-texture",
+      "Thunderbolt 4"
+    ],
+    "similar": []
+  },
+  {
+    "name": "AeroFly Air Drone",
+    "slug": "aerofly-air-drone",
+    "category": "Drones",
+    "price": 720,
+    "summary": "Drone built for creators and enthusiasts with polished design and smooth performance. Variant 1.",
+    "tags": [
+      "Drones",
+      "Premium",
+      "Glass"
+    ],
+    "heroImage": "images/gadgets/drone-aerofly-front.svg",
+    "gallery": [
+      "images/gadgets/drone-aerofly-front.svg",
+      "images/gadgets/drone-aerofly-top.svg"
+    ],
+    "specs": [
+      "8K gimbal",
+      "40 min flight",
+      "Omni sensing",
+      "12km range"
+    ],
+    "similar": []
+  },
+  {
+    "name": "AeroFly Pro Drone",
+    "slug": "aerofly-pro-drone",
+    "category": "Drones",
+    "price": 940,
+    "summary": "Drone built for creators and enthusiasts with polished design and smooth performance. Variant 2.",
+    "tags": [
+      "Drones",
+      "Premium",
+      "Glass"
+    ],
+    "heroImage": "images/gadgets/drone-aerofly-front.svg",
+    "gallery": [
+      "images/gadgets/drone-aerofly-front.svg",
+      "images/gadgets/drone-aerofly-top.svg"
+    ],
+    "specs": [
+      "8K gimbal",
+      "40 min flight",
+      "Omni sensing",
+      "12km range"
+    ],
+    "similar": []
+  },
+  {
+    "name": "AeroFly Max Drone",
+    "slug": "aerofly-max-drone",
+    "category": "Drones",
+    "price": 1160,
+    "summary": "Drone built for creators and enthusiasts with polished design and smooth performance. Variant 3.",
+    "tags": [
+      "Drones",
+      "Premium",
+      "Glass"
+    ],
+    "heroImage": "images/gadgets/drone-aerofly-front.svg",
+    "gallery": [
+      "images/gadgets/drone-aerofly-front.svg",
+      "images/gadgets/drone-aerofly-top.svg"
+    ],
+    "specs": [
+      "8K gimbal",
+      "40 min flight",
+      "Omni sensing",
+      "12km range"
+    ],
+    "similar": []
+  },
+  {
+    "name": "AeroFly Studio Drone",
+    "slug": "aerofly-studio-drone",
+    "category": "Drones",
+    "price": 1380,
+    "summary": "Drone built for creators and enthusiasts with polished design and smooth performance. Variant 4.",
+    "tags": [
+      "Drones",
+      "Premium",
+      "Glass"
+    ],
+    "heroImage": "images/gadgets/drone-aerofly-front.svg",
+    "gallery": [
+      "images/gadgets/drone-aerofly-front.svg",
+      "images/gadgets/drone-aerofly-top.svg"
+    ],
+    "specs": [
+      "8K gimbal",
+      "40 min flight",
+      "Omni sensing",
+      "12km range"
+    ],
+    "similar": []
+  },
+  {
+    "name": "AeroFly Lite Drone",
+    "slug": "aerofly-lite-drone",
+    "category": "Drones",
+    "price": 1600,
+    "summary": "Drone built for creators and enthusiasts with polished design and smooth performance. Variant 5.",
+    "tags": [
+      "Drones",
+      "Premium",
+      "Glass"
+    ],
+    "heroImage": "images/gadgets/drone-aerofly-front.svg",
+    "gallery": [
+      "images/gadgets/drone-aerofly-front.svg",
+      "images/gadgets/drone-aerofly-top.svg"
+    ],
+    "specs": [
+      "8K gimbal",
+      "40 min flight",
+      "Omni sensing",
+      "12km range"
+    ],
+    "similar": []
+  },
+  {
+    "name": "AeroFly Plus Drone",
+    "slug": "aerofly-plus-drone",
+    "category": "Drones",
+    "price": 1820,
+    "summary": "Drone built for creators and enthusiasts with polished design and smooth performance. Variant 6.",
+    "tags": [
+      "Drones",
+      "Premium",
+      "Glass"
+    ],
+    "heroImage": "images/gadgets/drone-aerofly-front.svg",
+    "gallery": [
+      "images/gadgets/drone-aerofly-front.svg",
+      "images/gadgets/drone-aerofly-top.svg"
+    ],
+    "specs": [
+      "8K gimbal",
+      "40 min flight",
+      "Omni sensing",
+      "12km range"
+    ],
+    "similar": []
+  },
+  {
+    "name": "AeroFly Ultra Drone",
+    "slug": "aerofly-ultra-drone",
+    "category": "Drones",
+    "price": 2040,
+    "summary": "Drone built for creators and enthusiasts with polished design and smooth performance. Variant 7.",
+    "tags": [
+      "Drones",
+      "Premium",
+      "Glass"
+    ],
+    "heroImage": "images/gadgets/drone-aerofly-front.svg",
+    "gallery": [
+      "images/gadgets/drone-aerofly-front.svg",
+      "images/gadgets/drone-aerofly-top.svg"
+    ],
+    "specs": [
+      "8K gimbal",
+      "40 min flight",
+      "Omni sensing",
+      "12km range"
+    ],
+    "similar": []
+  },
+  {
+    "name": "AeroFly Edge Drone",
+    "slug": "aerofly-edge-drone",
+    "category": "Drones",
+    "price": 2260,
+    "summary": "Drone built for creators and enthusiasts with polished design and smooth performance. Variant 8.",
+    "tags": [
+      "Drones",
+      "Premium",
+      "Glass"
+    ],
+    "heroImage": "images/gadgets/drone-aerofly-front.svg",
+    "gallery": [
+      "images/gadgets/drone-aerofly-front.svg",
+      "images/gadgets/drone-aerofly-top.svg"
+    ],
+    "specs": [
+      "8K gimbal",
+      "40 min flight",
+      "Omni sensing",
+      "12km range"
+    ],
+    "similar": []
+  },
+  {
+    "name": "AeroFly Prime Drone",
+    "slug": "aerofly-prime-drone",
+    "category": "Drones",
+    "price": 2480,
+    "summary": "Drone built for creators and enthusiasts with polished design and smooth performance. Variant 9.",
+    "tags": [
+      "Drones",
+      "Premium",
+      "Glass"
+    ],
+    "heroImage": "images/gadgets/drone-aerofly-front.svg",
+    "gallery": [
+      "images/gadgets/drone-aerofly-front.svg",
+      "images/gadgets/drone-aerofly-top.svg"
+    ],
+    "specs": [
+      "8K gimbal",
+      "40 min flight",
+      "Omni sensing",
+      "12km range"
+    ],
+    "similar": []
+  },
+  {
+    "name": "AeroFly Flex Drone",
+    "slug": "aerofly-flex-drone",
+    "category": "Drones",
+    "price": 2700,
+    "summary": "Drone built for creators and enthusiasts with polished design and smooth performance. Variant 10.",
+    "tags": [
+      "Drones",
+      "Premium",
+      "Glass"
+    ],
+    "heroImage": "images/gadgets/drone-aerofly-front.svg",
+    "gallery": [
+      "images/gadgets/drone-aerofly-front.svg",
+      "images/gadgets/drone-aerofly-top.svg"
+    ],
+    "specs": [
+      "8K gimbal",
+      "40 min flight",
+      "Omni sensing",
+      "12km range"
+    ],
+    "similar": []
+  }
+]
