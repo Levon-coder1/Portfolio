@@ -4,7 +4,7 @@
     "slug": "aurora-pro-phone",
     "category": "Phones",
     "price": 1299,
-    "summary": "6.8"" AMOLED, pro cameras, and ultra-fast silicon for creators on the go.",
+    "summary": "6.8\" AMOLED, pro cameras, and ultra-fast silicon for creators on the go.",
     "tags": ["5G", "AMOLED", "Pro Camera"],
     "heroImage": "images/gadgets/phone-aurora-front.svg",
     "gallery": [
@@ -13,7 +13,7 @@
       "images/gadgets/phone-aurora-side.svg"
     ],
     "specs": ["6.8\" 120Hz AMOLED", "Triple 50MP camera", "512GB / 1TB", "5,000mAh fast charge"],
-    "similar": ["lumen-ultrabook", "nova-gaming-rig"]
+    "similar": ["lumen-ultrabook", "nova-gaming-rig", "pulse-fit-watch"]
   },
   {
     "name": "Lumen Ultrabook",
@@ -28,7 +28,7 @@
       "images/gadgets/laptop-lumen-side.svg"
     ],
     "specs": ["14\" 4K OLED", "32GB RAM", "1TB NVMe", "RTX Studio graphics"],
-    "similar": ["aurora-pro-phone", "nova-gaming-rig"]
+    "similar": ["aurora-pro-phone", "studio-canvas-monitor", "nova-gaming-rig"]
   },
   {
     "name": "Nova Gaming Rig",
@@ -43,7 +43,7 @@
       "images/gadgets/rig-nova-side.svg"
     ],
     "specs": ["Ryzen 9 / i9", "RTX 4080", "64GB DDR5", "2TB NVMe"],
-    "similar": ["lumen-ultrabook"]
+    "similar": ["lumen-ultrabook", "arcade-go-console", "studio-canvas-monitor"]
   },
   {
     "name": "Orbit Studio Tablet",
@@ -58,6 +58,96 @@
       "images/gadgets/tablet-orbit-side.svg"
     ],
     "specs": ["12.9\" XDR", "M-series chip", "Stylus + keyboard", "Wi-Fi 6E"],
-    "similar": ["aurora-pro-phone", "lumen-ultrabook"]
+    "similar": ["aurora-pro-phone", "lumen-ultrabook", "pulse-fit-watch"]
+  },
+  {
+    "name": "Pulse Fit Watch",
+    "slug": "pulse-fit-watch",
+    "category": "Wearables",
+    "price": 449,
+    "summary": "Biometric watch with sapphire glass, LTE, and seven-day battery for health tracking.",
+    "tags": ["Sapphire", "LTE", "Health"],
+    "heroImage": "images/gadgets/watch-pulse-face.svg",
+    "gallery": [
+      "images/gadgets/watch-pulse-face.svg",
+      "images/gadgets/watch-pulse-side.svg"
+    ],
+    "specs": ["Always-on display", "ECG + SpO2", "LTE + GPS", "7-day battery"],
+    "similar": ["aurora-pro-phone", "echo-buds-pro"]
+  },
+  {
+    "name": "Echo Buds Pro",
+    "slug": "echo-buds-pro",
+    "category": "Audio",
+    "price": 249,
+    "summary": "Adaptive ANC earbuds with dual drivers, spatial audio, and wireless charging case.",
+    "tags": ["ANC", "Spatial", "Wireless"],
+    "heroImage": "images/gadgets/earbuds-echo-case.svg",
+    "gallery": [
+      "images/gadgets/earbuds-echo-case.svg",
+      "images/gadgets/earbuds-echo-pods.svg"
+    ],
+    "specs": ["Dual hybrid drivers", "Adaptive ANC", "Spatial audio", "Wireless charging"],
+    "similar": ["pulse-fit-watch", "aurora-pro-phone"]
+  },
+  {
+    "name": "Zen Studio Camera",
+    "slug": "zen-studio-camera",
+    "category": "Cameras",
+    "price": 2199,
+    "summary": "Full-frame hybrid camera with 8K video, stacked sensor, and tactile dials for creators.",
+    "tags": ["8K", "Hybrid", "Pro Glass"],
+    "heroImage": "images/gadgets/camera-zen-front.svg",
+    "gallery": [
+      "images/gadgets/camera-zen-front.svg",
+      "images/gadgets/camera-zen-top.svg"
+    ],
+    "specs": ["45MP stacked sensor", "8K60 RAW", "IBIS 7-stop", "Dual CFexpress"],
+    "similar": ["lumen-ultrabook", "aurora-pro-phone", "studio-canvas-monitor"]
+  },
+  {
+    "name": "Arcade Go Console",
+    "slug": "arcade-go-console",
+    "category": "Consoles",
+    "price": 599,
+    "summary": "Portable console with OLED display, hall-effect sticks, and cloud/hybrid gameplay.",
+    "tags": ["OLED", "Portable", "Cloud"],
+    "heroImage": "images/gadgets/console-arcade-front.svg",
+    "gallery": [
+      "images/gadgets/console-arcade-front.svg",
+      "images/gadgets/console-arcade-side.svg"
+    ],
+    "specs": ["7\" HDR OLED", "Hall-effect sticks", "RDNA graphics", "1TB NVMe"],
+    "similar": ["nova-gaming-rig", "aurora-pro-phone"]
+  },
+  {
+    "name": "Studio Canvas Monitor",
+    "slug": "studio-canvas-monitor",
+    "category": "Monitors",
+    "price": 1299,
+    "summary": "32\" 6K reference display with nano-texture glass, mini-LED, and pro color for editors.",
+    "tags": ["6K", "Mini-LED", "Reference"],
+    "heroImage": "images/gadgets/monitor-canvas-front.svg",
+    "gallery": [
+      "images/gadgets/monitor-canvas-front.svg",
+      "images/gadgets/monitor-canvas-side.svg"
+    ],
+    "specs": ["32\" 6K", "Nano-texture", "1,600 nits", "Thunderbolt 4"],
+    "similar": ["lumen-ultrabook", "zen-studio-camera"]
+  },
+  {
+    "name": "AeroFly Drone",
+    "slug": "aerofly-drone",
+    "category": "Drones",
+    "price": 1599,
+    "summary": "Carbon drone with 8K gimbal, 40-minute flight, and obstacle sensing for aerial capture.",
+    "tags": ["8K", "40 min", "360° Sensing"],
+    "heroImage": "images/gadgets/drone-aerofly-front.svg",
+    "gallery": [
+      "images/gadgets/drone-aerofly-front.svg",
+      "images/gadgets/drone-aerofly-top.svg"
+    ],
+    "specs": ["8K gimbal camera", "40 min flight", "Omni avoidance", "12km range"],
+    "similar": ["zen-studio-camera", "aurora-pro-phone"]
   }
 ]

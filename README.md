@@ -1,19 +1,19 @@
 # Asher Jay Portfolio
 
-Multi-page, responsive portfolio and gadget catalog with a glossy white/orange/cream/black theme.
+Multi-page, responsive portfolio and gadget catalog with an iOS-style liquid glass vibe (white, orange, cream, black).
 
 ## Pages
 - **Home**: Overview and quick links.
 - **Projects**: Case-study cards.
 - **Gadgets**: Catalog fed from `data/products.json`; each product links to its own detail page.
 - **Product detail**: Dedicated page per gadget (driven by `slug` query param) with similar items.
-- **Search**: Search and filter (category + price) across the catalog with shareable query params.
+- **Search**: Search and filter (category + price) across the catalog with shareable query params and all categories represented.
 - **Socials**: Profile link placeholders by platform.
-- **Hub**: Blog, maps, and suggestions placeholders.
+- **Hub**: Demo blog cards (phones, laptops, gadgets), delivery timing panel, and a glass suggestion box.
 - **Contact**: Basic mailto form.
 
 ## Data & assets
-- Gadget data lives in [`data/products.json`](data/products.json). Edit or add products there without touching markup.
+- Gadget data lives in [`data/products.json`](data/products.json) with 10 sample products across phones, laptops, tablets, gaming, wearables, audio, cameras, consoles, monitors, and drones.
 - Image placeholders live under [`images/gadgets`](images/gadgets). Replace with your own assets while keeping filenames or updating the JSON paths.
 
 ## Running locally

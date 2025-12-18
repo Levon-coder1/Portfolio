@@ -34,28 +34,66 @@
         <div>
           <p class="pill mini">Hub</p>
           <h1>Blog, maps, and suggestions</h1>
-          <p class="lede">A central place for updates, store locations, and client suggestions.</p>
+          <p class="lede">Fresh drops on phones and laptops, delivery timing, and a glossy inbox for your ideas.</p>
         </div>
-        <div class="glass-card">
-          <p class="lede">Swap in your own embeds for maps or forms; the layout stays responsive on any device.</p>
+        <div class="glass-card highlight">
+          <p class="lede">Fully liquid-glass surfaces with layered glow and blur—swap in live embeds anytime.</p>
         </div>
       </section>
 
-      <section class="section simple-grid">
-        <article class="card">
-          <h3>Blog</h3>
-          <p class="lede">Latest articles and notes.</p>
-          <a class="cta" href="#">Open blog</a>
+      <section class="section blog-grid">
+        <article class="card blog-card">
+          <div class="pill mini">Phones</div>
+          <h3>Foldables are getting lighter</h3>
+          <p class="lede">A breakdown of the newest 120Hz foldables with brighter cover screens and slimmer hinges.</p>
+          <div class="meta-row">
+            <span class="pill mini">2 min read</span>
+            <span class="pill mini">June drop</span>
+          </div>
         </article>
-        <article class="card">
-          <h3>Locations map</h3>
-          <p class="lede">Embed a map or location list here.</p>
-          <a class="cta" href="#">View map</a>
+        <article class="card blog-card">
+          <div class="pill mini">Laptops</div>
+          <h3>OLED everywhere</h3>
+          <p class="lede">Creator-class notebooks now ship with calibrated OLED, quieter fans, and faster NVMe by default.</p>
+          <div class="meta-row">
+            <span class="pill mini">3 min read</span>
+            <span class="pill mini">New arrivals</span>
+          </div>
         </article>
-        <article class="card">
-          <h3>Suggestions</h3>
-          <p class="lede">Capture feedback or requests with your preferred form tool.</p>
-          <a class="cta" href="#">Leave suggestions</a>
+        <article class="card blog-card">
+          <div class="pill mini">Gadgets</div>
+          <h3>Play longer, charge faster</h3>
+          <p class="lede">Handheld consoles are getting 90Hz panels and hall-effect sticks while sipping less power.</p>
+          <div class="meta-row">
+            <span class="pill mini">2 min read</span>
+            <span class="pill mini">Buyer guide</span>
+          </div>
+        </article>
+      </section>
+
+      <section class="section hub-grid">
+        <article class="glass-card map-card">
+          <div class="meta-row">
+            <span class="pill mini">Delivery ETA</span>
+            <span class="pill mini">Demo timing</span>
+          </div>
+          <h3>How long does delivery take?</h3>
+          <p class="lede">Enter a location in your map widget to surface precise estimates. Demo: Lagos mainland → 24 hrs, Abuja → 48 hrs.</p>
+          <div class="tag-row">
+            <a class="cta primary" href="#">Check my area</a>
+            <a class="cta" href="contact.html">Talk to logistics</a>
+          </div>
+        </article>
+        <article class="glass-card suggestion-box">
+          <div class="pill mini">Suggestion box</div>
+          <h3>Tell me what to add next</h3>
+          <p class="lede">Drop requests for brands, devices, or site tweaks. I’ll tailor the catalog around your needs.</p>
+          <form class="grid suggestion-form">
+            <input type="text" name="name" placeholder="Your name" aria-label="Name" />
+            <input type="email" name="email" placeholder="Email" aria-label="Email" />
+            <textarea name="suggestion" rows="3" placeholder="What should I add?" aria-label="Suggestion"></textarea>
+            <button class="cta primary" type="submit">Send suggestion</button>
+          </form>
         </article>
       </section>
     </main>
