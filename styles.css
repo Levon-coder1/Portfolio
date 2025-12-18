@@ -1,15 +1,17 @@
 :root {
-  --bg: radial-gradient(circle at 18% 18%, rgba(32, 170, 112, 0.12), transparent 42%),
-    radial-gradient(circle at 82% 0%, rgba(243, 197, 66, 0.32), transparent 40%), #f7fbf5;
-  --panel: rgba(255, 255, 255, 0.8);
-  --panel-strong: rgba(255, 255, 255, 0.94);
-  --text: #0a120c;
-  --muted: rgba(10, 18, 13, 0.7);
-  --accent: linear-gradient(145deg, #1ab574, #7ddf62 36%, #f4c542 72%, #f99b1d 96%);
-  --accent-soft: linear-gradient(135deg, rgba(36, 161, 103, 0.18), rgba(255, 255, 255, 0.9));
-  --border: rgba(36, 161, 103, 0.28);
-  --shadow: 0 24px 80px rgba(8, 40, 22, 0.12), inset 0 1px 0 rgba(255, 255, 255, 0.38);
-  --shadow-strong: 0 30px 90px rgba(8, 40, 22, 0.16), inset 0 1px 0 rgba(255, 255, 255, 0.4);
+  --bg: radial-gradient(circle at 18% 18%, rgba(120, 255, 210, 0.22), transparent 46%),
+    radial-gradient(circle at 82% 0%, rgba(170, 255, 195, 0.38), transparent 44%), #f5fff9;
+  --panel: rgba(255, 255, 255, 0.82);
+  --panel-strong: rgba(255, 255, 255, 0.96);
+  --text: #07140e;
+  --muted: rgba(7, 20, 14, 0.72);
+  --accent: linear-gradient(135deg, #c9ffe8 0%, #8ff7c8 30%, #5fd0a9 60%, #bdf1ff 100%);
+  --accent-soft: linear-gradient(135deg, rgba(147, 255, 211, 0.25), rgba(255, 255, 255, 0.92));
+  --button-accent: linear-gradient(135deg, #e9fff4 0%, #b6ffd9 25%, #66f3b1 55%, #59d19f 72%, #c1ffe6 100%);
+  --button-gloss: linear-gradient(180deg, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0));
+  --border: rgba(111, 214, 171, 0.4);
+  --shadow: 0 24px 80px rgba(6, 60, 40, 0.12), inset 0 1px 0 rgba(255, 255, 255, 0.46);
+  --shadow-strong: 0 30px 90px rgba(6, 60, 40, 0.18), inset 0 1px 0 rgba(255, 255, 255, 0.5);
   --radius: 18px;
   --radius-lg: 26px;
   --blur: 18px;
@@ -115,17 +117,30 @@ main {
   border-radius: 999px;
   font-weight: 600;
   text-decoration: none;
-  border: 1px solid rgba(36, 161, 103, 0.32);
-  background: var(--panel);
-  box-shadow: var(--shadow);
-  color: var(--text);
+  border: 1px solid var(--border);
+  background-image: var(--button-accent);
+  box-shadow: var(--shadow-strong), 0 12px 24px rgba(70, 193, 140, 0.22);
+  color: #05311d;
   backdrop-filter: blur(var(--blur));
+  position: relative;
+  overflow: hidden;
+}
+
+.pill::after,
+.cta::after {
+  content: '';
+  position: absolute;
+  inset: 1px;
+  border-radius: inherit;
+  background: var(--button-gloss);
+  opacity: 0.85;
+  pointer-events: none;
 }
 
 .cta.primary {
-  background-image: var(--accent);
-  color: #0b1a0e;
-  border: 1px solid rgba(36, 161, 103, 0.4);
+  background-image: var(--button-accent);
+  color: #042317;
+  border: 1px solid var(--border);
 }
 
 button.cta,

@@ -32,12 +32,59 @@ function createTagPills(tags = []) {
     .join('');
 }
 
-async function renderCatalog() {
-  const grid = document.getElementById('gadget-grid');
-  if (!grid) return;
+async function renderCategoryOverview() {
+  const wrap = document.getElementById('category-grid');
+  if (!wrap) return;
 
   const products = await fetchProducts();
-  grid.innerHTML = products
+  const grouped = products.reduce((acc, product) => {
+    if (!acc[product.category]) acc[product.category] = [];
+    acc[product.category].push(product);
+    return acc;
+  }, {});
+
+  wrap.innerHTML = Object.entries(grouped)
+    .map(([category, items]) => {
+      const hero = items[0]?.heroImage || '';
+      const previewTags = items[0]?.tags || [];
+      return `
+      <article class="card">
+        <img src="${hero}" alt="${category} preview" loading="lazy" />
+        <div class="tag-row">${createTagPills(previewTags)}</div>
+        <h3>${category}</h3>
+        <p class="lede">${items.length} products ready. Open to view the dedicated page for ${category.toLowerCase()}.</p>
+        <div class="tag-row">
+          <span class="pill mini">${category}</span>
+          <span class="pill mini">${items.length} items</span>
+        </div>
+        <a class="cta primary" href="category.html?category=${encodeURIComponent(category)}">Open ${category}</a>
+      </article>
+    `;
+    })
+    .join('');
+}
+
+async function renderCategoryProducts() {
+  const grid = document.getElementById('category-products');
+  if (!grid) return;
+  const params = new URLSearchParams(window.location.search);
+  const category = params.get('category') || 'Gadgets';
+  const products = await fetchProducts();
+  const filtered = products.filter((product) => product.category === category);
+
+  const heading = document.getElementById('category-name');
+  const title = document.getElementById('category-heading');
+  const count = document.getElementById('category-count');
+  if (heading) heading.textContent = `${category} devices`;
+  if (title) title.textContent = `${category} line-up`;
+  if (count) count.textContent = `${filtered.length} products in this category.`;
+
+  if (!filtered.length) {
+    grid.innerHTML = `<p class="lede">No products found for ${category}. Go back to <a class="cta" href="gadgets.html">categories</a>.</p>`;
+    return;
+  }
+
+  grid.innerHTML = filtered
     .map(
       (product) => `
       <article class="card">
@@ -49,7 +96,7 @@ async function renderCatalog() {
           <span class="pill mini">${product.category}</span>
           <span class="pill mini">${formatPrice(product.price)}</span>
         </div>
-        <a class="cta" href="product.html?slug=${product.slug}">View details</a>
+        <a class="cta" href="product.html?slug=${product.slug}">Open product page</a>
       </article>
     `
     )
@@ -179,6 +226,7 @@ async function renderSearchResults() {
     .join('');
 }
 
-renderCatalog();
+renderCategoryOverview();
+renderCategoryProducts();
 renderProductDetail();
 renderSearchResults();

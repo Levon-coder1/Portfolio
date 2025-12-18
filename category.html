@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Gadgets · Asher Jay</title>
+    <title>Category · Asher Jay</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -32,34 +32,34 @@
     <main>
       <section class="page-hero">
         <div>
-          <p class="pill mini">Catalog</p>
-          <h1>Flagship gadgets curated with transparent details.</h1>
-          <p class="lede">Click any product to open a dedicated detail page with gallery, specs, price, and similar devices.</p>
+          <p class="pill mini">Category</p>
+          <h1 id="category-heading">Explore this lineup</h1>
+          <p class="lede">Each product opens to its own dedicated page with specs, gallery, and similar picks.</p>
           <div class="tag-row">
             <a class="cta primary" href="search.html">Search & filter</a>
-            <a class="cta" href="contact.html">Request a device</a>
+            <a class="cta" href="gadgets.html">Back to categories</a>
           </div>
         </div>
         <div class="glass-card">
-          <p class="lede">Fully responsive layout with glassmorphism panels. Works across phones, tablets, and desktops without overlapping sections.</p>
+          <p class="lede">Fully separated pages per category keep the experience clean. Choose a product to open its unique detail page.</p>
         </div>
       </section>
 
       <section class="section">
         <div class="section__header">
-          <p class="pill mini">Categories</p>
-          <h2>Pick a lane and dive in</h2>
-          <p class="lede">Select a category to open a dedicated page of its products. Each category opens on its own page with full listings.</p>
+          <p class="pill mini">Products</p>
+          <h2 id="category-name">Category devices</h2>
+          <p class="lede" id="category-count"></p>
         </div>
-        <div id="category-grid" class="gadget-grid" aria-live="polite"></div>
+        <div id="category-products" class="gadget-grid" aria-live="polite"></div>
       </section>
     </main>
 
     <footer class="footer">
-      <p>Asher Jay · Gadget catalog</p>
+      <p>Asher Jay · Gadgets by category</p>
       <div class="footer-links">
+        <a href="gadgets.html">Categories</a>
         <a href="search.html">Search</a>
-        <a href="product.html">Product page</a>
         <a href="contact.html">Contact</a>
       </div>
     </footer>
