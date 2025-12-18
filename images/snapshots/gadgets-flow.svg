@@ -1,0 +1,17 @@
+<svg width="480" height="280" viewBox="0 0 480 280" xmlns="http://www.w3.org/2000/svg" fill="none">
+  <defs>
+    <linearGradient id="grad2" x1="1" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fffaf5" stop-opacity="0.92"/>
+      <stop offset="60%" stop-color="#ffb36b" stop-opacity="0.32"/>
+      <stop offset="100%" stop-color="#0a0a0a" stop-opacity="0.85"/>
+    </linearGradient>
+  </defs>
+  <rect x="10" y="10" width="460" height="260" rx="34" fill="url(#grad2)" stroke="rgba(255,140,50,0.35)" stroke-width="2"/>
+  <rect x="60" y="60" width="150" height="180" rx="26" fill="rgba(255,255,255,0.9)" stroke="rgba(0,0,0,0.1)"/>
+  <rect x="230" y="70" width="90" height="160" rx="20" fill="rgba(0,0,0,0.82)" stroke="rgba(255,255,255,0.2)"/>
+  <rect x="340" y="88" width="80" height="120" rx="18" fill="rgba(255,255,255,0.76)" stroke="rgba(255,140,50,0.4)"/>
+  <circle cx="150" cy="120" r="20" fill="rgba(255,140,50,0.28)"/>
+  <circle cx="275" cy="140" r="12" fill="rgba(255,255,255,0.7)"/>
+  <text x="60" y="110" fill="#0f0f0f" font-family="'Space Grotesk', 'Inter', sans-serif" font-size="26" font-weight="700">Flagship catalog</text>
+  <text x="60" y="142" fill="#0f0f0f" font-family="'Space Grotesk', 'Inter', sans-serif" font-size="16" opacity="0.8">Phones, laptops, tablets, and rigs with quick-view specs.</text>
+</svg>
