@@ -1,0 +1,11 @@
+<svg width="640" height="360" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="g" x1="0%" x2="100%" y1="0%" y2="100%">
+      <stop stop-color="#ff8a3d" offset="0%"/>
+      <stop stop-color="#ffdca4" offset="100%"/>
+    </linearGradient>
+  </defs>
+  <rect width="640" height="360" rx="32" fill="url(#g)"/>
+  <rect x="120" y="40" width="400" height="280" rx="40" fill="#ffffff" opacity="0.6" stroke="#111" stroke-width="4"/>
+  <text x="320" y="190" font-family="'Space Grotesk', Arial" font-size="28" text-anchor="middle" fill="#0f0a07">Aurora Pro Phone</text>
+</svg>

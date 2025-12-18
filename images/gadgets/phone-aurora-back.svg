@@ -1,0 +1,11 @@
+<svg width="640" height="360" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="g" x1="0%" x2="100%" y1="0%" y2="100%">
+      <stop stop-color="#111" offset="0%"/>
+      <stop stop-color="#ff7a18" offset="50%"/>
+      <stop stop-color="#ffdca4" offset="100%"/>
+    </linearGradient>
+  </defs>
+  <rect width="640" height="360" rx="32" fill="url(#g)" opacity="0.85"/>
+  <text x="320" y="190" font-family="'Space Grotesk', Arial" font-size="28" text-anchor="middle" fill="#ffffff" opacity="0.95">Replace with ${f}.jpg</text>
+</svg>

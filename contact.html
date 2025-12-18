@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact · Asher Jay</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="bg-noise"></div>
+    <header class="nav">
+      <div class="brand">Asher Jay</div>
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+      <nav class="nav-links" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="projects.html">Projects</a>
+        <a href="gadgets.html">Gadgets</a>
+        <a href="socials.html">Socials</a>
+        <a href="hub.html">Hub</a>
+        <a href="contact.html">Contact</a>
+        <a href="search.html">Search</a>
+      </nav>
+      <a class="pill" href="mailto:hello@asherjay.dev">Let’s talk</a>
+    </header>
+
+    <main>
+      <section class="page-hero">
+        <div>
+          <p class="pill mini">Contact</p>
+          <h1>Let’s collaborate</h1>
+          <p class="lede">Drop a note about projects, gadgets, or partnerships. The layout stays clean on mobile.</p>
+        </div>
+        <div class="glass-card">
+          <p class="lede">Replace the form action with your own service.</p>
+        </div>
+      </section>
+
+      <section class="section">
+        <form class="card" action="mailto:hello@asherjay.dev" method="post" enctype="text/plain">
+          <label for="name">Name</label>
+          <input id="name" name="name" type="text" required placeholder="Your name" />
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" required placeholder="you@example.com" />
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="5" placeholder="How can I help?" required></textarea>
+          <button class="cta primary" type="submit">Send</button>
+        </form>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>Asher Jay · Contact</p>
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="gadgets.html">Gadgets</a>
+      </div>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
