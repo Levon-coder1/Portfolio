@@ -57,7 +57,7 @@ main {
   top: 18px;
   display: flex;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: space-between;
   gap: 12px;
   padding: 14px 20px;
   background: var(--accent-soft);
@@ -66,6 +66,9 @@ main {
   box-shadow: var(--shadow);
   backdrop-filter: blur(var(--blur));
   z-index: 10;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .brand {
@@ -89,7 +92,6 @@ main {
   display: flex;
   align-items: center;
   gap: 14px;
-  flex: 1;
   justify-content: center;
 }
 
@@ -136,7 +138,10 @@ main {
   cursor: pointer;
 }
 
-.search-trigger {
+.nav-actions {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
   margin-left: auto;
 }
 
@@ -199,6 +204,55 @@ button.pill {
   font-size: clamp(32px, 4vw, 52px);
   line-height: 1.02;
   margin-bottom: 14px;
+}
+
+.carousel-section {
+  margin: 40px 0 10px;
+  display: grid;
+  gap: 16px;
+}
+
+.carousel-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.carousel {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--radius-lg);
+  background: var(--panel);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-strong);
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.8s ease;
+}
+
+.carousel-slide {
+  min-width: 100%;
+  display: grid;
+  gap: 12px;
+  padding: clamp(12px, 4vw, 24px);
+  align-items: center;
+}
+
+.carousel-slide img {
+  width: 100%;
+  height: clamp(220px, 40vw, 420px);
+  object-fit: cover;
+  border-radius: calc(var(--radius-lg) - 6px);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.94), rgba(143, 247, 200, 0.28));
+  box-shadow: var(--shadow-strong);
+}
+
+.carousel-slide p {
+  max-width: 720px;
 }
 
 .hero__copy .lede,
@@ -489,11 +543,15 @@ textarea {
 }
 
 @media (max-width: 900px) {
+  .nav {
+    justify-content: space-between;
+  }
+
   .nav-links {
     position: absolute;
-    top: 70px;
-    right: 20px;
-    left: 20px;
+    top: calc(100% + 12px);
+    right: 18px;
+    left: 18px;
     flex-direction: column;
     align-items: flex-start;
     background: var(--panel);
@@ -513,7 +571,7 @@ textarea {
   }
 
   .icon-button {
-    margin-left: 8px;
+    margin-left: 0;
   }
 }
 
@@ -569,11 +627,8 @@ textarea {
 
   .mobile-cta-bar {
     display: flex;
-    position: fixed;
-    bottom: 18px;
-    left: 18px;
-    right: 18px;
-    z-index: 11;
+    position: static;
+    margin: 32px 0 0;
   }
 
   .mobile-cta-bar .cta {
