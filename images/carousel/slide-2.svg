@@ -1,0 +1,16 @@
+<svg width="1200" height="720" viewBox="0 0 1200 720" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg2" x1="1" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#B6FFD9" />
+      <stop offset="100%" stop-color="#C1FFE6" />
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="720" rx="48" fill="url(#bg2)"/>
+  <rect x="120" y="140" width="960" height="340" rx="34" fill="white" fill-opacity="0.78" stroke="#59D19F" stroke-opacity="0.6" stroke-width="6" />
+  <circle cx="280" cy="310" r="110" fill="#0F3B29" fill-opacity="0.85" />
+  <rect x="470" y="200" width="520" height="66" rx="18" fill="#0F3B29" fill-opacity="0.7" />
+  <rect x="470" y="286" width="500" height="44" rx="14" fill="#0F3B29" fill-opacity="0.55" />
+  <rect x="470" y="350" width="440" height="30" rx="12" fill="#0F3B29" fill-opacity="0.45" />
+  <text x="500" y="245" fill="#E9FFF4" font-family="'Space Grotesk', 'Arial Black'" font-size="36" font-weight="700">Auto-sliding spotlight</text>
+  <text x="500" y="330" fill="#E9FFF4" font-family="'Space Grotesk', 'Arial'" font-size="20" font-weight="500">Swap this with product or showcase photography.</text>
+</svg>

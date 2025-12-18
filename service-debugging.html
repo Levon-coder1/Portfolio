@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Debugging · Asher Jay</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="bg-noise"></div>
+    <header class="nav">
+      <a class="brand" href="index.html">
+        <img src="images/logo.svg" alt="Asher Jay logo" class="brand-logo" />
+        <span>Asher Jay</span>
+      </a>
+      <nav class="nav-links" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="projects.html">Projects</a>
+        <a href="gadgets.html">Gadgets</a>
+        <a href="socials.html">Socials</a>
+        <a href="hub.html">Hub</a>
+        <a href="contact.html">Contact</a>
+        <a href="search.html">Search</a>
+      </nav>
+      <div class="nav-actions">
+        <button class="icon-button search-trigger" aria-label="Open search page" title="Search">
+          🔍
+        </button>
+        <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+      </div>
+    </header>
+
+    <main>
+      <section class="page-hero">
+        <div>
+          <p class="pill mini">Service</p>
+          <h1>Debugging</h1>
+          <p class="lede">Trace, diagnose, and fix the gnarly issues slowing down your apps and hardware integrations.</p>
+        </div>
+        <div class="glass-card">
+          <img src="images/services/debugging.svg" alt="Debugging preview" />
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section__header">
+          <p class="pill mini">Highlights</p>
+          <h2>How it ships</h2>
+        </div>
+        <div class="detail-grid">
+          <article class="card">
+            <h3>Root cause analysis</h3>
+            <p class="lede">Logs, traces, and profiling to isolate regressions and crash loops quickly.</p>
+          </article>
+          <article class="card">
+            <h3>Stability sweeps</h3>
+            <p class="lede">Performance passes, memory cleanup, and defensive fixes to harden releases.</p>
+          </article>
+          <article class="card">
+            <h3>Follow-through</h3>
+            <p class="lede">Documentation and monitoring so the fixes stay healthy after handoff.</p>
+          </article>
+        </div>
+        <div class="tag-row">
+          <a class="cta primary" href="contact.html">Get quote</a>
+          <a class="cta" href="projects.html">Back to projects</a>
+        </div>
+      </section>
+    </main>
+
+
+    <div class="mobile-cta-bar">
+      <a class="cta primary" href="mailto:hello@asherjay.dev">Let’s talk</a>
+    </div>
+
+    <footer class="footer">
+      <p>Asher Jay · Debugging</p>
+      <div class="footer-links">
+        <a href="projects.html">Projects</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>

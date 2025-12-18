@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Search gadgets · Asher Jay</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="bg-noise"></div>
+    <header class="nav">
+      <a class="brand" href="index.html">
+        <img src="images/logo.svg" alt="Asher Jay logo" class="brand-logo" />
+        <span>Asher Jay</span>
+      </a>
+      <nav class="nav-links" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="projects.html">Projects</a>
+        <a href="gadgets.html">Gadgets</a>
+        <a href="socials.html">Socials</a>
+        <a href="hub.html">Hub</a>
+        <a href="contact.html">Contact</a>
+        <a href="search.html">Search</a>
+      </nav>
+      <div class="nav-actions">
+        <button class="icon-button search-trigger" aria-label="Open search page" title="Search">
+          🔍
+        </button>
+        <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+      </div>
+    </header>
+
+    <main>
+      <section class="page-hero">
+        <div>
+          <p class="pill mini">Search</p>
+          <h1>Find gadgets fast</h1>
+          <p class="lede">Search across the catalog and filter by category or price. Results link to a dedicated product page.</p>
+        </div>
+        <div class="glass-card">
+          <p class="lede">Use the filters below. The results area updates based on the query string so you can share search results URLs.</p>
+        </div>
+      </section>
+
+      <section class="section">
+        <form id="search-form" class="search-bar">
+          <input type="search" name="q" placeholder="Search gadgets" aria-label="Search gadgets" />
+          <select name="category" aria-label="Filter by category">
+            <option value="">All categories</option>
+            <option value="Phones">Phones</option>
+            <option value="Laptops">Laptops</option>
+            <option value="Tablets">Tablets</option>
+            <option value="Gaming">Gaming</option>
+            <option value="Wearables">Wearables</option>
+            <option value="Audio">Audio</option>
+            <option value="Cameras">Cameras</option>
+            <option value="Consoles">Consoles</option>
+            <option value="Monitors">Monitors</option>
+            <option value="Drones">Drones</option>
+          </select>
+          <select name="price" aria-label="Filter by price">
+            <option value="">Any price</option>
+            <option value="under-1200">Under $1200</option>
+            <option value="1200-2000">$1200 - $2000</option>
+            <option value="over-2000">Over $2000</option>
+          </select>
+          <button class="cta primary" type="submit">Search</button>
+        </form>
+        <ul id="search-suggestions" class="search-suggestions" aria-live="polite"></ul>
+        <p class="results-meta" aria-live="polite"></p>
+        <div id="search-results" class="gadget-grid" aria-live="polite"></div>
+      </section>
+    </main>
+
+
+    <div class="mobile-cta-bar">
+      <a class="cta primary" href="mailto:hello@asherjay.dev">Let’s talk</a>
+    </div>
+
+    <footer class="footer">
+      <p>Asher Jay · Search</p>
+      <div class="footer-links">
+        <a href="gadgets.html">Gadgets</a>
+        <a href="product.html">Product page</a>
+      </div>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
