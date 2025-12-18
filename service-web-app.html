@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Web App Development · Asher Jay</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="bg-noise"></div>
+    <header class="nav">
+      <div class="brand">Asher Jay</div>
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+      <nav class="nav-links" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="projects.html">Projects</a>
+        <a href="gadgets.html">Gadgets</a>
+        <a href="socials.html">Socials</a>
+        <a href="hub.html">Hub</a>
+        <a href="contact.html">Contact</a>
+        <a href="search.html">Search</a>
+      </nav>
+      <a class="pill" href="mailto:hello@asherjay.dev">Let’s talk</a>
+    </header>
+
+    <main>
+      <section class="page-hero">
+        <div>
+          <p class="pill mini">Service</p>
+          <h1>Web app development</h1>
+          <p class="lede">
+            SaaS dashboards, portals, and marketing-connected apps that balance aesthetics with performance and reliability.
+          </p>
+        </div>
+        <div class="glass-card">
+          <img src="images/services/web-app.svg" alt="Web app preview" />
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section__header">
+          <p class="pill mini">Highlights</p>
+          <h2>How it ships</h2>
+        </div>
+        <div class="detail-grid">
+          <article class="card">
+            <h3>Architecture</h3>
+            <p class="lede">Modern stacks with auth, API integrations, and CI/CD to keep releases predictable.</p>
+          </article>
+          <article class="card">
+            <h3>Product thinking</h3>
+            <p class="lede">Flows crafted to reduce friction, speed onboarding, and surface value quickly.</p>
+          </article>
+          <article class="card">
+            <h3>Observability</h3>
+            <p class="lede">Metrics, logging, and alerts so the app stays healthy after launch.</p>
+          </article>
+        </div>
+        <div class="tag-row">
+          <a class="cta primary" href="contact.html">Get quote</a>
+          <a class="cta" href="projects.html">Back to projects</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>Asher Jay · Web apps</p>
+      <div class="footer-links">
+        <a href="projects.html">Projects</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>

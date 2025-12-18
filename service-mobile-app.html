@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mobile App Development · Asher Jay</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="bg-noise"></div>
+    <header class="nav">
+      <div class="brand">Asher Jay</div>
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+      <nav class="nav-links" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="projects.html">Projects</a>
+        <a href="gadgets.html">Gadgets</a>
+        <a href="socials.html">Socials</a>
+        <a href="hub.html">Hub</a>
+        <a href="contact.html">Contact</a>
+        <a href="search.html">Search</a>
+      </nav>
+      <a class="pill" href="mailto:hello@asherjay.dev">Let’s talk</a>
+    </header>
+
+    <main>
+      <section class="page-hero">
+        <div>
+          <p class="pill mini">Service</p>
+          <h1>Mobile app development</h1>
+          <p class="lede">
+            Native-feel experiences for iOS and Android with offline-first logic, push notifications, and buttery gestures.
+          </p>
+        </div>
+        <div class="glass-card">
+          <img src="images/services/mobile-app.svg" alt="Mobile app preview" />
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section__header">
+          <p class="pill mini">Highlights</p>
+          <h2>How it ships</h2>
+        </div>
+        <div class="detail-grid">
+          <article class="card">
+            <h3>Platform fidelity</h3>
+            <p class="lede">Haptics, gestures, and platform-native controls wrapped in the liquid glass aesthetic.</p>
+          </article>
+          <article class="card">
+            <h3>Offline + sync</h3>
+            <p class="lede">State is cached when offline and synced when back online so flows never stall.</p>
+          </article>
+          <article class="card">
+            <h3>Analytics & rollouts</h3>
+            <p class="lede">Release toggles, telemetry, and crash reporting to keep updates safe and observable.</p>
+          </article>
+        </div>
+        <div class="tag-row">
+          <a class="cta primary" href="contact.html">Get quote</a>
+          <a class="cta" href="projects.html">Back to projects</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>Asher Jay · Mobile apps</p>
+      <div class="footer-links">
+        <a href="projects.html">Projects</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
