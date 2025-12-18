@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="900" viewBox="0 0 1400 900" fill="none">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#0b1220"/>
+    </linearGradient>
+    <linearGradient id="rim" x1="0" y1="1" x2="1" y2="0">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#22d3ee" stop-opacity="0.3"/>
+    </linearGradient>
+  </defs>
+  <rect width="1400" height="900" fill="url(#bg)"/>
+  <rect x="200" y="520" width="1000" height="140" rx="40" fill="#0b1220" stroke="url(#rim)" stroke-width="14"/>
+  <rect x="250" y="480" width="900" height="60" rx="26" fill="#111827" stroke="#1f2937" stroke-width="8"/>
+  <rect x="280" y="430" width="840" height="70" rx="22" fill="#0f172a" stroke="#1e293b" stroke-width="6"/>
+  <rect x="320" y="260" width="760" height="180" rx="28" fill="#0b1220" stroke="#334155" stroke-width="12"/>
+  <rect x="320" y="220" width="760" height="60" rx="24" fill="#0f172a" stroke="#1e293b" stroke-width="6"/>
+  <text x="700" y="560" text-anchor="middle" fill="#cbd5e1" font-size="44" font-family="'Inter', 'Helvetica', 'Arial', sans-serif">Studio Laptop — Side</text>
+  <text x="700" y="606" text-anchor="middle" fill="#94a3b8" font-size="26" font-family="'Inter', 'Helvetica', 'Arial', sans-serif">Replace with actual profile shot</text>
+</svg>
