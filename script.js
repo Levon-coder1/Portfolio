@@ -1,15 +1,15 @@
 const tiltElements = document.querySelectorAll('[data-tilt]');
 const reveals = document.querySelectorAll('.reveal');
 const views = document.querySelectorAll('[data-route]');
-const navLinks = document.querySelectorAll('.nav-links a');
+const navLinks = document.querySelectorAll('[data-route-link]');
 const brand = document.querySelector('.brand');
 const categoryTabs = document.querySelectorAll('[data-category]');
 const productGrid = document.getElementById('product-grid');
-const productDetail = document.getElementById('product-detail');
 const productPage = document.getElementById('product-page');
 const productPageVisual = document.getElementById('product-page-visual');
 const productPageCategory = document.getElementById('product-page-category');
 const productPagePrice = document.getElementById('product-page-price');
+const productPageSubtitle = document.getElementById('product-page-subtitle');
 const productPageName = document.getElementById('product-page-name');
 const productPageDescription = document.getElementById('product-page-description');
 const productPageList = document.getElementById('product-page-list');
@@ -481,3 +481,178 @@ navToggle?.addEventListener('click', () => {
 nav?.querySelectorAll('.nav-links a').forEach((link) => {
   link.addEventListener('click', () => nav?.classList.remove('open'));
 });
+
+let activeCategory = 'phones';
+
+function normalizeRoute(route) {
+  if (!route) return '/';
+  const trimmed = route.includes('#') ? route.slice(route.indexOf('#') + 1) : route;
+  if (!trimmed) return '/';
+  return trimmed.startsWith('/') ? trimmed : `/${trimmed}`;
+}
+
+function goToRoute(route) {
+  const formatted = route.startsWith('#') ? route : `#${route}`;
+  if (window.location.hash === formatted) {
+    handleRouteChange();
+  } else {
+    window.location.hash = formatted;
+  }
+}
+
+navLinks.forEach((link) => {
+  link.addEventListener('click', (event) => {
+    const href = link.getAttribute('href');
+    if (href?.startsWith('#/')) {
+      event.preventDefault();
+      goToRoute(normalizeRoute(href));
+      nav?.classList.remove('open');
+    }
+  });
+});
+
+function getProductContext(slug) {
+  return Object.entries(gadgetCatalog).reduce((found, [key, category]) => {
+    if (found) return found;
+    const product = category.products.find((item) => item.slug === slug);
+    return product ? { product, categoryKey: key, categoryLabel: category.label } : null;
+  }, null);
+}
+
+function renderCatalog(categoryKey = activeCategory) {
+  if (!productGrid) return;
+  const category = gadgetCatalog[categoryKey];
+  if (!category) return;
+  activeCategory = categoryKey;
+
+  categoryDescription.textContent = category.description;
+  categoryTabs.forEach((tab) => tab.classList.toggle('active', tab.dataset.category === categoryKey));
+
+  productGrid.innerHTML = '';
+  category.products.forEach((product) => {
+    const card = document.createElement('article');
+    card.className = 'product-card';
+    card.dataset.slug = product.slug;
+    card.innerHTML = `
+      <div class="product-card__media" style="background-image:url('${product.image}')">
+        <span class="badge">${category.label}</span>
+      </div>
+      <div class="product-card__body">
+        <p class="small">${product.price}</p>
+        <h3>${product.name}</h3>
+        <p class="muted">${product.summary}</p>
+        <div class="cta-row">
+          <button class="cta primary link-chip">View details</button>
+        </div>
+      </div>`;
+
+    card.addEventListener('click', () => goToRoute(`/gadgets/${product.slug}`));
+    productGrid.appendChild(card);
+  });
+}
+
+function renderProductDetail(slug) {
+  if (!productPage) return;
+  const context = slug ? getProductContext(slug) : null;
+  const product = context?.product;
+
+  productPageTitle.textContent = product ? `${product.name} — full gallery` : 'Pick a device to see its story.';
+  productPageSubtitle.textContent = product?.shipping ?? 'Click any product image to open a dedicated display with specs and gallery.';
+  productPageCategory.textContent = context?.categoryLabel ?? 'Gadget';
+  productPagePrice.textContent = product?.price ?? '';
+  productPageName.textContent = product?.name ?? 'Choose any product tile to load details.';
+  productPageDescription.textContent = product?.summary ??
+    'The full-width panel will showcase the hero image, expanded specs, pricing, shipping, and curated related picks.';
+
+  productPageVisual.style.backgroundImage = product ? `url('${product.image}')` : '';
+
+  productPageList.innerHTML = '';
+  (product?.details ?? []).forEach((detail) => {
+    const li = document.createElement('li');
+    li.textContent = detail;
+    productPageList.appendChild(li);
+  });
+
+  productPageGallery.innerHTML = '';
+  (product?.gallery ?? []).forEach((item) => {
+    const chip = document.createElement('span');
+    chip.className = 'gallery-chip';
+    chip.textContent = item;
+    productPageGallery.appendChild(chip);
+  });
+
+  productPageRelated.innerHTML = '';
+  if (product?.related?.length) {
+    const label = document.createElement('p');
+    label.className = 'muted';
+    label.textContent = 'Similar products';
+    productPageRelated.appendChild(label);
+
+    const wrap = document.createElement('div');
+    wrap.className = 'related-chips';
+    product.related.forEach((slugRef) => {
+      const relatedContext = getProductContext(slugRef);
+      if (!relatedContext) return;
+      const btn = document.createElement('button');
+      btn.className = 'pill mini link-chip';
+      btn.textContent = relatedContext.product.name;
+      btn.addEventListener('click', () => goToRoute(`/gadgets/${relatedContext.product.slug}`));
+      wrap.appendChild(btn);
+    });
+    productPageRelated.appendChild(wrap);
+  }
+}
+
+function setActiveView(path) {
+  const detailRoute = path.startsWith('/gadgets/') ? '/gadgets/detail' : path;
+  let targetView = Array.from(views).find((view) => view.dataset.route === detailRoute);
+  if (!targetView) {
+    targetView = Array.from(views).find((view) => view.dataset.route === '/');
+  }
+
+  views.forEach((view) => view.classList.toggle('active', view === targetView));
+
+  if (detailRoute === '/gadgets/detail') {
+    renderProductDetail(path.replace('/gadgets/', ''));
+  }
+
+  if (detailRoute === '/gadgets') {
+    renderCatalog(activeCategory);
+  }
+}
+
+function setActiveNav(path) {
+  navLinks.forEach((link) => {
+    const route = normalizeRoute(link.getAttribute('href'));
+    const isMatch = path === route || (path.startsWith('/gadgets/') && route === '/gadgets');
+    link.classList.toggle('active', isMatch);
+  });
+}
+
+function handleRouteChange() {
+  const path = normalizeRoute(window.location.hash || '/');
+  setActiveView(path);
+  setActiveNav(path);
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+categoryTabs.forEach((tab) => {
+  tab.addEventListener('click', () => {
+    const category = tab.dataset.category;
+    if (category) {
+      renderCatalog(category);
+    }
+  });
+});
+
+if (!window.location.hash) {
+  window.location.hash = '#/';
+  renderCatalog(activeCategory);
+  setActiveView('/');
+  setActiveNav('/');
+} else {
+  handleRouteChange();
+  renderCatalog(activeCategory);
+}
+
+window.addEventListener('hashchange', handleRouteChange);
