@@ -481,6 +481,26 @@ textarea {
   box-shadow: var(--shadow-strong);
 }
 
+.snapshots {
+  display: grid;
+  gap: 28px;
+}
+
+.snapshot-group {
+  display: grid;
+  gap: 16px;
+  padding: 18px;
+  border-radius: var(--radius-large);
+  background: var(--panel);
+  border: 1px solid rgba(255, 193, 134, 0.35);
+  box-shadow: var(--shadow-strong);
+}
+
+.snapshot-intro {
+  display: grid;
+  gap: 10px;
+}
+
 .snapshot-head {
   display: flex;
   justify-content: space-between;
@@ -521,6 +541,15 @@ textarea {
   min-height: 260px;
 }
 
+.snapshot-card img {
+  width: 100%;
+  height: 160px;
+  object-fit: contain;
+  border-radius: calc(var(--radius) - 4px);
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.78), rgba(255, 193, 134, 0.12));
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.6);
+}
+
 .snapshot-card p {
   font-size: 15px;
   line-height: 1.45;
@@ -548,6 +577,7 @@ textarea {
     grid-auto-columns: minmax(220px, 80%);
   }
 
+  .snapshot-group,
   .snapshot-track {
     padding: 14px;
   }
