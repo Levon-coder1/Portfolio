@@ -1,20 +1,20 @@
 const tiltElements = document.querySelectorAll('[data-tilt]');
 const reveals = document.querySelectorAll('.reveal');
-const views = document.querySelectorAll('[data-route]');
 const navLinks = document.querySelectorAll('.nav-links a');
 const brand = document.querySelector('.brand');
 const categoryTabs = document.querySelectorAll('[data-category]');
 const productGrid = document.getElementById('product-grid');
-const productDetail = document.getElementById('product-detail');
 const productPage = document.getElementById('product-page');
 const productPageVisual = document.getElementById('product-page-visual');
 const productPageCategory = document.getElementById('product-page-category');
 const productPagePrice = document.getElementById('product-page-price');
+const productPageSubtitle = document.getElementById('product-page-subtitle');
 const productPageName = document.getElementById('product-page-name');
 const productPageDescription = document.getElementById('product-page-description');
 const productPageList = document.getElementById('product-page-list');
 const productPageGallery = document.getElementById('product-page-gallery');
 const productPageRelated = document.getElementById('product-page-related');
+const productPageTags = document.getElementById('product-page-tags');
 const categoryDescription = document.getElementById('category-description');
 const searchInput = document.getElementById('catalog-search');
 const clearSearchButton = document.getElementById('clear-search');
@@ -807,10 +807,12 @@ function resetTilt() {
   this.style.transform = 'rotateX(0deg) rotateY(0deg)';
 }
 
-tiltElements.forEach((el) => {
+function registerTilt(el) {
   el.addEventListener('mousemove', handleTilt);
   el.addEventListener('mouseleave', resetTilt);
-});
+}
+
+tiltElements.forEach(registerTilt);
 
 const observer = new IntersectionObserver(
   (entries) => {

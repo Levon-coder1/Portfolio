@@ -1,0 +1,440 @@
+{
+  "categories": [
+    {
+      "id": "phones",
+      "label": "Phones",
+      "description": "Flagship devices tuned for camera work, travel, and creator stacks.",
+      "products": [
+        {
+          "slug": "pixel-pro",
+          "name": "Pixel Pro 9",
+          "category": "phones",
+          "price": "$1,099 · 256GB",
+          "shipping": "3-5 days, sealed or tuned with your app kit",
+          "summary": "Tensor-powered flagship with cinematic video presets and calibrated OLED.",
+          "gallery": ["Warm Amber", "Graphite Mist", "Porcelain"],
+          "specs": [
+            "50MP main + 5x telephoto; natural HDR with mobile LUTs installed",
+            "Unlocked dual-SIM with travel eSIM setup and battery health report",
+            "Delivered with tempered glass + slim clear and sport cases"
+          ],
+          "related": ["iphone-pro", "galaxy-s24"],
+          "tags": ["android", "camera", "flagship"],
+          "imageColors": { "primary": "#ff7a18", "secondary": "#202033" }
+        },
+        {
+          "slug": "iphone-pro",
+          "name": "iPhone 15 Pro Max",
+          "category": "phones",
+          "price": "$1,199 · 512GB",
+          "shipping": "Next-day courier available in select cities",
+          "summary": "Titanium build, 5x tetraprism zoom, and ProRes log capture out of the box.",
+          "gallery": ["Natural Titanium", "Blue Titanium", "White"],
+          "specs": [
+            "Color science tuned for social-first exports and LUT-ready delivery",
+            "MagSafe kit + glass install with warranty-friendly handoff",
+            "iCloud and Google Drive migration concierge included"
+          ],
+          "related": ["pixel-pro", "xperia-1vi"],
+          "tags": ["ios", "camera", "flagship"],
+          "imageColors": { "primary": "#c7b9a6", "secondary": "#1b1c22" }
+        },
+        {
+          "slug": "galaxy-s24",
+          "name": "Galaxy S24 Ultra",
+          "category": "phones",
+          "price": "$1,299 · 512GB",
+          "shipping": "Insured shipping with camera tuning and Spigen case",
+          "summary": "200MP camera with ExpertRAW presets, vivid LTPO screen, S Pen in-box.",
+          "gallery": ["Titan Gray", "Onyx Black"],
+          "specs": [
+            "Snapdragon for Galaxy with performance + battery profiles set",
+            "ExpertRAW + Lightroom presets installed for crisp night shots",
+            "Aramid fiber and clear kickstand cases included"
+          ],
+          "related": ["iphone-pro", "pixel-pro"],
+          "tags": ["android", "s-pen", "camera"],
+          "imageColors": { "primary": "#2f2b38", "secondary": "#9e7cff" }
+        },
+        {
+          "slug": "oneplus-12",
+          "name": "OnePlus 12",
+          "category": "phones",
+          "price": "$899 · 256GB",
+          "shipping": "2-4 days with Warp charge kit",
+          "summary": "Snapdragon 8 Gen 3, bright 120Hz OLED, Hasselblad-tuned colors.",
+          "gallery": ["Flowy Emerald", "Silky Black"],
+          "specs": [
+            "OxygenOS streamlined with creator tools and Zen mode focus setup",
+            "100W charger + spare cable and matte protector installed",
+            "Gaming mode toggles mapped with haptics tuned"
+          ],
+          "related": ["galaxy-s24", "pixel-pro"],
+          "tags": ["android", "fast charge"],
+          "imageColors": { "primary": "#61f4b8", "secondary": "#0f1820" }
+        },
+        {
+          "slug": "xperia-1vi",
+          "name": "Sony Xperia 1 VI",
+          "category": "phones",
+          "price": "$1,199 · 256GB",
+          "shipping": "Ships in 3-5 days with CineAlta presets",
+          "summary": "True 4K OLED, pro manual cameras, and Hi-Res audio with LDAC.",
+          "gallery": ["Khaki Green", "Black"],
+          "specs": [
+            "Cinema Pro and Photo Pro dialed with LUTs + shutter button tuning",
+            "Hi-Res playlists + LDAC headphone pairing at handoff",
+            "Glass screen protector installed with lanyard-ready case"
+          ],
+          "related": ["iphone-pro"],
+          "tags": ["android", "hi-res audio", "manual camera"],
+          "imageColors": { "primary": "#94a58a", "secondary": "#0a0f0a" }
+        },
+        {
+          "slug": "nothing-2a",
+          "name": "Nothing Phone 2a",
+          "category": "phones",
+          "price": "$499 · 256GB",
+          "shipping": "Fast dispatch with glyph automation setup",
+          "summary": "Playful transparent design, solid cameras, and glyph lighting presets.",
+          "gallery": ["Milk", "Black"],
+          "specs": [
+            "Glyph lights mapped to focus, delivery, and productivity cues",
+            "Minimal bloat setup with curated app stack and privacy tweaks",
+            "Comes with clear case, film protector, and USB-C cable"
+          ],
+          "related": ["oneplus-12"],
+          "tags": ["android", "glyph", "budget"],
+          "imageColors": { "primary": "#ffffff", "secondary": "#0c0c0c" }
+        }
+      ]
+    },
+    {
+      "id": "laptops",
+      "label": "Laptops",
+      "description": "Creator-grade rigs with calibrated displays, tuned thermals, and quiet performance.",
+      "products": [
+        {
+          "slug": "macbook-pro",
+          "name": "MacBook Pro 16\" M3 Max",
+          "category": "laptops",
+          "price": "$3,699 · 64GB / 1TB",
+          "shipping": "Priority insured shipping with photo proof + setup call",
+          "summary": "Apple Silicon speed with 120Hz XDR and preloaded creative suite shortcuts.",
+          "gallery": ["Space Black", "Silver"],
+          "specs": [
+            "Color-calibrated XDR profile and reference modes configured",
+            "Clamshell + external monitor performance profiles pre-set",
+            "Includes USB-C hub, braided USB-C cables, and quiet cooling pad"
+          ],
+          "related": ["zephyrus-g16", "razer-blade"],
+          "tags": ["macos", "creator", "xdr"],
+          "imageColors": { "primary": "#1f1c2c", "secondary": "#d9d9d9" }
+        },
+        {
+          "slug": "zephyrus-g16",
+          "name": "ROG Zephyrus G16 OLED",
+          "category": "laptops",
+          "price": "$2,299 · RTX 4080",
+          "shipping": "2-4 days with stress test reports",
+          "summary": "Ultra-thin gaming/creator hybrid with G-Sync OLED and studio-ready acoustics.",
+          "gallery": ["Nebula Gray"],
+          "specs": [
+            "GPU/CPU undervolt and fan curve tuned for balanced thermals",
+            "DaVinci Resolve + Blender profiles installed with hotkeys",
+            "Comes with low-latency 2.4GHz mouse and coiled keyboard cable"
+          ],
+          "related": ["macbook-pro", "xps-15"],
+          "tags": ["windows", "gaming", "oled"],
+          "imageColors": { "primary": "#7f8cff", "secondary": "#12121a" }
+        },
+        {
+          "slug": "razer-blade",
+          "name": "Razer Blade 15 OLED",
+          "category": "laptops",
+          "price": "$2,499 · RTX 4070",
+          "shipping": "Ships with thermals tuned + matte screen guard installed",
+          "summary": "Slim aluminum chassis, per-key RGB, and calibrated OLED for edits and play.",
+          "gallery": ["Shadow Black"],
+          "specs": [
+            "Synapse profiles balanced for whisper, creator, and turbo modes",
+            "RGB set to subtle studio-safe glow with per-app triggers",
+            "Includes USB-C dock, slim charger, and microfiber kit"
+          ],
+          "related": ["zephyrus-g16"],
+          "tags": ["gaming", "rgb", "oled"],
+          "imageColors": { "primary": "#00ffbd", "secondary": "#0b0f0f" }
+        },
+        {
+          "slug": "xps-15",
+          "name": "Dell XPS 15 OLED",
+          "category": "laptops",
+          "price": "$2,099 · 32GB / 1TB",
+          "shipping": "Calibrated and delivered with Windows Studio setup",
+          "summary": "Borderless OLED, Adobe-tuned color profiles, and quiet performance.",
+          "gallery": ["Platinum"],
+          "specs": [
+            "Fresh Windows build with minimal bloat + driver validation",
+            "Adobe Suite shortcuts, VPN, and cloud sync staged",
+            "Includes USB-C hub and Thunderbolt SSD enclosure"
+          ],
+          "related": ["macbook-pro"],
+          "tags": ["windows", "creator", "oled"],
+          "imageColors": { "primary": "#d4e2ff", "secondary": "#0e1520" }
+        },
+        {
+          "slug": "spectre-x360",
+          "name": "HP Spectre x360 14",
+          "category": "laptops",
+          "price": "$1,699 · Evo platform",
+          "shipping": "3-6 days with pen + sleeve bundle",
+          "summary": "Convertible elegance with OLED touch, long battery, and stylus-ready hinge.",
+          "gallery": ["Nightfall Black", "Nocturne Blue"],
+          "specs": [
+            "Two-in-one modes tuned with pen shortcuts + note templates",
+            "Windows Hello + privacy switches set and verified",
+            "Includes pen tips, folio sleeve, and spare charger"
+          ],
+          "related": ["xps-15"],
+          "tags": ["convertible", "oled", "windows"],
+          "imageColors": { "primary": "#2c1c3a", "secondary": "#caa7ff" }
+        },
+        {
+          "slug": "framework-13",
+          "name": "Framework 13 DIY",
+          "category": "laptops",
+          "price": "$1,399 · Modular",
+          "shipping": "Ships in 4-7 days with expansion cards of your choice",
+          "summary": "Repairable, modular laptop tuned for dev and travel simplicity.",
+          "gallery": ["Modular Silver"],
+          "specs": [
+            "RAM/SSD installed + BIOS tuned for battery and quiet cooling",
+            "Expansion cards picked for your ports; spare screws included",
+            "Linux/Windows dual-boot setup available on request"
+          ],
+          "related": ["macbook-pro"],
+          "tags": ["modular", "repairable", "windows"],
+          "imageColors": { "primary": "#d9ffea", "secondary": "#1c1f24" }
+        }
+      ]
+    },
+    {
+      "id": "accessories",
+      "label": "Accessories",
+      "description": "Polished essentials that keep your devices protected, powered, and ready.",
+      "products": [
+        {
+          "slug": "aurora-buds",
+          "name": "Aurora ANC Buds",
+          "category": "accessories",
+          "price": "$249",
+          "shipping": "Ships within 48 hours with fit kit",
+          "summary": "Dual drivers, adaptive ANC, and spatial audio for iOS and Android.",
+          "gallery": ["Frost White", "Obsidian"],
+          "specs": [
+            "Wireless + USB-C fast charge case with 36h total battery",
+            "Ear fit calibration and EQ tuning during handoff",
+            "Includes silicone + foam tips and magnetic cable clip"
+          ],
+          "related": ["halo-watch", "arc-charger"],
+          "tags": ["audio", "anc", "wireless"],
+          "imageColors": { "primary": "#f7f8ff", "secondary": "#0f111c" }
+        },
+        {
+          "slug": "arc-charger",
+          "name": "Arc Wireless Charger",
+          "category": "accessories",
+          "price": "$119",
+          "shipping": "3-5 days with cable kit",
+          "summary": "15W MagSafe-compatible stand with soft-touch glass and LED breathing ring.",
+          "gallery": ["Cloud", "Midnight"],
+          "specs": [
+            "Supports iPhone/Android + Qi2 with auto-alignment magnets",
+            "Detachable braided USB-C + 30W GaN brick included",
+            "LED ring uses ambient light sensor for night-friendly glow"
+          ],
+          "related": ["aurora-buds", "lumen-cable"],
+          "tags": ["charger", "wireless", "qi2"],
+          "imageColors": { "primary": "#c3d8ff", "secondary": "#0b1020" }
+        },
+        {
+          "slug": "halo-watch",
+          "name": "Halo Health Watch",
+          "category": "accessories",
+          "price": "$329",
+          "shipping": "Priority courier with strap sizing kit",
+          "summary": "AMOLED wearable with dual-band GPS, HRV tracking, and week-long battery.",
+          "gallery": ["Sandstone", "Slate"],
+          "specs": [
+            "Preloaded with sleep coaching, strength plans, and NFC wallet",
+            "Metal + fluoroelastomer straps sized and fitted at delivery",
+            "Includes tempered glass protector and wireless puck"
+          ],
+          "related": ["aurora-buds"],
+          "tags": ["wearable", "health", "gps"],
+          "imageColors": { "primary": "#ffd3b6", "secondary": "#1b0f0f" }
+        },
+        {
+          "slug": "aero-pack",
+          "name": "Aero Tech Backpack",
+          "category": "accessories",
+          "price": "$189",
+          "shipping": "Ships in 2-3 days with dust bag",
+          "summary": "Weatherproof 24L pack with laptop cradle, cable bay, and hidden AirTag slot.",
+          "gallery": ["Jet Black", "Fog Gray"],
+          "specs": [
+            "Fits 16\" laptops, cameras, and tablet; structured to stand upright",
+            "Cable/charger bay with magnetic door and label set",
+            "Luggage passthrough + breathable straps tuned for travel"
+          ],
+          "related": ["arc-charger"],
+          "tags": ["carry", "travel", "weatherproof"],
+          "imageColors": { "primary": "#d7dee7", "secondary": "#0c0f12" }
+        },
+        {
+          "slug": "lumen-cable",
+          "name": "Lumen Weave Cable Set",
+          "category": "accessories",
+          "price": "$69",
+          "shipping": "24h dispatch; set of 3 braided lengths",
+          "summary": "Glowing braided USB-C/Lightning set with 100W support and soft glass sheen.",
+          "gallery": ["Frost Glow", "Obsidian"],
+          "specs": [
+            "Includes 1m, 2m, and 3m lengths with cable wraps",
+            "LED breathing ends to find cables in dark studios",
+            "Kevlar-weave with gentle curve memory to stay tidy"
+          ],
+          "related": ["arc-charger"],
+          "tags": ["cable", "usb-c", "lighting"],
+          "imageColors": { "primary": "#f0f5ff", "secondary": "#0e1b2f" }
+        },
+        {
+          "slug": "glide-stand",
+          "name": "Glide Laptop Stand",
+          "category": "accessories",
+          "price": "$129",
+          "shipping": "3-5 days with padded sleeve",
+          "summary": "Polished aluminum stand with glass inlays and 18° ergonomic lift.",
+          "gallery": ["Ice Silver", "Ink"],
+          "specs": [
+            "Holds 16\" laptops securely with silicone rail and cable pass-through",
+            "Glass inlay with anti-fingerprint coating for clean desk aesthetic",
+            "Folds flat; includes microfiber and travel sleeve"
+          ],
+          "related": ["macbook-pro"],
+          "tags": ["desk", "ergonomics", "aluminum"],
+          "imageColors": { "primary": "#cbd8ff", "secondary": "#0f172a" }
+        }
+      ]
+    },
+    {
+      "id": "tablets",
+      "label": "Tabs",
+      "description": "Portable canvases for sketching, note-taking, and on-the-go edit passes.",
+      "products": [
+        {
+          "slug": "ipad-pro",
+          "name": "iPad Pro 13\" M4",
+          "category": "tablets",
+          "price": "$1,499 · 512GB",
+          "shipping": "Next-day dispatch with folio + pencil options",
+          "summary": "OLED tandem display with Pencil Pro and Stage Manager tuned for multitask.",
+          "gallery": ["Silver", "Space Black"],
+          "specs": [
+            "Paperlike matte protector installed on request",
+            "Shortcuts, Procreate brushes, and note templates preloaded",
+            "Magic Keyboard + Pencil pairing and warranty guidance"
+          ],
+          "related": ["tab-s9", "ipad-air"],
+          "tags": ["ios", "oled", "pencil"],
+          "imageColors": { "primary": "#f6f4ff", "secondary": "#0c0c12" }
+        },
+        {
+          "slug": "tab-s9",
+          "name": "Galaxy Tab S9 Ultra",
+          "category": "tablets",
+          "price": "$1,299 · 512GB",
+          "shipping": "3-6 days with rugged case option",
+          "summary": "14.6\" Dynamic AMOLED with S Pen in-box and DeX desktop presets.",
+          "gallery": ["Graphite"],
+          "specs": [
+            "Color-calibrated for sketching and video color checks",
+            "Samsung Notes + GoodNotes setup with cloud sync tuned",
+            "Keyboard cover + 45W charger bundle available"
+          ],
+          "related": ["ipad-pro"],
+          "tags": ["android", "s-pen", "amoled"],
+          "imageColors": { "primary": "#a4b5ff", "secondary": "#0d1623" }
+        },
+        {
+          "slug": "ipad-air",
+          "name": "iPad Air 13\"",
+          "category": "tablets",
+          "price": "$899 · 256GB",
+          "shipping": "Ships within 72 hours with Smart Folio",
+          "summary": "M2 power in an ultra-thin chassis with vivid Liquid Retina display.",
+          "gallery": ["Blue", "Starlight"],
+          "specs": [
+            "Stage Manager + split view shortcuts pre-mapped",
+            "Paperlike or gloss protector installed at handoff",
+            "Bundle options with Pencil USB-C and Bluetooth keyboard"
+          ],
+          "related": ["ipad-pro"],
+          "tags": ["ios", "tablet", "pencil"],
+          "imageColors": { "primary": "#c8e5ff", "secondary": "#0d1322" }
+        },
+        {
+          "slug": "surface-pro",
+          "name": "Surface Pro 10",
+          "category": "tablets",
+          "price": "$1,199 · Copilot+ PC",
+          "shipping": "Ships in 3-5 days with keyboard cover",
+          "summary": "OLED Copilot+ 2-in-1 with studio mics, sharp webcam, and pen layer.",
+          "gallery": ["Platinum", "Black"],
+          "specs": [
+            "Fresh Windows build with Studio Effects tuned for calls",
+            "Pen, keyboard, and color profiles calibrated for editing",
+            "Clip Studio and OneNote layouts ready to go"
+          ],
+          "related": ["tab-s9"],
+          "tags": ["windows", "2-in-1", "copilot"],
+          "imageColors": { "primary": "#d8d8ff", "secondary": "#0f0f1a" }
+        },
+        {
+          "slug": "lenovo-p12",
+          "name": "Lenovo Tab P12 Pro",
+          "category": "tablets",
+          "price": "$749 · 256GB",
+          "shipping": "4-7 days with folio + pen kit",
+          "summary": "OLED entertainment and sketch tablet with slim metal build.",
+          "gallery": ["Storm Gray"],
+          "specs": [
+            "Pen latency tuned; custom shortcuts for sketching apps",
+            "Dolby Vision / Atmos profiles ready for media nights",
+            "Bundled with keyboard cover and tempered glass"
+          ],
+          "related": ["ipad-air"],
+          "tags": ["android", "oled", "entertainment"],
+          "imageColors": { "primary": "#c7d2ff", "secondary": "#0c111f" }
+        },
+        {
+          "slug": "remarkable-2",
+          "name": "reMarkable 2 Studio",
+          "category": "tablets",
+          "price": "$649 · Bundle",
+          "shipping": "Ships within 5 days with folio and Marker Plus",
+          "summary": "Paper-feel e-ink tablet for deep work and note capture.",
+          "gallery": ["Cloud Gray"],
+          "specs": [
+            "Templates, notebooks, and cloud sync configured",
+            "Marker tips + folio installed; handwriting OCR enabled",
+            "Focus mode layouts for distraction-free sessions"
+          ],
+          "related": ["lenovo-p12"],
+          "tags": ["e-ink", "notes", "focus"],
+          "imageColors": { "primary": "#f1f1f1", "secondary": "#111111" }
+        }
+      ]
+    }
+  ]
+}
