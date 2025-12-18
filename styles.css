@@ -196,6 +196,7 @@ button.pill {
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 24px;
   align-items: center;
+  min-height: clamp(560px, 80vh, 820px);
   margin: 48px 0 28px;
   position: relative;
   overflow: hidden;
@@ -571,6 +572,11 @@ textarea {
 }
 
 @media (max-width: 780px) {
+  .hero,
+  .page-hero {
+    min-height: 520px;
+  }
+
   .hero__copy h1,
   .page-hero h1 {
     font-size: clamp(28px, 6vw, 40px);
@@ -622,6 +628,7 @@ textarea {
   .hero,
   .page-hero {
     grid-template-columns: 1fr;
+    min-height: 480px;
   }
 
   .card,
