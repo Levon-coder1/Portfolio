@@ -482,177 +482,230 @@ nav?.querySelectorAll('.nav-links a').forEach((link) => {
   link.addEventListener('click', () => nav?.classList.remove('open'));
 });
 
-let activeCategory = 'phones';
-
-function normalizeRoute(route) {
-  if (!route) return '/';
-  const trimmed = route.includes('#') ? route.slice(route.indexOf('#') + 1) : route;
-  if (!trimmed) return '/';
-  return trimmed.startsWith('/') ? trimmed : `/${trimmed}`;
-}
-
-function goToRoute(route) {
-  const formatted = route.startsWith('#') ? route : `#${route}`;
-  if (window.location.hash === formatted) {
-    handleRouteChange();
-  } else {
-    window.location.hash = formatted;
-  }
-}
-
-navLinks.forEach((link) => {
-  link.addEventListener('click', (event) => {
-    const href = link.getAttribute('href');
-    if (href?.startsWith('#/')) {
-      event.preventDefault();
-      goToRoute(normalizeRoute(href));
-      nav?.classList.remove('open');
+function findProductBySlug(slug) {
+  for (const [categoryKey, category] of Object.entries(gadgetCatalog)) {
+    const match = category.products.find((product) => product.slug === slug);
+    if (match) {
+      return { product: match, categoryKey, category };
     }
-  });
-});
+  }
 
-function getProductContext(slug) {
-  return Object.entries(gadgetCatalog).reduce((found, [key, category]) => {
-    if (found) return found;
-    const product = category.products.find((item) => item.slug === slug);
-    return product ? { product, categoryKey: key, categoryLabel: category.label } : null;
-  }, null);
+  return null;
 }
 
-function renderCatalog(categoryKey = activeCategory) {
+function setActiveCategoryTab(activeKey) {
+  categoryTabs.forEach((tab) => {
+    tab.classList.toggle('active', tab.dataset.category === activeKey);
+  });
+}
+
+function renderProductCards(categoryKey) {
   if (!productGrid) return;
+
   const category = gadgetCatalog[categoryKey];
   if (!category) return;
-  activeCategory = categoryKey;
-
-  categoryDescription.textContent = category.description;
-  categoryTabs.forEach((tab) => tab.classList.toggle('active', tab.dataset.category === categoryKey));
 
   productGrid.innerHTML = '';
+  setActiveCategoryTab(categoryKey);
+  if (categoryDescription) {
+    categoryDescription.textContent = category.description;
+  }
+
   category.products.forEach((product) => {
     const card = document.createElement('article');
     card.className = 'product-card';
     card.dataset.slug = product.slug;
+    card.dataset.category = categoryKey;
+
     card.innerHTML = `
-      <div class="product-card__media" style="background-image:url('${product.image}')">
+      <div class="product-card__media" style="background-image: url('${product.image}')">
         <span class="badge">${category.label}</span>
       </div>
       <div class="product-card__body">
-        <p class="small">${product.price}</p>
+        <div class="card-meta">
+          <p class="small">${product.price}</p>
+          <p class="small">${product.shipping}</p>
+        </div>
         <h3>${product.name}</h3>
         <p class="muted">${product.summary}</p>
-        <div class="cta-row">
-          <button class="cta primary link-chip">View details</button>
-        </div>
-      </div>`;
+      </div>
+    `;
 
-    card.addEventListener('click', () => goToRoute(`/gadgets/${product.slug}`));
+    card.addEventListener('click', () => openProductPage(product.slug, categoryKey));
     productGrid.appendChild(card);
   });
 }
 
-function renderProductDetail(slug) {
+function buildChips(container, items, className) {
+  container.innerHTML = '';
+  items.forEach((item) => {
+    const chip = document.createElement('span');
+    chip.className = className;
+    chip.textContent = item;
+    container.appendChild(chip);
+  });
+}
+
+function renderRelated(container, relatedSlugs) {
+  if (!container) return;
+  container.innerHTML = '';
+
+  const relatedWrapper = document.createElement('div');
+  relatedWrapper.className = 'related-chips';
+
+  relatedSlugs.forEach((slug) => {
+    const found = findProductBySlug(slug);
+    if (!found) return;
+
+    const button = document.createElement('button');
+    button.className = 'pill mini link-chip';
+    button.type = 'button';
+    button.textContent = found.product.name;
+    button.addEventListener('click', () => openProductPage(slug, found.categoryKey));
+    relatedWrapper.appendChild(button);
+  });
+
+  if (!relatedWrapper.childElementCount) return;
+  container.appendChild(relatedWrapper);
+}
+
+function renderDetailPanel(product, categoryLabel) {
+  if (!productDetail) return;
+
+  const detailTitle = productDetail.querySelector('.detail-title');
+  const detailPrice = productDetail.querySelector('.detail-price');
+  const detailMeta = productDetail.querySelector('.detail-meta.shipping');
+  const detailVisual = productDetail.querySelector('.detail-media');
+  const detailGallery = productDetail.querySelector('.detail-gallery');
+  const detailList = productDetail.querySelector('.detail-list');
+  const detailRelated = productDetail.querySelector('.detail-related');
+  const detailPill = productDetail.querySelector('.pill');
+
+  detailPill.textContent = categoryLabel;
+  detailTitle.textContent = product.name;
+  detailPrice.textContent = product.price;
+  detailMeta.textContent = product.shipping;
+
+  if (detailVisual) {
+    detailVisual.style.backgroundImage = `url('${product.image}')`;
+  }
+
+  if (detailGallery) {
+    buildChips(detailGallery, product.gallery, 'gallery-chip');
+  }
+
+  if (detailList) {
+    detailList.innerHTML = '';
+    product.details.forEach((item) => {
+      const li = document.createElement('li');
+      li.textContent = item;
+      detailList.appendChild(li);
+    });
+  }
+
+  renderRelated(detailRelated, product.related);
+}
+
+function renderProductPage(product, categoryKey) {
   if (!productPage) return;
-  const context = slug ? getProductContext(slug) : null;
-  const product = context?.product;
 
-  productPageTitle.textContent = product ? `${product.name} — full gallery` : 'Pick a device to see its story.';
-  productPageSubtitle.textContent = product?.shipping ?? 'Click any product image to open a dedicated display with specs and gallery.';
-  productPageCategory.textContent = context?.categoryLabel ?? 'Gadget';
-  productPagePrice.textContent = product?.price ?? '';
-  productPageName.textContent = product?.name ?? 'Choose any product tile to load details.';
-  productPageDescription.textContent = product?.summary ??
-    'The full-width panel will showcase the hero image, expanded specs, pricing, shipping, and curated related picks.';
+  const categoryLabel = gadgetCatalog[categoryKey]?.label ?? 'Gadgets';
+  const title = document.getElementById('product-page-title');
+  const subtitle = document.getElementById('product-page-subtitle');
 
-  productPageVisual.style.backgroundImage = product ? `url('${product.image}')` : '';
+  productPage.classList.add('open');
 
+  productPageCategory.textContent = categoryLabel;
+  productPagePrice.textContent = `${product.price} · ${product.shipping}`;
+  productPageName.textContent = product.name;
+  productPageDescription.textContent = product.summary;
   productPageList.innerHTML = '';
-  (product?.details ?? []).forEach((detail) => {
+
+  product.details.forEach((item) => {
     const li = document.createElement('li');
-    li.textContent = detail;
+    li.textContent = item;
     productPageList.appendChild(li);
   });
 
-  productPageGallery.innerHTML = '';
-  (product?.gallery ?? []).forEach((item) => {
-    const chip = document.createElement('span');
-    chip.className = 'gallery-chip';
-    chip.textContent = item;
-    productPageGallery.appendChild(chip);
-  });
+  buildChips(productPageGallery, product.gallery, 'gallery-chip');
+  renderRelated(productPageRelated, product.related);
 
-  productPageRelated.innerHTML = '';
-  if (product?.related?.length) {
-    const label = document.createElement('p');
-    label.className = 'muted';
-    label.textContent = 'Similar products';
-    productPageRelated.appendChild(label);
+  if (productPageVisual) {
+    productPageVisual.style.backgroundImage = `url('${product.image}')`;
+  }
 
-    const wrap = document.createElement('div');
-    wrap.className = 'related-chips';
-    product.related.forEach((slugRef) => {
-      const relatedContext = getProductContext(slugRef);
-      if (!relatedContext) return;
-      const btn = document.createElement('button');
-      btn.className = 'pill mini link-chip';
-      btn.textContent = relatedContext.product.name;
-      btn.addEventListener('click', () => goToRoute(`/gadgets/${relatedContext.product.slug}`));
-      wrap.appendChild(btn);
-    });
-    productPageRelated.appendChild(wrap);
+  if (title) {
+    title.textContent = product.name;
+  }
+
+  if (subtitle) {
+    subtitle.textContent = `${categoryLabel} · ${product.shipping}`;
   }
 }
 
-function setActiveView(path) {
-  const detailRoute = path.startsWith('/gadgets/') ? '/gadgets/detail' : path;
-  let targetView = Array.from(views).find((view) => view.dataset.route === detailRoute);
-  if (!targetView) {
-    targetView = Array.from(views).find((view) => view.dataset.route === '/');
-  }
+function openProductPage(slug, categoryKey) {
+  const target = findProductBySlug(slug);
 
-  views.forEach((view) => view.classList.toggle('active', view === targetView));
+  if (!target) return;
 
-  if (detailRoute === '/gadgets/detail') {
-    renderProductDetail(path.replace('/gadgets/', ''));
-  }
+  const { product, categoryKey: locatedCategoryKey, category } = target;
+  const resolvedCategory = categoryKey ?? locatedCategoryKey;
 
-  if (detailRoute === '/gadgets') {
-    renderCatalog(activeCategory);
-  }
+  renderProductCards(resolvedCategory);
+  renderDetailPanel(product, category.label);
+  renderProductPage(product, resolvedCategory);
+  updateHash(resolvedCategory, product.slug);
 }
 
-function setActiveNav(path) {
-  navLinks.forEach((link) => {
-    const route = normalizeRoute(link.getAttribute('href'));
-    const isMatch = path === route || (path.startsWith('/gadgets/') && route === '/gadgets');
-    link.classList.toggle('active', isMatch);
-  });
+function updateHash(categoryKey, slug) {
+  const nextHash = slug ? `#/gadgets/${slug}` : '#/gadgets';
+  const nextUrl = window.location.pathname + window.location.search + nextHash;
+  history.replaceState(null, '', nextUrl);
+  setActiveCategoryTab(categoryKey);
 }
 
-function handleRouteChange() {
-  const path = normalizeRoute(window.location.hash || '/');
-  setActiveView(path);
-  setActiveNav(path);
-  window.scrollTo({ top: 0, behavior: 'smooth' });
-}
+function handleRoute() {
+  if (!productGrid) return;
 
-categoryTabs.forEach((tab) => {
-  tab.addEventListener('click', () => {
-    const category = tab.dataset.category;
-    if (category) {
-      renderCatalog(category);
+  const hash = window.location.hash.slice(1);
+  const segments = hash.split('/').filter(Boolean);
+  const [route, slug] = segments;
+  let activeCategory = 'phones';
+
+  if (route === 'gadgets' && slug) {
+    const found = findProductBySlug(slug);
+    if (found) {
+      activeCategory = found.categoryKey;
+      renderProductCards(activeCategory);
+      renderDetailPanel(found.product, found.category.label);
+      renderProductPage(found.product, activeCategory);
+      setActiveCategoryTab(activeCategory);
+      return;
     }
-  });
-});
+  }
 
-if (!window.location.hash) {
-  window.location.hash = '#/';
-  renderCatalog(activeCategory);
-  setActiveView('/');
-  setActiveNav('/');
-} else {
-  handleRouteChange();
-  renderCatalog(activeCategory);
+  renderProductCards(activeCategory);
+  updateHash(activeCategory);
 }
 
-window.addEventListener('hashchange', handleRouteChange);
+function attachCategoryHandlers() {
+  if (!categoryTabs.length) return;
+
+  categoryTabs.forEach((tab) => {
+    tab.addEventListener('click', () => {
+      const categoryKey = tab.dataset.category;
+      renderProductCards(categoryKey);
+      updateHash(categoryKey);
+    });
+  });
+}
+
+function initializeCatalog() {
+  if (!productGrid) return;
+
+  attachCategoryHandlers();
+  handleRoute();
+  window.addEventListener('hashchange', handleRoute);
+}
+
+initializeCatalog();

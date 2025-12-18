@@ -63,37 +63,89 @@
         </div>
       </section>
 
-      <section class="section reveal gadgets-highlight">
+      <section class="section reveal">
         <div class="section__header">
-          <p class="eyebrow">Featured bundles</p>
-          <h2>Pick your stack and I’ll handle logistics.</h2>
+          <p class="eyebrow">Device drops</p>
+          <h2>Browse curated gear, then dive into rich product stories.</h2>
+          <p class="lede">Each tile pulls live data from the catalog—tap to open a dedicated page with imagery, specs, shipping, and related picks.</p>
         </div>
-        <div class="highlight-grid">
-          <article class="highlight-card" data-tilt>
-            <div class="thumb phone"></div>
-            <div class="highlight-body">
-              <p class="small">Phones</p>
-              <h3>iPhone 17 PM / Galaxy S25 Ultra</h3>
-              <p class="muted">Carrier unlocked, glass protectors applied, and data transfer support.</p>
-            </div>
-          </article>
-          <article class="highlight-card" data-tilt>
-            <div class="thumb laptop"></div>
-            <div class="highlight-body">
-              <p class="small">Laptops</p>
-              <h3>MacBook Pro creator kits</h3>
-              <p class="muted">Configured for Figma, DaVinci Resolve, and VS Code out of the box.</p>
-            </div>
-          </article>
-          <article class="highlight-card" data-tilt>
-            <div class="thumb audio"></div>
-            <div class="highlight-body">
-              <p class="small">Audio</p>
-              <h3>JBL Studio sets</h3>
-              <p class="muted">Dual-speaker setups with tuned EQ and wireless pairing cards.</p>
-            </div>
-          </article>
+
+        <div class="category-tabs" id="category-tabs">
+          <button class="tab" data-category="phones">
+            <span class="tab__label">Phones</span>
+            <span class="tab__hint">Flagship cameras & travel builds</span>
+          </button>
+          <button class="tab" data-category="laptops">
+            <span class="tab__label">Laptops</span>
+            <span class="tab__hint">Creator rigs & tuned thermals</span>
+          </button>
+          <button class="tab" data-category="accessories">
+            <span class="tab__label">Accessories</span>
+            <span class="tab__hint">Polished chargers, audio, carry</span>
+          </button>
+          <button class="tab" data-category="tablets">
+            <span class="tab__label">Tabs</span>
+            <span class="tab__hint">Sketch, notes, and couch edits</span>
+          </button>
         </div>
+        <p class="muted category-description" id="category-description">
+          Pick a lane to see glossy gear with specs, imagery, and concierge notes.
+        </p>
+
+        <div class="catalog">
+          <div class="product-grid" id="product-grid" aria-live="polite"></div>
+          <aside class="product-detail" id="product-detail">
+            <div class="pill mini">Select a device</div>
+            <h3 class="detail-title">Choose a category</h3>
+            <p class="detail-price"></p>
+            <p class="detail-meta">Tap any product tile to reveal imagery, pricing, shipping, and related picks.</p>
+            <div class="detail-visual shimmer">
+              <div class="detail-media gloss"></div>
+            </div>
+            <div class="detail-gallery"></div>
+            <ul class="detail-list"></ul>
+            <div class="detail-meta shipping"></div>
+            <div class="detail-related"></div>
+            <div class="cta-row">
+              <a class="cta primary" href="mailto:hello@asherjay.dev">Reserve a drop</a>
+              <a class="cta ghost" href="#/gadgets">Back to catalog</a>
+            </div>
+          </aside>
+        </div>
+
+        <section class="product-page" id="product-page">
+          <div class="product-page__header">
+            <div>
+              <p class="eyebrow">Full product view</p>
+              <h3 id="product-page-title">Pick a device to see its story.</h3>
+              <p class="muted" id="product-page-subtitle">
+                Click any product image to open a dedicated display with hero, specs, shipping, gallery, and curated related gadgets.
+              </p>
+            </div>
+            <div class="page-cta-group">
+              <a class="cta primary" href="#/gadgets">Back to catalog</a>
+              <a class="cta ghost" href="mailto:hello@asherjay.dev">Concierge setup</a>
+            </div>
+          </div>
+          <div class="product-page__canvas glassy">
+            <div class="product-page__visual shimmer" id="product-page-visual">
+              <div class="gloss"></div>
+            </div>
+            <div class="product-page__content">
+              <div class="page-meta">
+                <p class="pill mini" id="product-page-category">Phones</p>
+                <p class="small" id="product-page-price"></p>
+              </div>
+              <h4 id="product-page-name">Choose any product tile to load details.</h4>
+              <p class="muted" id="product-page-description">
+                The full-width panel will showcase the hero image, expanded specs, pricing, shipping, and curated related picks.
+              </p>
+              <ul class="page-list" id="product-page-list"></ul>
+              <div class="page-gallery" id="product-page-gallery"></div>
+              <div class="page-related" id="product-page-related"></div>
+            </div>
+          </div>
+        </section>
       </section>
     </main>
 
