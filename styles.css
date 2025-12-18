@@ -228,15 +228,15 @@ button.pill {
   min-width: 100%;
   background-size: cover;
   background-position: center;
-  filter: saturate(1.05) brightness(1.02);
-  opacity: 0.9;
+  filter: saturate(1.08) brightness(1.06);
+  opacity: 1;
 }
 
 .hero-bg-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.72), rgba(255, 255, 255, 0.4)),
-    radial-gradient(circle at 18% 22%, rgba(143, 247, 200, 0.22), transparent 40%);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.46), rgba(255, 255, 255, 0.18)),
+    radial-gradient(circle at 18% 22%, rgba(143, 247, 200, 0.18), transparent 40%);
   pointer-events: none;
   mix-blend-mode: screen;
 }
