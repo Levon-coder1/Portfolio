@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Gadgets · Asher Jay</title>
+    <title>Search gadgets · Asher Jay</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -32,34 +32,43 @@
     <main>
       <section class="page-hero">
         <div>
-          <p class="pill mini">Catalog</p>
-          <h1>Flagship gadgets curated with transparent details.</h1>
-          <p class="lede">Click any product to open a dedicated detail page with gallery, specs, price, and similar devices.</p>
-          <div class="tag-row">
-            <a class="cta primary" href="search.html">Search & filter</a>
-            <a class="cta" href="contact.html">Request a device</a>
-          </div>
+          <p class="pill mini">Search</p>
+          <h1>Find gadgets fast</h1>
+          <p class="lede">Search across the catalog and filter by category or price. Results link to a dedicated product page.</p>
         </div>
         <div class="glass-card">
-          <p class="lede">Fully responsive layout with glassmorphism panels. Works across phones, tablets, and desktops without overlapping sections.</p>
+          <p class="lede">Use the filters below. The results area updates based on the query string so you can share search results URLs.</p>
         </div>
       </section>
 
       <section class="section">
-        <div class="section__header">
-          <p class="pill mini">Gadgets</p>
-          <h2>Browse the lineup</h2>
-        </div>
-        <div id="gadget-grid" class="gadget-grid" aria-live="polite"></div>
+        <form id="search-form" class="search-bar">
+          <input type="search" name="q" placeholder="Search gadgets" aria-label="Search gadgets" />
+          <select name="category" aria-label="Filter by category">
+            <option value="">All categories</option>
+            <option value="Phones">Phones</option>
+            <option value="Laptops">Laptops</option>
+            <option value="Gaming">Gaming</option>
+            <option value="Tablets">Tablets</option>
+          </select>
+          <select name="price" aria-label="Filter by price">
+            <option value="">Any price</option>
+            <option value="under-1200">Under $1200</option>
+            <option value="1200-2000">$1200 - $2000</option>
+            <option value="over-2000">Over $2000</option>
+          </select>
+          <button class="cta primary" type="submit">Search</button>
+        </form>
+        <p class="results-meta" aria-live="polite"></p>
+        <div id="search-results" class="gadget-grid" aria-live="polite"></div>
       </section>
     </main>
 
     <footer class="footer">
-      <p>Asher Jay · Gadget catalog</p>
+      <p>Asher Jay · Search</p>
       <div class="footer-links">
-        <a href="search.html">Search</a>
+        <a href="gadgets.html">Gadgets</a>
         <a href="product.html">Product page</a>
-        <a href="contact.html">Contact</a>
       </div>
     </footer>
     <script src="script.js"></script>

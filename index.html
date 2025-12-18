@@ -3,498 +3,89 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Asher Jay — Immersive Engineer & Gadget Vendor</title>
+    <title>Asher Jay — Portfolio & Gadgets</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Clash+Display:wght@600&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <div class="bg-noise"></div>
-    <div class="bg-gradient orb orb-a"></div>
-    <div class="bg-gradient orb orb-b"></div>
-    <div class="bg-gradient orb orb-c"></div>
-
     <header class="nav">
-      <a class="brand" data-route-link href="#/">Asher Jay</a>
-      <button class="nav-toggle" aria-label="Toggle menu">☰</button>
-      <nav class="nav-links">
-        <a data-route-link href="#/">Home</a>
-        <a data-route-link href="#/projects">Projects</a>
-        <a data-route-link href="#/gadgets">Gadgets</a>
-        <a data-route-link href="#/socials">Socials</a>
-        <a data-route-link href="#/hub">Hub</a>
-        <a data-route-link href="#/contact">Contact</a>
+      <div class="brand">Asher Jay</div>
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+      <nav class="nav-links" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="projects.html">Projects</a>
+        <a href="gadgets.html">Gadgets</a>
+        <a href="socials.html">Socials</a>
+        <a href="hub.html">Hub</a>
+        <a href="contact.html">Contact</a>
+        <a href="search.html">Search</a>
       </nav>
       <a class="pill" href="mailto:hello@asherjay.dev">Let’s talk</a>
     </header>
 
     <main>
-      <section class="view" data-route="/">
-        <section class="hero" id="top">
-          <div class="hero__copy">
-            <p class="eyebrow">Immersive portfolio — Apple-grade feel</p>
-            <h1>
-              Asher Jay<br /><span class="stroke">Software engineer</span>
-              <span class="accent">& gadget curator</span>
-            </h1>
-            <p class="lede">
-              22-year-old engineer shaping fluid, cinematic web stories while
-              sourcing flagship phones, laptops, and gaming tech. Precision,
-              lighting, and motion tuned to feel inevitable.
-            </p>
-            <div class="cta-row">
-              <a class="cta primary" data-route-link href="#/projects">See the flow</a>
-              <a class="cta ghost" data-route-link href="#/gadgets">Shop gadgets</a>
-            </div>
-            <div class="hero__meta">
-              <div>
-                <p class="meta-label">Based in</p>
-                <p class="meta-value">Remote · Global</p>
-              </div>
-              <div>
-                <p class="meta-label">Signature</p>
-                <p class="meta-value">3D transitions · Seamless scroll</p>
-              </div>
-              <div class="hero__meta">
-                <div>
-                  <p class="meta-label">Based in</p>
-                  <p class="meta-value">Remote · Global</p>
-                </div>
-                <div>
-                  <p class="meta-label">Signature</p>
-                  <p class="meta-value">3D transitions · Seamless scroll</p>
-                </div>
-                <div>
-                  <p class="meta-label">Industries</p>
-                  <p class="meta-value">Tech, Commerce, Lifestyle</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="hero__visual" data-tilt>
-            <div class="gadget-frame">
-              <div class="gadget-frame__badge">Flagship drop</div>
-              <img
-                src="images/gadget-collage.svg"
-                alt="Collage of MacBook, iPhone 17 Pro Max, iPhone 17, Galaxy S25 Ultra, and JBL speaker"
-                loading="lazy"
-                class="gadget-frame__image"
-              />
-              <div class="gadget-frame__footer">
-                <div>
-                  <h3>Flagship gadget hero</h3>
-                  <p class="muted">Swap <code>images/gadget-collage.svg</code> with your final render to update the hero instantly.</p>
-                </div>
-                <div class="pill mini translucent">Live visual</div>
-              </div>
-              <div class="floating-tag" data-depth="0.25">Cinematic scroll</div>
-              <div class="floating-tag" data-depth="0.45">Realtime lighting</div>
-              <div class="floating-tag" data-depth="0.65">Magnetic CTA</div>
-            </div>
-          </div>
-        </section>
-
-        <section class="section reveal gadgets-highlight">
-          <div class="section__header">
-            <p class="eyebrow">Gadgets</p>
-            <h2>Featured devices ready to ship with concierge setup.</h2>
-          </div>
-          <div class="highlight-grid">
-            <article class="highlight-card" data-tilt>
-              <div class="thumb phone"></div>
-              <div class="highlight-body">
-                <p class="small">Phones</p>
-                <h3>iPhone 17 PM + Galaxy S25 Ultra</h3>
-                <p class="muted">Flagship cameras, calibrated displays, and premium unboxing.</p>
-              </div>
-            </article>
-            <article class="highlight-card" data-tilt>
-              <div class="thumb laptop"></div>
-              <div class="highlight-body">
-                <p class="small">Laptops</p>
-                <h3>MacBook Pro creator kits</h3>
-                <p class="muted">Color-accurate, silent performance tuned for design and edit suites.</p>
-              </div>
-            </article>
-            <article class="highlight-card" data-tilt>
-              <div class="thumb audio"></div>
-              <div class="highlight-body">
-                <p class="small">Audio</p>
-                <h3>JBL Studio stacks</h3>
-                <p class="muted">Room-filling sound with clean controls and wireless pairing.</p>
-              </div>
-            </article>
-          </div>
-          <div class="section-actions">
-            <a class="cta primary" data-route-link href="#/gadgets">Shop now</a>
-            <a class="cta ghost" data-route-link href="#/contact">Talk builds</a>
-          </div>
-        </section>
-
-        <section class="section reveal projects-highlight">
-          <div class="section__header">
-            <p class="eyebrow">Projects</p>
-            <h2>Recent builds that blend cinematic web with high-end hardware.</h2>
-          </div>
-          <div class="project-grid">
-            <article class="project-card" data-tilt>
-              <div class="project-visual" aria-hidden="true"></div>
-              <div class="project-body">
-                <h3>Launch atlas</h3>
-                <p class="muted">Scroll-choreographed product unveil with realtime lighting passes.</p>
-              </div>
-            </article>
-            <article class="project-card" data-tilt>
-              <div class="project-visual alt" aria-hidden="true"></div>
-              <div class="project-body">
-                <h3>Creator gear hub</h3>
-                <p class="muted">Shop experience with hero-to-cart motion and tactile device previews.</p>
-              </div>
-            </article>
-            <article class="project-card" data-tilt>
-              <div class="project-visual neon" aria-hidden="true"></div>
-              <div class="project-body">
-                <h3>Gaming immersion</h3>
-                <p class="muted">HDR-ready landing with layered parallax and tilt-responsive cards.</p>
-              </div>
-            </article>
-          </div>
-          <div class="section-actions">
-            <a class="cta primary" data-route-link href="#/projects">View more</a>
-            <a class="cta ghost" data-route-link href="#/contact">Back to contact</a>
-          </div>
-        </section>
-      </section>
-
-      <section class="view" data-route="/projects">
-        <div id="work" class="section reveal">
-          <div class="section__header">
-            <p class="eyebrow">Projects</p>
-            <h2>Fluid storytelling with depth and precision.</h2>
-          </div>
-          <div class="work-grid">
-            <article class="work-card" data-tilt>
-              <div class="work-visual gradient-1"></div>
-              <div class="work-body">
-                <p class="small">Product hero</p>
-                <h3>Immersive launch surfaces</h3>
-                <p class="muted">
-                  Apple-like pacing with staged reveals, spatial transitions, and
-                  copy that rides the motion.
-                </p>
-              </div>
-            </article>
-            <article class="work-card" data-tilt>
-              <div class="work-visual gradient-2"></div>
-              <div class="work-body">
-                <p class="small">Experience layer</p>
-                <h3>3D storytelling & parallax</h3>
-                <p class="muted">
-                  Multi-plane parallax and tilt cues that keep attention flowing as
-                  the narrative unfolds.
-                </p>
-              </div>
-            </article>
-            <article class="work-card" data-tilt>
-              <div class="work-visual gradient-3"></div>
-              <div class="work-body">
-                <p class="small">Commerce</p>
-                <h3>Flagship gadget drops</h3>
-                <p class="muted">
-                  Curated phones, laptops, and gaming rigs presented with tactile
-                  UI so buyers feel the premium fit.
-                </p>
-              </div>
-            </article>
-          </div>
-        </div>
-
-        <section class="section reveal duo">
-          <div class="section__header">
-            <p class="eyebrow">Process</p>
-            <h2>Flow-first delivery tuned for rhythm and detail.</h2>
-          </div>
-          <div class="timeline">
-            <div class="step" data-tilt>
-              <span class="step__index">01</span>
-              <div>
-                <h3>Discover & stage</h3>
-                <p>Define the emotional arc, core interactions, and device needs.</p>
-              </div>
-            </div>
-            <div class="step" data-tilt>
-              <span class="step__index">02</span>
-              <div>
-                <h3>Design & prototype</h3>
-                <p>Motion-first frames, lighting, and microcopy aligned to your brand.</p>
-              </div>
-            </div>
-            <div class="step" data-tilt>
-              <span class="step__index">03</span>
-              <div>
-                <h3>Build & deliver</h3>
-                <p>Edge-ready builds, QA on real hardware, and concierge handoff.</p>
-              </div>
-            </div>
-          </div>
-        </section>
-      </section>
-
-      <section class="view" data-route="/gadgets">
-        <div class="section reveal">
-          <div class="section__header">
-            <p class="eyebrow">Device drops</p>
-            <h2>Pick a lane, explore the grid, tap into glossy detail.</h2>
-            <p class="lede">Liquid-glass UI with live category routes, rich product tiles, and cinematic device previews.</p>
-          </div>
-          <div class="category-tabs" id="category-tabs">
-            <button class="tab" data-category="phones">
-              <span class="tab__label">Phones</span>
-              <span class="tab__hint">Flagship cameras & travel builds</span>
-            </button>
-            <button class="tab" data-category="laptops">
-              <span class="tab__label">Laptops</span>
-              <span class="tab__hint">Creator rigs & tuned thermals</span>
-            </button>
-            <button class="tab" data-category="accessories">
-              <span class="tab__label">Accessories</span>
-              <span class="tab__hint">Polished chargers, audio, carry</span>
-            </button>
-            <button class="tab" data-category="tablets">
-              <span class="tab__label">Tabs</span>
-              <span class="tab__hint">Sketch, notes, and couch edits</span>
-            </button>
-          </div>
-          <p class="muted category-description" id="category-description">
-            Pick a lane to see glossy gear with specs, imagery, and concierge notes.
+      <section class="hero">
+        <div class="hero__copy">
+          <p class="pill mini">Immersive portfolio</p>
+          <h1>Building glossy experiences for the web and the hardware on your desk.</h1>
+          <p class="lede">
+            Asher Jay blends cinematic web work with concierge gadget sourcing—software engineering, tactile UI, and flagship devices in one place.
           </p>
-          <div class="search-panel">
-            <div class="search-panel__bar">
-              <label class="search-label" for="catalog-search">Search gadgets</label>
-              <div class="search-input">
-                <span class="search-icon" aria-hidden="true">🔍</span>
-                <input
-                  id="catalog-search"
-                  type="search"
-                  name="search"
-                  placeholder="Search devices, bundles, or tags (e.g., 120Hz, OLED, ANC)"
-                  autocomplete="off"
-                />
-                <button class="pill mini ghost" id="clear-search" type="button">Clear</button>
-              </div>
-            </div>
-            <div class="filters">
-              <div class="filter">
-                <label for="filter-category">Category</label>
-                <select id="filter-category">
-                  <option value="all">All gadgets</option>
-                  <option value="phones">Phones</option>
-                  <option value="laptops">Laptops</option>
-                  <option value="accessories">Accessories</option>
-                  <option value="tablets">Tabs</option>
-                </select>
-              </div>
-              <div class="filter">
-                <div class="filter-row">
-                  <label for="filter-price">Price ceiling</label>
-                  <span class="price-display" id="filter-price-display"></span>
-                </div>
-                <input type="range" id="filter-price" min="0" max="4000" step="50" value="4000" />
-                <div class="filter-range">
-                  <span id="filter-price-min">$0</span>
-                  <span id="filter-price-max">$4,000</span>
-                </div>
-              </div>
-              <div class="filter tags-filter">
-                <label>Tags</label>
-                <div class="tag-chips" id="filter-tags"></div>
-              </div>
-              <div class="filter filter-actions">
-                <label aria-hidden="true" class="sr-only">Actions</label>
-                <button class="cta ghost" id="reset-filters" type="button">Reset filters</button>
-              </div>
-            </div>
-            <div class="results-header" id="results-header">
-              <div>
-                <p class="eyebrow">Results</p>
-                <h3 id="results-title">Browse curated gadgets</h3>
-              </div>
-              <p class="muted" id="results-subtitle">
-                Start typing or pick filters to see matching products. Debounced search keeps things smooth.
-              </p>
-            </div>
+          <div class="tag-row">
+            <a class="cta primary" href="projects.html">See projects</a>
+            <a class="cta" href="gadgets.html">Browse gadgets</a>
           </div>
-          <div class="catalog">
-            <div class="product-grid" id="product-grid" aria-live="polite"></div>
-            <aside class="product-detail" id="product-detail">
-              <div class="pill mini">Select a device</div>
-              <h3 class="detail-title">Choose a category</h3>
-              <p class="detail-price"></p>
-              <div class="detail-tags" id="detail-tags"></div>
-              <p class="detail-meta">Tap any product tile to reveal imagery, pricing, shipping, and related picks.</p>
-              <div class="detail-visual shimmer">
-                <div class="detail-media gloss"></div>
-              </div>
-              <div class="detail-gallery"></div>
-              <ul class="detail-list"></ul>
-              <div class="detail-meta shipping"></div>
-              <div class="detail-related"></div>
-              <div class="cta-row">
-                <a class="cta primary" href="mailto:hello@asherjay.dev">Reserve a drop</a>
-                <a class="cta ghost" href="#/contact">Talk to Asher</a>
-              </div>
-            </aside>
-          </div>
+        </div>
+        <div class="hero__visual">
+          <h3>Glass & glow</h3>
+          <p class="lede">Layers of translucent panels, warm orange light, and crisp type to keep every surface readable and premium on any screen size.</p>
         </div>
       </section>
 
-      <section class="view" data-route="/gadgets/detail">
-        <div class="section reveal">
-          <section class="product-page" id="product-page">
-            <div class="product-page__header">
-              <div>
-                <p class="eyebrow">Full product view</p>
-                <h3 id="product-page-title">Pick a device to see its story.</h3>
-                <p class="muted" id="product-page-subtitle">
-                  Click any product image to open a dedicated display with rich specs, shipping, gallery, and related gadgets.
-                </p>
-              </div>
-              <div class="page-cta-group">
-                <a class="cta primary" data-route-link href="#/gadgets">Back to catalog</a>
-                <a class="cta ghost" data-route-link href="#/contact">Concierge setup</a>
-              </div>
-            </div>
-            <div class="product-page__canvas glassy">
-              <div class="product-page__visual shimmer" id="product-page-visual">
-                <div class="gloss"></div>
-              </div>
-              <div class="product-page__content">
-                <div class="page-meta">
-                  <p class="pill mini" id="product-page-category">Phones</p>
-                  <p class="small" id="product-page-price"></p>
-                </div>
-                <div class="page-tags" id="product-page-tags"></div>
-                <h4 id="product-page-name">Choose any product tile to load details.</h4>
-                <p class="muted" id="product-page-description">
-                  The full-width panel will showcase the hero image, expanded specs, pricing, shipping, and curated related picks.
-                </p>
-                <ul class="page-list" id="product-page-list"></ul>
-                <div class="page-gallery" id="product-page-gallery"></div>
-                <div class="page-related" id="product-page-related"></div>
-              </div>
-            </div>
-          </section>
+      <section class="section">
+        <div class="section__header">
+          <p class="pill mini">Snapshot</p>
+          <h2>What’s inside</h2>
         </div>
-      </section>
-
-      <section class="view" data-route="/socials">
-        <div class="section reveal">
-          <div class="section__header">
-            <p class="eyebrow">Socials</p>
-            <h2>Find the builds, drops, and behind-the-scenes.</h2>
-          </div>
-          <div class="socials-grid">
-            <article class="social-card" data-tilt>
-              <div class="pill mini">Instagram</div>
-              <h3>Visual drops</h3>
-              <p class="muted">Weekly reels on motion studies, unboxings, and lighting setups.</p>
-              <a class="cta ghost" href="https://instagram.com" target="_blank" rel="noreferrer">Open feed</a>
-            </article>
-            <article class="social-card" data-tilt>
-              <div class="pill mini">LinkedIn</div>
-              <h3>Build logs</h3>
-              <p class="muted">Shipping notes, architecture writeups, and client launches.</p>
-              <a class="cta ghost" href="https://linkedin.com" target="_blank" rel="noreferrer">Connect</a>
-            </article>
-            <article class="social-card" data-tilt>
-              <div class="pill mini">X</div>
-              <h3>Live thoughts</h3>
-              <p class="muted">Micro-updates on gadgets, sprints, and design experiments.</p>
-              <a class="cta ghost" href="https://x.com" target="_blank" rel="noreferrer">Follow</a>
-            </article>
-          </div>
+        <div class="work-grid">
+          <article class="card">
+            <h3>Projects</h3>
+            <p class="lede">Case studies of immersive builds and product launches engineered for flow.</p>
+            <a class="cta" href="projects.html">Open projects</a>
+          </article>
+          <article class="card">
+            <h3>Gadgets</h3>
+            <p class="lede">Flagship phones, laptops, gaming rigs, and tablets curated with specs and pricing.</p>
+            <a class="cta" href="gadgets.html">Shop catalog</a>
+          </article>
+          <article class="card">
+            <h3>Socials</h3>
+            <p class="lede">Follow along across platforms with dedicated panels for each channel.</p>
+            <a class="cta" href="socials.html">See socials</a>
+          </article>
+          <article class="card">
+            <h3>Hub</h3>
+            <p class="lede">Blog, maps, and suggestions rolled into one utility page.</p>
+            <a class="cta" href="hub.html">Open hub</a>
+          </article>
         </div>
-      </section>
-
-
-      <section class="view" data-route="/hub">
-        <section class="section cta-panel reveal">
-          <div class="cta-card" data-tilt>
-            <div>
-              <p class="eyebrow">Creator hub</p>
-              <h2>Blog, meetup maps, and upcoming drops.</h2>
-              <p class="lede">
-                Dive into the latest breakdowns, see meetup locations, and tell me what you want to see next.
-              </p>
-            </div>
-            <div class="hub-grid">
-              <article class="hub-card" data-tilt>
-                <div class="pill mini">Blog</div>
-                <h3>Latest posts</h3>
-                <p class="muted">Roadmaps, immersive UX breakdowns, and drop announcements.</p>
-                <ul>
-                  <li>Designing touch-friendly parallax</li>
-                  <li>Behind the flagship sourcing process</li>
-                  <li>Keeping scroll speed cinematic</li>
-                </ul>
-              </article>
-              <article class="hub-card" data-tilt>
-                <div class="pill mini">Maps</div>
-                <h3>Meet & deliver</h3>
-                <p class="muted">Preferred hubs in NYC, London, Singapore for handoffs.</p>
-                <div class="map-tags">
-                  <span class="pill mini">NYC · SoHo Labs</span>
-                  <span class="pill mini">London · Shoreditch</span>
-                  <span class="pill mini">Singapore · Orchard</span>
-                </div>
-              </article>
-              <article class="hub-card" data-tilt>
-                <div class="pill mini">Suggestions</div>
-                <h3>Request the next drop</h3>
-                <p class="muted">Tell me what you want to see next—content, devices, or collabs.</p>
-                <form class="suggest-form">
-                  <label class="small" for="idea">Your idea</label>
-                  <input id="idea" name="idea" type="text" placeholder="More VR demos, MacBook tuning, etc." />
-                  <button type="submit" class="cta primary">Send</button>
-                </form>
-              </article>
-            </div>
-          </div>
-        </section>
-      </section>
-
-      <section class="view" data-route="/contact">
-        <section class="section cta-panel reveal">
-          <div class="cta-card" data-tilt>
-            <div>
-              <p class="eyebrow">Let’s build something bright</p>
-              <h2>Ready for cinematic web + premium hardware?</h2>
-              <p class="lede">
-                Tell me about your launch, platform, or the gear you want to feel. I’ll respond within 24 hours.
-              </p>
-              <div class="cta-row">
-                <a class="cta primary" href="mailto:hello@asherjay.dev">Email Asher</a>
-                <a class="cta ghost" data-route-link href="#/socials">Find socials</a>
-              </div>
-            </div>
-          </div>
-        </section>
       </section>
     </main>
 
     <footer class="footer">
-      <p>Asher Jay · Immersive engineer & gadget vendor · 2024</p>
+      <p>Asher Jay · 2024 · Responsive glossy experience</p>
       <div class="footer-links">
-        <a href="#/socials">Instagram</a>
-        <a href="#/socials">LinkedIn</a>
-        <a href="#/socials">X</a>
+        <a href="socials.html">Socials</a>
+        <a href="gadgets.html">Gadgets</a>
+        <a href="contact.html">Contact</a>
       </div>
     </footer>
-
     <script src="script.js"></script>
   </body>
 </html>

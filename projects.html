@@ -3,105 +3,69 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Projects — Asher Jay</title>
+    <title>Projects · Asher Jay</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Clash+Display:wght@600&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <div class="bg-noise"></div>
-    <div class="bg-gradient orb orb-a"></div>
-    <div class="bg-gradient orb orb-b"></div>
-    <div class="bg-gradient orb orb-c"></div>
-
     <header class="nav">
       <div class="brand">Asher Jay</div>
-      <button class="nav-toggle" aria-label="Toggle menu">☰</button>
-      <nav class="nav-links">
-        <a href="index.html#top">Home</a>
-        <a href="#">Projects</a>
-        <a href="index.html#gadgets">Gadgets</a>
-        <a href="index.html#contact">Contact</a>
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+      <nav class="nav-links" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="projects.html">Projects</a>
+        <a href="gadgets.html">Gadgets</a>
+        <a href="socials.html">Socials</a>
+        <a href="hub.html">Hub</a>
+        <a href="contact.html">Contact</a>
+        <a href="search.html">Search</a>
       </nav>
       <a class="pill" href="mailto:hello@asherjay.dev">Let’s talk</a>
     </header>
 
     <main>
-      <section class="hero" id="projects">
-        <div class="hero__copy">
-          <p class="eyebrow">Projects</p>
-          <h1>
-            Cinematic web builds
-            <span class="accent">with tactile motion</span>
-          </h1>
-          <p class="lede">
-            A shortlist of launch experiences, commerce flows, and hardware hubs
-            engineered for clarity and premium feel.
-          </p>
+      <section class="page-hero">
+        <div>
+          <p class="pill mini">Projects</p>
+          <h1>Featured builds</h1>
+          <p class="lede">Showcase your recent launches and immersive experiences. Add cards below to grow this page.</p>
         </div>
-        <div class="hero__visual" data-tilt>
-          <div class="gadget-frame">
-            <div class="gadget-frame__badge">Project reel</div>
-            <img
-              src="images/gadget-collage.svg"
-              alt="Placeholder visual for project reel"
-              class="gadget-frame__image"
-            />
-            <div class="gadget-frame__footer">
-              <div>
-                <h3>Replace with your reel</h3>
-                <p class="muted">Drop your exported reel to <code>images/gadget-collage.svg</code> or update the source path.</p>
-              </div>
-              <div class="pill mini translucent">Swap anytime</div>
-            </div>
-          </div>
+        <div class="glass-card">
+          <p class="lede">Glass panels, responsive grids, and crisp typography maintain the glossy look on every device.</p>
         </div>
       </section>
 
-      <section class="section reveal projects-highlight">
-        <div class="section__header">
-          <p class="eyebrow">Recent builds</p>
-          <h2>Selected collaborations shipped this year.</h2>
-        </div>
-        <div class="project-grid">
-          <article class="project-card" data-tilt>
-            <div class="project-visual" aria-hidden="true"></div>
-            <div class="project-body">
-              <h3>Flagship launch deck</h3>
-              <p class="muted">Multi-scene hero with layered depth, realtime glare, and CTA tracking.</p>
-            </div>
+      <section class="section">
+        <div class="simple-grid">
+          <article class="card">
+            <h3>Immersive launch site</h3>
+            <p class="lede">Cinematic scroll, staged lighting, and interactive CTAs.</p>
           </article>
-          <article class="project-card" data-tilt>
-            <div class="project-visual alt" aria-hidden="true"></div>
-            <div class="project-body">
-              <h3>Creator commerce</h3>
-              <p class="muted">Gadget storefront with AR previews, guided bundles, and tailored checkout.</p>
-            </div>
+          <article class="card">
+            <h3>Commerce experience</h3>
+            <p class="lede">Seamless storefront with product storytelling and checkout polish.</p>
           </article>
-          <article class="project-card" data-tilt>
-            <div class="project-visual neon" aria-hidden="true"></div>
-            <div class="project-body">
-              <h3>Gaming dropsite</h3>
-              <p class="muted">High-refresh layout with responsive tilt, particle passes, and team stats.</p>
-            </div>
+          <article class="card">
+            <h3>3D product tour</h3>
+            <p class="lede">Three.js / WebGL layered with copy and interaction cues.</p>
           </article>
         </div>
       </section>
     </main>
 
     <footer class="footer">
-      <p>Asher Jay · Immersive engineer & gadget vendor · 2024</p>
+      <p>Asher Jay · Projects</p>
       <div class="footer-links">
-        <a href="#">Instagram</a>
-        <a href="#">LinkedIn</a>
-        <a href="#">X</a>
+        <a href="gadgets.html">Gadgets</a>
+        <a href="contact.html">Contact</a>
       </div>
     </footer>
-
     <script src="script.js"></script>
   </body>
 </html>
