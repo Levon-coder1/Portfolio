@@ -108,6 +108,8 @@ body {
   background: none;
   border: none;
   cursor: pointer;
+  text-decoration: none;
+  color: var(--text);
 }
 
 .nav-links {

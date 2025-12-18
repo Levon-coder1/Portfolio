@@ -1,15 +1,15 @@
 const tiltElements = document.querySelectorAll('[data-tilt]');
 const reveals = document.querySelectorAll('.reveal');
 const views = document.querySelectorAll('[data-route]');
-const navLinks = document.querySelectorAll('.nav-links a');
+const navLinks = document.querySelectorAll('[data-route-link]');
 const brand = document.querySelector('.brand');
 const categoryTabs = document.querySelectorAll('[data-category]');
 const productGrid = document.getElementById('product-grid');
-const productDetail = document.getElementById('product-detail');
 const productPage = document.getElementById('product-page');
 const productPageVisual = document.getElementById('product-page-visual');
 const productPageCategory = document.getElementById('product-page-category');
 const productPagePrice = document.getElementById('product-page-price');
+const productPageSubtitle = document.getElementById('product-page-subtitle');
 const productPageName = document.getElementById('product-page-name');
 const productPageDescription = document.getElementById('product-page-description');
 const productPageList = document.getElementById('product-page-list');
