@@ -25,18 +25,17 @@ if (searchTrigger) {
   });
 }
 
-function initCarousel() {
-  const track = document.querySelector('.carousel-track');
+function initHeroBackground() {
+  const track = document.querySelector('.hero-bg-track');
   if (!track) return;
 
   const slides = Array.from(track.children);
-  if (!slides.length) return;
+  if (slides.length <= 1) return;
+
+  const prefersMobile = window.matchMedia('(max-width: 780px)').matches;
+  if (prefersMobile) return;
 
   let index = 0;
-
-  slides.forEach((slide) => {
-    slide.setAttribute('aria-hidden', 'true');
-  });
 
   const goTo = (next) => {
     index = next % slides.length;
@@ -300,4 +299,4 @@ renderCategoryProducts();
 renderProductDetail();
 renderSearchResults();
 setupSearchSuggestions();
-initCarousel();
+initHeroBackground();

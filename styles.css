@@ -55,9 +55,9 @@ main {
 .nav {
   position: sticky;
   top: 18px;
-  display: flex;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
   align-items: center;
-  justify-content: space-between;
   gap: 12px;
   padding: 14px 20px;
   background: var(--accent-soft);
@@ -142,7 +142,7 @@ main {
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  margin-left: auto;
+  justify-self: flex-end;
 }
 
 .pill,
@@ -197,6 +197,8 @@ button.pill {
   gap: 24px;
   align-items: center;
   margin: 48px 0 28px;
+  position: relative;
+  overflow: hidden;
 }
 
 .hero__copy h1,
@@ -206,53 +208,45 @@ button.pill {
   margin-bottom: 14px;
 }
 
-.carousel-section {
-  margin: 40px 0 10px;
-  display: grid;
-  gap: 16px;
-}
-
-.carousel-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 14px;
-  flex-wrap: wrap;
-}
-
-.carousel {
-  position: relative;
+.hero-bg {
+  position: absolute;
+  inset: -12px;
+  border-radius: calc(var(--radius-lg) + 8px);
   overflow: hidden;
-  border-radius: var(--radius-lg);
-  background: var(--panel);
-  border: 1px solid var(--border);
-  box-shadow: var(--shadow-strong);
+  z-index: 0;
+  height: calc(100% + 24px);
 }
 
-.carousel-track {
+.hero-bg-track {
   display: flex;
-  transition: transform 0.8s ease;
+  width: 300%;
+  height: 100%;
+  transition: transform 1s ease;
 }
 
-.carousel-slide {
+.hero-bg-slide {
   min-width: 100%;
-  display: grid;
-  gap: 12px;
-  padding: clamp(12px, 4vw, 24px);
-  align-items: center;
+  background-size: cover;
+  background-position: center;
+  filter: saturate(1.05) brightness(1.02);
+  opacity: 0.9;
 }
 
-.carousel-slide img {
-  width: 100%;
-  height: clamp(220px, 40vw, 420px);
-  object-fit: cover;
-  border-radius: calc(var(--radius-lg) - 6px);
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.94), rgba(143, 247, 200, 0.28));
-  box-shadow: var(--shadow-strong);
+.hero-bg-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.72), rgba(255, 255, 255, 0.4)),
+    radial-gradient(circle at 18% 22%, rgba(143, 247, 200, 0.22), transparent 40%);
+  pointer-events: none;
+  mix-blend-mode: screen;
 }
 
-.carousel-slide p {
-  max-width: 720px;
+.hero__copy,
+.hero__visual,
+.page-hero > div,
+.page-hero .glass-card {
+  position: relative;
+  z-index: 1;
 }
 
 .hero__copy .lede,
@@ -406,8 +400,9 @@ button.pill {
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.7);
 }
 
-.mobile-cta-bar {
+.footer-mobile-cta {
   display: none;
+  width: 100%;
 }
 
 .search-bar {
@@ -581,6 +576,19 @@ textarea {
     font-size: clamp(28px, 6vw, 40px);
   }
 
+  .hero-bg-track {
+    width: 100%;
+    transform: translateX(0) !important;
+  }
+
+  .hero-bg-slide {
+    display: none;
+  }
+
+  .hero-bg-slide:first-child {
+    display: block;
+  }
+
   .section {
     margin: 52px 0;
   }
@@ -625,13 +633,12 @@ textarea {
     flex-direction: column;
   }
 
-  .mobile-cta-bar {
+  .footer-mobile-cta {
     display: flex;
-    position: static;
-    margin: 32px 0 0;
+    margin: 0 0 12px;
   }
 
-  .mobile-cta-bar .cta {
+  .footer-mobile-cta .cta {
     width: 100%;
     justify-content: center;
   }

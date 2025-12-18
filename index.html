@@ -38,6 +38,14 @@
 
     <main>
       <section class="hero">
+        <div class="hero-bg" aria-hidden="true">
+          <div class="hero-bg-track">
+            <div class="hero-bg-slide" style="background-image: url('images/carousel/slide-1.svg')"></div>
+            <div class="hero-bg-slide" style="background-image: url('images/carousel/slide-2.svg')"></div>
+            <div class="hero-bg-slide" style="background-image: url('images/carousel/slide-3.svg')"></div>
+          </div>
+          <div class="hero-bg-overlay"></div>
+        </div>
         <div class="hero__copy">
           <p class="pill mini">Immersive portfolio</p>
           <h1>Building glossy experiences for the web and the hardware on your desk.</h1>
@@ -52,33 +60,6 @@
         <div class="hero__visual">
           <h3>Glass & glow</h3>
           <p class="lede">Layers of translucent panels, warm orange light, and crisp type to keep every surface readable and premium on any screen size.</p>
-        </div>
-      </section>
-
-      <section class="carousel-section" aria-label="Featured carousel">
-        <div class="carousel-header">
-          <div>
-            <p class="pill mini">Glassy spotlight</p>
-            <h2>Auto-sliding showcase you can swap with real photos.</h2>
-            <p class="lede">A liquid-glass frame glides through featured visuals. Replace the placeholder slides with your own gadget or project imagery.</p>
-          </div>
-          <a class="cta" href="gadgets.html">Browse catalog</a>
-        </div>
-        <div class="carousel">
-          <div class="carousel-track">
-            <div class="carousel-slide">
-              <img src="images/carousel/slide-1.svg" alt="Placeholder slide showing glass panels" />
-              <p class="lede">Hero-ready composition that pairs gradient light with layered panels. Drop in a flagship photo to instantly preview the vibe.</p>
-            </div>
-            <div class="carousel-slide">
-              <img src="images/carousel/slide-2.svg" alt="Placeholder slide showing spotlight layout" />
-              <p class="lede">A wide single-focus frame ideal for showing the front of a phone, laptop, or console with space for taglines.</p>
-            </div>
-            <div class="carousel-slide">
-              <img src="images/carousel/slide-3.svg" alt="Placeholder slide showing triple tiles" />
-              <p class="lede">Three-tile layout to tease multiple angles at once. Swap each tile with your own photography when you are ready.</p>
-            </div>
-          </div>
         </div>
       </section>
 
@@ -185,11 +166,10 @@
       </section>
     </main>
 
-    <div class="mobile-cta-bar">
-      <a class="cta primary" href="mailto:hello@asherjay.dev">Let’s talk</a>
-    </div>
-
     <footer class="footer">
+      <div class="footer-mobile-cta">
+        <a class="cta primary" href="mailto:hello@asherjay.dev">Let’s talk</a>
+      </div>
       <p>Asher Jay · 2024 · Responsive glossy experience</p>
       <div class="footer-links">
         <a href="socials.html">Socials</a>
