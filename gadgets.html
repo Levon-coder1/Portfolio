@@ -15,8 +15,10 @@
   <body>
     <div class="bg-noise"></div>
     <header class="nav">
-      <div class="brand">Asher Jay</div>
-      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+      <a class="brand" href="index.html">
+        <img src="images/logo.svg" alt="Asher Jay logo" class="brand-logo" />
+        <span>Asher Jay</span>
+      </a>
       <nav class="nav-links" aria-label="Main navigation">
         <a href="index.html">Home</a>
         <a href="projects.html">Projects</a>
@@ -26,7 +28,10 @@
         <a href="contact.html">Contact</a>
         <a href="search.html">Search</a>
       </nav>
-      <a class="pill" href="mailto:hello@asherjay.dev">Let’s talk</a>
+      <button class="icon-button search-trigger" aria-label="Open search page" title="Search">
+        🔍
+      </button>
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
     </header>
 
     <main>
@@ -54,6 +59,11 @@
         <div id="category-grid" class="gadget-grid" aria-live="polite"></div>
       </section>
     </main>
+
+
+    <div class="mobile-cta-bar">
+      <a class="cta primary" href="mailto:hello@asherjay.dev">Let’s talk</a>
+    </div>
 
     <footer class="footer">
       <p>Asher Jay · Gadget catalog</p>

@@ -1,5 +1,7 @@
 const navToggle = document.querySelector('.nav-toggle');
 const navLinks = document.querySelector('.nav-links');
+const searchTrigger = document.querySelector('.search-trigger');
+let productCache = null;
 
 if (navToggle && navLinks) {
   navToggle.addEventListener('click', () => {
@@ -17,9 +19,17 @@ if (navToggle && navLinks) {
   });
 }
 
+if (searchTrigger) {
+  searchTrigger.addEventListener('click', () => {
+    window.location.href = 'search.html';
+  });
+}
+
 async function fetchProducts() {
+  if (productCache) return productCache;
   const response = await fetch('data/products.json');
-  return response.json();
+  productCache = await response.json();
+  return productCache;
 }
 
 function formatPrice(value) {
@@ -176,6 +186,42 @@ function applyFilters(products, filters) {
   });
 }
 
+async function setupSearchSuggestions() {
+  const suggestionList = document.getElementById('search-suggestions');
+  const form = document.querySelector('#search-form');
+  const input = form?.querySelector('input[name="q"]');
+  if (!suggestionList || !input) return;
+
+  const render = (items) => {
+    if (!items.length) {
+      suggestionList.innerHTML = '<li class="meta">Start typing to see instant matches.</li>';
+      return;
+    }
+
+    suggestionList.innerHTML = items
+      .map(
+        (item) => `
+        <li>
+          <a href="product.html?slug=${item.slug}">${item.name}</a>
+          <span class="meta">${item.category} · ${formatPrice(item.price)}</span>
+        </li>
+      `
+      )
+      .join('');
+  };
+
+  input.addEventListener('input', async () => {
+    const query = input.value.trim().toLowerCase();
+    const products = await fetchProducts();
+    const matches = query
+      ? products.filter((product) => product.name.toLowerCase().includes(query)).slice(0, 7)
+      : [];
+    render(matches);
+  });
+
+  input.dispatchEvent(new Event('input'));
+}
+
 async function renderSearchResults() {
   const resultsWrap = document.getElementById('search-results');
   if (!resultsWrap) return;
@@ -230,3 +276,4 @@ renderCategoryOverview();
 renderCategoryProducts();
 renderProductDetail();
 renderSearchResults();
+setupSearchSuggestions();
